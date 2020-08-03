@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/base_red"
+        android:gravity="center"
+        android:text="@string/main_fill_in_room_id"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_icon"
+        android:layout_width="match_parent"
+        android:layout_height="146.1dp"
+        android:layout_marginTop="61dp"
+        android:contentDescription="@string/logo"
+        android:src="@mipmap/ic_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_room_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_edit_height"
+        android:layout_marginStart="@dimen/main_margin_side"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="@dimen/main_margin_side"
+        android:autofillHints="@string/main_hint_room_id"
+        android:hint="@string/main_hint_room_id"
+        android:inputType="number"
+        android:textColorHint="@color/edit_hint"
+        android:maxLength="11"
+        app:layout_constraintTop_toBottomOf="@id/img_icon" />
+
+    <ImageView
+        android:id="@+id/img_clear_input"
+        android:layout_width="@dimen/main_edit_height"
+        android:layout_height="@dimen/main_edit_height"
+        android:contentDescription="@string/clear_input"
+        android:padding="13dp"
+        android:src="@mipmap/ic_input_clear"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/et_room_id"
+        app:layout_constraintEnd_toEndOf="@id/et_room_id"
+        app:layout_constraintTop_toTopOf="@id/et_room_id" />
+
+    <Button
+        android:id="@+id/btn_join"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_btn_join_height"
+        android:layout_marginStart="@dimen/main_margin_side"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="@dimen/main_margin_side"
+        android:background="@drawable/shape_main_btn_join"
+        android:text="@string/join_room"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_room_id" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

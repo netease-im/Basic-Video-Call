@@ -1,0 +1,46 @@
+<RCC>
+    <qresource prefix="/">
+        <file>G2-Sample-cut/pc-2.1-停止视频-click@2x.png</file>
+        <file>G2-Sample-cut/pc-2.1-停止视频-default@2x.png</file>
+        <file>G2-Sample-cut/pc-2.1-停止视频-hover@2x.png</file>
+        <file>G2-Sample-cut/pc-2.1-开启视频-click@2x.png</file>
+        <file>G2-Sample-cut/pc-2.1-开启视频-default@2x.png</file>
+        <file>G2-Sample-cut/pc-2.1-开启视频-hover@2x.png</file>
+        <file>G2-Sample-cut/pc-2.1-结束视频-click@2x.png</file>
+        <file>G2-Sample-cut/pc-2.1-结束视频-default@2x.png</file>
+        <file>G2-Sample-cut/pc-2.1-结束视频-hover@2x.png</file>
+        <file>G2-Sample-cut/pc-2.1-解除静音-click@2x.png</file>
+        <file>G2-Sample-cut/pc-2.1-解除静音-default@2x.png</file>
+        <file>G2-Sample-cut/pc-2.1-解除静音-hover@2x.png</file>
+        <file>G2-Sample-cut/pc-2.1-静音-click@2x.png</file>
+        <file>G2-Sample-cut/pc-2.1-静音-default@2x.png</file>
+        <file>G2-Sample-cut/pc-2.1-静音-hover@2x.png</file>
+        <file>G2-Sample-cut/pc-4.1-关闭-click@2x.png</file>
+        <file>G2-Sample-cut/pc-4.1-关闭-default@2x.png</file>
+        <file>G2-Sample-cut/pc-4.1-关闭-hover@2x.png</file>
+        <file>G2-Sample-cut/pc-4.1-最大化-click@2x.png</file>
+        <file>G2-Sample-cut/pc-4.1-最大化-default@2x.png</file>
+        <file>G2-Sample-cut/pc-4.1-最大化-hover@2x.png</file>
+        <file>G2-Sample-cut/pc-4.1-最小化-click@2x.png</file>
+        <file>G2-Sample-cut/pc-4.1-最小化-default@2x.png</file>
+        <file>G2-Sample-cut/pc-4.1-最小化-hover@2x.png</file>
+        <file>G2-Sample-cut/pc-4.1-还原-click@2x.png</file>
+        <file>G2-Sample-cut/pc-4.1-还原-default@2x.png</file>
+        <file>G2-Sample-cut/pc-4.1-还原-hover@2x.png</file>
+        <file>G2-Sample-cut/icon.PNG</file>
+        <file>G2-Sample-cut/title_icon.PNG</file>
+        <file>G2-Sample-cut/clear_button.PNG</file>
+        <file>G2-Sample-cut/toast_icon.PNG</file>
+        <file>componets/Image_button.qml</file>
+        <file>componets/Line_edit.qml</file>
+        <file>componets/Rectangle_button.qml</file>
+        <file>componets/Titlebar.qml</file>
+        <file>componets/Toast.qml</file>
+        <file>componets/Toolbar.qml</file>
+        <file>ui/Inroom_page.qml</file>
+        <file>ui/Inroom_pageForm.ui.qml</file>
+        <file>ui/Joinroom_page.qml</file>
+        <file>ui/Joinroom_pageForm.ui.qml</file>
+        <file>main.qml</file>
+    </qresource>
+</RCC>

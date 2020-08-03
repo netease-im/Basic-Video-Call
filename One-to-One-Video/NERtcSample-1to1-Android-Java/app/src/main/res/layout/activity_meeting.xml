@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/meeting_background"
+    tools:context=".MeetingActivity">
+
+    <View
+        android:id="@+id/v_function_container"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ib_audio"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/meeting_background"
+        android:contentDescription="@string/leave_room"
+        android:src="@drawable/selector_meeting_mute"
+        app:layout_constraintBottom_toBottomOf="@id/v_function_container"
+        app:layout_constraintEnd_toStartOf="@id/ib_leave"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@id/v_function_container"
+        app:layout_constraintTop_toTopOf="@id/v_function_container" />
+
+    <ImageButton
+        android:id="@+id/ib_leave"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/meeting_background"
+        android:contentDescription="@string/leave_room"
+        android:src="@drawable/selector_meeting_leave"
+        app:layout_constraintBottom_toBottomOf="@id/v_function_container"
+        app:layout_constraintEnd_toStartOf="@id/ib_video"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/ib_audio"
+        app:layout_constraintTop_toTopOf="@id/v_function_container" />
+
+    <ImageButton
+        android:id="@+id/ib_video"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/meeting_background"
+        android:contentDescription="@string/leave_room"
+        android:src="@drawable/selector_meeting_close_video"
+        app:layout_constraintBottom_toBottomOf="@id/v_function_container"
+        app:layout_constraintEnd_toEndOf="@id/v_function_container"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/ib_leave"
+        app:layout_constraintTop_toTopOf="@id/v_function_container" />
+
+
+    <com.netease.lava.nertc.sdk.video.NERtcVideoView
+        android:id="@+id/vv_remote_user"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/v_function_container"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_wait_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/meeting_wait_hint"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/vv_remote_user"
+        app:layout_constraintEnd_toEndOf="@id/vv_remote_user"
+        app:layout_constraintStart_toStartOf="@id/vv_remote_user"
+        app:layout_constraintTop_toTopOf="@id/vv_remote_user" />
+
+    <View
+        android:id="@+id/v_local_user_bg"
+        android:layout_width="90dp"
+        android:layout_height="160dp"
+        android:layout_margin="12dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.netease.lava.nertc.sdk.video.NERtcVideoView
+        android:id="@+id/vv_local_user"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/v_local_user_bg"
+        app:layout_constraintEnd_toEndOf="@+id/v_local_user_bg"
+        app:layout_constraintStart_toStartOf="@+id/v_local_user_bg"
+        app:layout_constraintTop_toTopOf="@+id/v_local_user_bg" />
+
+
+    <ImageView
+        android:id="@+id/img_camera_flip"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="12dp"
+        android:contentDescription="@string/switch_camera"
+        android:src="@mipmap/ic_camera_flip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

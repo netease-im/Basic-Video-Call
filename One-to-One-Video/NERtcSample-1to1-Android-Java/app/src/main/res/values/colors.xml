@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/white</color>
+    <color name="colorAccent">@color/base_blue</color>
+
+    <color name="transparent">@android:color/transparent</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="white_c">#FFCCCCCC</color>
+    <color name="base_blue">#FF337EFF</color>
+    <color name="base_red">#E6F24957</color>
+    <color name="meeting_background">#FF212129</color>
+    <color name="edit_hint">#FFB0B6BE</color>
+
+</resources>

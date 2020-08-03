@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		419DA0B524D7EDF90001A561 /* nim_strip_archs.sh in Resources */ = {isa = PBXBuildFile; fileRef = 419DA0A524D7EDF90001A561 /* nim_strip_archs.sh */; };
+		419DA0B624D7EDF90001A561 /* NETSDemoP2PViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 419DA0A624D7EDF90001A561 /* NETSDemoP2PViewController.m */; };
+		419DA0B724D7EDF90001A561 /* NETSDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 419DA0A724D7EDF90001A561 /* NETSDemoViewController.m */; };
+		419DA0B824D7EDF90001A561 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 419DA0A824D7EDF90001A561 /* Assets.xcassets */; };
+		419DA0B924D7EDF90001A561 /* NETSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 419DA0A924D7EDF90001A561 /* NETSAppDelegate.m */; };
+		419DA0BA24D7EDF90001A561 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 419DA0AA24D7EDF90001A561 /* LaunchScreen.storyboard */; };
+		419DA0BB24D7EDF90001A561 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 419DA0AC24D7EDF90001A561 /* Main.storyboard */; };
+		419DA0BC24D7EDF90001A561 /* NTESDemoUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 419DA0B024D7EDF90001A561 /* NTESDemoUserModel.m */; };
+		419DA0BD24D7EDF90001A561 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 419DA0B124D7EDF90001A561 /* main.m */; };
+		E27986E6F1146334DA7CC33C /* Pods_NERTC1to1Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17538673E95033C9E12A5C5 /* Pods_NERTC1to1Sample.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		419DA0A424D7EDF90001A561 /* NTESDemoUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESDemoUserModel.h; sourceTree = "<group>"; };
+		419DA0A524D7EDF90001A561 /* nim_strip_archs.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = nim_strip_archs.sh; sourceTree = "<group>"; };
+		419DA0A624D7EDF90001A561 /* NETSDemoP2PViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NETSDemoP2PViewController.m; sourceTree = "<group>"; };
+		419DA0A724D7EDF90001A561 /* NETSDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NETSDemoViewController.m; sourceTree = "<group>"; };
+		419DA0A824D7EDF90001A561 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		419DA0A924D7EDF90001A561 /* NETSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NETSAppDelegate.m; sourceTree = "<group>"; };
+		419DA0AB24D7EDF90001A561 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		419DA0AD24D7EDF90001A561 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		419DA0AE24D7EDF90001A561 /* AppKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppKey.h; sourceTree = "<group>"; };
+		419DA0AF24D7EDF90001A561 /* NETSDemoP2PViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NETSDemoP2PViewController.h; sourceTree = "<group>"; };
+		419DA0B024D7EDF90001A561 /* NTESDemoUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESDemoUserModel.m; sourceTree = "<group>"; };
+		419DA0B124D7EDF90001A561 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		419DA0B224D7EDF90001A561 /* NETSDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NETSDemoViewController.h; sourceTree = "<group>"; };
+		419DA0B324D7EDF90001A561 /* NETSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NETSAppDelegate.h; sourceTree = "<group>"; };
+		419DA0B424D7EDF90001A561 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48B7FB62128890C428F4C63C /* Pods-NERtcP2pSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NERtcP2pSampleTests.debug.xcconfig"; path = "Target Support Files/Pods-NERtcP2pSampleTests/Pods-NERtcP2pSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		48CFCBFC24C5766E002DE0CA /* NERTC1to1Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NERTC1to1Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B6365D8AC3C9BD2B6E0637C /* Pods-NERtcP2pSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NERtcP2pSample.release.xcconfig"; path = "Target Support Files/Pods-NERtcP2pSample/Pods-NERtcP2pSample.release.xcconfig"; sourceTree = "<group>"; };
+		9691D4D316DAB71FF86F6EA5 /* Pods-NERTC1to1Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NERTC1to1Sample.release.xcconfig"; path = "Target Support Files/Pods-NERTC1to1Sample/Pods-NERTC1to1Sample.release.xcconfig"; sourceTree = "<group>"; };
+		986A29A6594B60AE1E2E527C /* Pods-NERtcP2pSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NERtcP2pSampleTests.release.xcconfig"; path = "Target Support Files/Pods-NERtcP2pSampleTests/Pods-NERtcP2pSampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		D0E2629D65BDF2279CC68FF4 /* Pods_NERtcP2pSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NERtcP2pSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F17538673E95033C9E12A5C5 /* Pods_NERTC1to1Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NERTC1to1Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC5C3C8634B0AFCD6093380C /* Pods-NERTC1to1Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NERTC1to1Sample.debug.xcconfig"; path = "Target Support Files/Pods-NERTC1to1Sample/Pods-NERTC1to1Sample.debug.xcconfig"; sourceTree = "<group>"; };
+		FFBD9EE79ABE211352D9D30D /* Pods-NERtcP2pSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NERtcP2pSample.debug.xcconfig"; path = "Target Support Files/Pods-NERtcP2pSample/Pods-NERtcP2pSample.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48CFCBF924C5766E002DE0CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E27986E6F1146334DA7CC33C /* Pods_NERTC1to1Sample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0417D8F3599AB5E8B5633296 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0E2629D65BDF2279CC68FF4 /* Pods_NERtcP2pSampleTests.framework */,
+				F17538673E95033C9E12A5C5 /* Pods_NERTC1to1Sample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		419DA0A324D7EDF90001A561 /* NERTC1to1Sample */ = {
+			isa = PBXGroup;
+			children = (
+				419DA0B324D7EDF90001A561 /* NETSAppDelegate.h */,
+				419DA0A924D7EDF90001A561 /* NETSAppDelegate.m */,
+				419DA0B224D7EDF90001A561 /* NETSDemoViewController.h */,
+				419DA0A724D7EDF90001A561 /* NETSDemoViewController.m */,
+				419DA0AF24D7EDF90001A561 /* NETSDemoP2PViewController.h */,
+				419DA0A624D7EDF90001A561 /* NETSDemoP2PViewController.m */,
+				419DA0A424D7EDF90001A561 /* NTESDemoUserModel.h */,
+				419DA0B024D7EDF90001A561 /* NTESDemoUserModel.m */,
+				419DA0AE24D7EDF90001A561 /* AppKey.h */,
+				419DA0A524D7EDF90001A561 /* nim_strip_archs.sh */,
+				419DA0A824D7EDF90001A561 /* Assets.xcassets */,
+				419DA0AA24D7EDF90001A561 /* LaunchScreen.storyboard */,
+				419DA0AC24D7EDF90001A561 /* Main.storyboard */,
+				419DA0B124D7EDF90001A561 /* main.m */,
+				419DA0B424D7EDF90001A561 /* Info.plist */,
+			);
+			path = NERTC1to1Sample;
+			sourceTree = "<group>";
+		};
+		48CFCBF324C5766E002DE0CA = {
+			isa = PBXGroup;
+			children = (
+				419DA0A324D7EDF90001A561 /* NERTC1to1Sample */,
+				48CFCBFD24C5766E002DE0CA /* Products */,
+				8CA7108BC9A09D2DBB718569 /* Pods */,
+				0417D8F3599AB5E8B5633296 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		48CFCBFD24C5766E002DE0CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48CFCBFC24C5766E002DE0CA /* NERTC1to1Sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CA7108BC9A09D2DBB718569 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FFBD9EE79ABE211352D9D30D /* Pods-NERtcP2pSample.debug.xcconfig */,
+				6B6365D8AC3C9BD2B6E0637C /* Pods-NERtcP2pSample.release.xcconfig */,
+				48B7FB62128890C428F4C63C /* Pods-NERtcP2pSampleTests.debug.xcconfig */,
+				986A29A6594B60AE1E2E527C /* Pods-NERtcP2pSampleTests.release.xcconfig */,
+				FC5C3C8634B0AFCD6093380C /* Pods-NERTC1to1Sample.debug.xcconfig */,
+				9691D4D316DAB71FF86F6EA5 /* Pods-NERTC1to1Sample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48CFCBFB24C5766E002DE0CA /* NERTC1to1Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48CFCC2024C57670002DE0CA /* Build configuration list for PBXNativeTarget "NERTC1to1Sample" */;
+			buildPhases = (
+				112561FC6395F37886CAF35C /* [CP] Check Pods Manifest.lock */,
+				48CFCBF824C5766E002DE0CA /* Sources */,
+				48CFCBF924C5766E002DE0CA /* Frameworks */,
+				48CFCBFA24C5766E002DE0CA /* Resources */,
+				224416CB89A37BC927D7977B /* [CP] Embed Pods Frameworks */,
+				48CFCC2E24C5781F002DE0CA /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NERTC1to1Sample;
+			productName = NERtcP2pSample;
+			productReference = 48CFCBFC24C5766E002DE0CA /* NERTC1to1Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48CFCBF424C5766E002DE0CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "丁文超";
+				TargetAttributes = {
+					48CFCBFB24C5766E002DE0CA = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = 48CFCBF724C5766E002DE0CA /* Build configuration list for PBXProject "NERTC1to1Sample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 48CFCBF324C5766E002DE0CA;
+			productRefGroup = 48CFCBFD24C5766E002DE0CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48CFCBFB24C5766E002DE0CA /* NERTC1to1Sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48CFCBFA24C5766E002DE0CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				419DA0BA24D7EDF90001A561 /* LaunchScreen.storyboard in Resources */,
+				419DA0B824D7EDF90001A561 /* Assets.xcassets in Resources */,
+				419DA0B524D7EDF90001A561 /* nim_strip_archs.sh in Resources */,
+				419DA0BB24D7EDF90001A561 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		112561FC6395F37886CAF35C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NERTC1to1Sample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		224416CB89A37BC927D7977B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NERTC1to1Sample/Pods-NERTC1to1Sample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NERTC1to1Sample/Pods-NERTC1to1Sample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NERTC1to1Sample/Pods-NERTC1to1Sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48CFCC2E24C5781F002DE0CA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/bin/sh \"${SRCROOT}/NERtcP2pSample/nim_strip_archs.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48CFCBF824C5766E002DE0CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				419DA0BD24D7EDF90001A561 /* main.m in Sources */,
+				419DA0B624D7EDF90001A561 /* NETSDemoP2PViewController.m in Sources */,
+				419DA0BC24D7EDF90001A561 /* NTESDemoUserModel.m in Sources */,
+				419DA0B924D7EDF90001A561 /* NETSAppDelegate.m in Sources */,
+				419DA0B724D7EDF90001A561 /* NETSDemoViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		419DA0AA24D7EDF90001A561 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				419DA0AB24D7EDF90001A561 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		419DA0AC24D7EDF90001A561 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				419DA0AD24D7EDF90001A561 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48CFCC1E24C57670002DE0CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		48CFCC1F24C57670002DE0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48CFCC2124C57670002DE0CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC5C3C8634B0AFCD6093380C /* Pods-NERTC1to1Sample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 569GNZ5392;
+				INFOPLIST_FILE = NERTC1to1Sample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.netease.nmc.NERtcP2pSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Dev";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48CFCC2224C57670002DE0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9691D4D316DAB71FF86F6EA5 /* Pods-NERTC1to1Sample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 569GNZ5392;
+				INFOPLIST_FILE = NERTC1to1Sample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.netease.nmc.NERtcP2pSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Dev";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48CFCBF724C5766E002DE0CA /* Build configuration list for PBXProject "NERTC1to1Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48CFCC1E24C57670002DE0CA /* Debug */,
+				48CFCC1F24C57670002DE0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48CFCC2024C57670002DE0CA /* Build configuration list for PBXNativeTarget "NERTC1to1Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48CFCC2124C57670002DE0CA /* Debug */,
+				48CFCC2224C57670002DE0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48CFCBF424C5766E002DE0CA /* Project object */;
+}

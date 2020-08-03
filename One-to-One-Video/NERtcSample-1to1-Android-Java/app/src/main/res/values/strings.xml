@@ -1,0 +1,15 @@
+<resources>
+    <!-- 替换为你自己的AppKey -->
+    <string name="app_key">YOUR APP KEY</string>
+    <string name="app_name">NERTC1to1Sample</string>
+    <string name="main_hint_room_id">请输入房间号</string>
+    <string name="join_channel">加入频道</string>
+    <string name="join_room">加入房间</string>
+    <string name="leave_room">离开房间</string>
+    <string name="input_nick">输入昵称</string>
+    <string name="logo">图标</string>
+    <string name="main_fill_in_room_id">请填写房间号</string>
+    <string name="clear_input">清除输入的内容</string>
+    <string name="meeting_wait_hint">等待加入…</string>
+    <string name="switch_camera">切换摄像头</string>
+</resources>
