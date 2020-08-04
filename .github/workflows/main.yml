@@ -31,3 +31,17 @@ jobs:
       with:
         name: NERtcSample-1to1-Android-Java
         path: ./One-to-One-Video/NERtcSample-1to1-Android-Java/app/build/outputs/apk/debug/app-debug.apk
+
+  build_ios_objc:
+    name: Build iOS(Objective-C)
+    runs-on: macos-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./One-to-One-Video/NERtcSample-1to1-iOS-Objective-C
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install Cocoapods
+      run: gem install cocoapods
