@@ -50,7 +50,7 @@ jobs:
       run: pod install
       
     - name: Select Xcode
-      run: xcode-select -s /Applications/Xcode_11.4.app
+      run: sudo xcode-select -s /Applications/Xcode_11.4.app
     
     - name: Build debug App
       run: xcodebuild -workspace "NERTC1to1Sample.xcworkspace" -scheme "NERTC1to1Sample" -destination 'platform=iOS Simulator,name=iPhone 11'
