@@ -29,5 +29,5 @@ jobs:
     - name: Upload APK
       uses: actions/upload-artifact@v1
       with:
-        name: app
+        name: NERtcSample-1to1-Android-Java
         path: ./One-to-One-Video/NERtcSample-1to1-Android-Java/app/build/outputs/apk/debug/app-debug.apk
