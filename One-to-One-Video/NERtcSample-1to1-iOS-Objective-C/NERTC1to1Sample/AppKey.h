@@ -9,6 +9,6 @@
 #ifndef AppKey_h
 #define AppKey_h
 
-NSString *const AppKey = <#请输入您的APPKey#>;
+#define AppKey @"请填入您的AppKey"
 
 #endif /* AppKey_h */
