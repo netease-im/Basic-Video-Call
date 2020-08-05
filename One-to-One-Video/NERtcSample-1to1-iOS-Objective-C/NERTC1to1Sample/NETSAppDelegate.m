@@ -7,6 +7,7 @@
 //
 
 #import "NETSAppDelegate.h"
+#import "AppKey.h"
 
 @interface NETSAppDelegate ()
 
@@ -16,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSAssert(![AppKey isEqualToString:@"请填入您的AppKey"],
+             @"请在AppKey.h中填入您的APPKey之后，再运行Demo");
     return YES;
 }
 @end
