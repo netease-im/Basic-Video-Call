@@ -43,7 +43,7 @@ Qt Quick
 - Windows 10及以上版本/ Mac OS
 - IDE
   - Windows环境下 Qt Creator/Microsoft Visual Stuido
-  - Mac环境下 Xcode
+  - Mac环境下 Xcode 
 - 编译器
   - Windows环境下 MSVC 2015 64bit
   - Mac环境下 clang 64bit
