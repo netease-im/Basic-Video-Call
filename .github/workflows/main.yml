@@ -54,4 +54,71 @@ jobs:
     
     - name: Build debug App
       run: xcodebuild -workspace "NERTC1to1Sample.xcworkspace" -scheme "NERTC1to1Sample" -destination 'platform=iOS Simulator,name=iPhone 11'
+        
+
+  build_windows_qt:
+    name: Build Windows(Qt) Executable
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: cmd
+        working-directory: ./One-to-One-Video/NERtcSample-1to1-Windows_macOS-Qt
+        
+    steps:
+    - uses: actions/checkout@v2
     
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v2
+      with:
+        version: '5.14.2'
+        arch: 'win64_msvc2015_64'
+        
+    - name: Build debug version
+      run: call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat" && qmake.exe NERtcSample-1to1-Windows_Mac.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" && nmake
+      
+    - name: Add Qt_sdk and nertc_sdk
+      run: windeployqt Debug\NERtcSample-1to1-Windows_Mac.exe -qmldir=%Qt5_DIR%\qml && copy nertc_sdk_win\dll\x64\*.dll Debug
+    
+    - name: Packege debug version
+      run: mv Debug NERtcSample-1to1-Windows-Qt
+    
+    - name: Upload debug version
+      uses: actions/upload-artifact@v1
+      with:
+        name: NERtcSample-1to1-Windows-Qt
+        path: ./One-to-One-Video/NERtcSample-1to1-Windows_macOS-Qt/NERtcSample-1to1-Windows-Qt
+  
+  build_mac_qt:
+    name: Build macOS(Qt) APP
+    runs-on: macos-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./One-to-One-Video/NERtcSample-1to1-Windows_macOS-Qt
+        
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v2
+      with:
+        version: '5.14.2'
+              
+    - name: Build debug APP
+      run: qmake NERtcSample-1to1-Windows_Mac.pro -spec macx-clang CONFIG+=debug CONFIG+=x86_64 CONFIG+=qml_debug && make qmake_all && make -j4 && mkdir Debug && mv NERtcSample-1to1-Windows_Mac.app Debug/
+      
+    - name: Add Qt_sdk and nertc_sdk
+      run: macdeployqt Debug/NERtcSample-1to1-Windows_Mac.app/ -qmldir=$Qt5_DIR/qml/ && cp -a nertc_sdk_mac/. Debug/NERtcSample-1to1-Windows_Mac.app/Contents/Frameworks/ && install_name_tool -change @rpath/NEFundation_Mac.framework/Versions/A/NEFundation_Mac @executable_path/../Frameworks/NEFundation_Mac.framework/Versions/A/NEFundation_Mac Debug/NERtcSample-1to1-Windows_Mac.app/Contents/MacOS/NERtcSample-1to1-Windows_Mac && install_name_tool -change @rpath/nertc_sdk_Mac.framework/Versions/A/nertc_sdk_Mac @executable_path/../Frameworks/nertc_sdk_Mac.framework/Versions/A/nertc_sdk_Mac Debug/NERtcSample-1to1-Windows_Mac.app/Contents/MacOS/NERtcSample-1to1-Windows_Mac
+        
+    - name: Add yuv sdk
+      run: cp -a libyuv_mac/lib/libyuv.dylib Debug/NERtcSample-1to1-Windows_Mac.app/Contents/Frameworks/ && install_name_tool -change /Users/dudu/CMX/compile_libyuv/src/out/libyuv.dylib @executable_path/../Frameworks/libyuv.dylib Debug/NERtcSample-1to1-Windows_Mac.app/Contents/MacOS/NERtcSample-1to1-Windows_Mac 
+    
+    
+    - name: Package macOS(Qt) APP
+      run: macdeployqt Debug/NERtcSample-1to1-Windows_Mac.app/ -qmldir=$Qt5_DIR/qml/ -verbose=1 -dmg
+    
+    - name: Upload debug APP
+      uses: actions/upload-artifact@v1
+      with:
+        name: NERtcSample-1to1-Mac-Qt.dmg
+        path: ./One-to-One-Video/NERtcSample-1to1-Windows_macOS-Qt/Debug/NERtcSample-1to1-Windows_Mac.dmg

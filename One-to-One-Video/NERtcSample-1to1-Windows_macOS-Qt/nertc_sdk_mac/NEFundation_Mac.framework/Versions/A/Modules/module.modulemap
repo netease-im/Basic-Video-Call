@@ -1,0 +1,6 @@
+framework module NEFundation_Mac {
+  umbrella header "NEFundation_Mac.h"
+
+  export *
+  module * { export * }
+}
