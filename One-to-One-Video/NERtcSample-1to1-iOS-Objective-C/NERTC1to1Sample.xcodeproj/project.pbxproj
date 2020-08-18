@@ -244,7 +244,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/bin/sh \"${SRCROOT}/NERtcP2pSample/nim_strip_archs.sh\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/bin/sh \"${SRCROOT}/NERTC1to1Sample/nim_strip_archs.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

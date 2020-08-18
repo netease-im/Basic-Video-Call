@@ -48,7 +48,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     //直接加入channel
     [self joinChannelWithRoomId:_roomId userId:_userId];
 }
