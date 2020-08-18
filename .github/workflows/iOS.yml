@@ -18,7 +18,7 @@ jobs:
       XC_ARCHIVE_DIR: ${{ './product/archive' }}
       XC_IPA_DIR: ${{ './product/ipa' }}
       XC_EXPORT_OPTIONS_PATH: ${{ './Workflow/ExportOptions.plist' }}
-      XC_KEY_HOOK_SCRIPT_PATH: ${{ './Workflow/keyHook.py' }}
+      XC_KEY_STUB_SCRIPT_PATH: ${{ './Workflow/keyStub.py' }}
 
       ENCRYPTED_CERT_PATH: ${{ './Workflow/cert.p12.gpg' }}
       DECRYPTED_CERT_PATH: ${{ './Workflow/cert.p12' }}
@@ -37,6 +37,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+
+    - name: Setup Python 2.7
+      uses: actions/setup-python@v2
+      with:
+          python-version: '2.7'
+          
+    - name: App Key Stub
+      run: 
+        python $XC_KEY_STUB_SCRIPT_PATH
     
     - name: Install Dependencies
       run: pod install
@@ -76,18 +85,9 @@ jobs:
         xcodebuild -exportArchive -archivePath $XC_ARCHIVE_DIR/$XC_PROJECT_NAME.xcarchive -exportPath $XC_IPA_DIR -exportOptionsPlist $XC_EXPORT_OPTIONS_PATH;
         mv $XC_IPA_DIR/$XC_SCHEME.ipa $XC_IPA_DIR/$XC_PROJECT_NAME.ipa;
 
-    - name: Setup Python 2.7
-      uses: actions/setup-python@v2
-      with:
-          python-version: '2.7'
-
-    - name: Hook App Key
-      run: 
-        python $XC_KEY_HOOK_SCRIPT_PATH
-
     - name: Zip IPA
       run:
-        zip -P $ARTIFACT_ZIP_PWD $XC_PROJECT_NAME.zip $XC_IPA_DIR/$XC_PROJECT_NAME.ipa
+        zip -P $ARTIFACT_ZIP_PWD -j $XC_PROJECT_NAME.zip $XC_IPA_DIR/$XC_PROJECT_NAME.ipa
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
