@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48FB8CB424EE26F600F9C3BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FB8CB224EE26F600F9C3BC /* Main.storyboard */; };
+		48FB8CB624EE26F700F9C3BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FB8CB524EE26F700F9C3BC /* Assets.xcassets */; };
+		48FB8CB924EE26F700F9C3BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FB8CB724EE26F700F9C3BC /* LaunchScreen.storyboard */; };
+		48FB8CBC24EE26F700F9C3BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FB8CBB24EE26F700F9C3BC /* main.m */; };
+		48FB8CE124EE4FE400F9C3BC /* nim_strip_archs.sh in Resources */ = {isa = PBXBuildFile; fileRef = 48FB8CE024EE4FE400F9C3BC /* nim_strip_archs.sh */; };
+		48FB8CE924EE651C00F9C3BC /* NTESMeetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FB8CE424EE651C00F9C3BC /* NTESMeetingViewController.m */; };
+		48FB8CEA24EE651C00F9C3BC /* NTESDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FB8CE524EE651C00F9C3BC /* NTESDemoViewController.m */; };
+		48FB8CEB24EE651C00F9C3BC /* NTESAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FB8CE824EE651C00F9C3BC /* NTESAppDelegate.m */; };
+		A07393D942D8AC848260A73A /* Pods_NERtcSample_GroupVideoCall_iOS_Objective_C.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11312C3C8BF0A1D010C27B9C /* Pods_NERtcSample_GroupVideoCall_iOS_Objective_C.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		031262C82292F15FDA035205 /* Pods-NERtcSample-GroupVideoCall-iOS-Objective-CTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NERtcSample-GroupVideoCall-iOS-Objective-CTests.release.xcconfig"; path = "Target Support Files/Pods-NERtcSample-GroupVideoCall-iOS-Objective-CTests/Pods-NERtcSample-GroupVideoCall-iOS-Objective-CTests.release.xcconfig"; sourceTree = "<group>"; };
+		11312C3C8BF0A1D010C27B9C /* Pods_NERtcSample_GroupVideoCall_iOS_Objective_C.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NERtcSample_GroupVideoCall_iOS_Objective_C.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F5564CE05AFD51FBC0BA866 /* Pods-NERtcSample-GroupVideoCall-iOS-Objective-CTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NERtcSample-GroupVideoCall-iOS-Objective-CTests.debug.xcconfig"; path = "Target Support Files/Pods-NERtcSample-GroupVideoCall-iOS-Objective-CTests/Pods-NERtcSample-GroupVideoCall-iOS-Objective-CTests.debug.xcconfig"; sourceTree = "<group>"; };
+		48FB8CA624EE26F600F9C3BC /* NERtcSample-GroupVideoCall-iOS-Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NERtcSample-GroupVideoCall-iOS-Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48FB8CB324EE26F600F9C3BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		48FB8CB524EE26F700F9C3BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		48FB8CB824EE26F700F9C3BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		48FB8CBA24EE26F700F9C3BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48FB8CBB24EE26F700F9C3BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		48FB8CDC24EE4E0400F9C3BC /* NTESAppDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTESAppDefine.h; sourceTree = "<group>"; };
+		48FB8CE024EE4FE400F9C3BC /* nim_strip_archs.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = nim_strip_archs.sh; sourceTree = "<group>"; };
+		48FB8CE224EE651C00F9C3BC /* NTESMeetingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESMeetingViewController.h; sourceTree = "<group>"; };
+		48FB8CE324EE651C00F9C3BC /* NTESAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESAppDelegate.h; sourceTree = "<group>"; };
+		48FB8CE424EE651C00F9C3BC /* NTESMeetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESMeetingViewController.m; sourceTree = "<group>"; };
+		48FB8CE524EE651C00F9C3BC /* NTESDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESDemoViewController.m; sourceTree = "<group>"; };
+		48FB8CE624EE651C00F9C3BC /* NTESDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESDemoViewController.h; sourceTree = "<group>"; };
+		48FB8CE824EE651C00F9C3BC /* NTESAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESAppDelegate.m; sourceTree = "<group>"; };
+		707771EB0384B59A437EA2FF /* Pods-NERtcSample-GroupVideoCall-iOS-Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NERtcSample-GroupVideoCall-iOS-Objective-C.release.xcconfig"; path = "Target Support Files/Pods-NERtcSample-GroupVideoCall-iOS-Objective-C/Pods-NERtcSample-GroupVideoCall-iOS-Objective-C.release.xcconfig"; sourceTree = "<group>"; };
+		8777C281EE1B472741CEFA40 /* Pods_NERtcSample_GroupVideoCall_iOS_Objective_CTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NERtcSample_GroupVideoCall_iOS_Objective_CTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A7A896B2A75294CFBC10952 /* Pods-NERtcSample-GroupVideoCall-iOS-Objective-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NERtcSample-GroupVideoCall-iOS-Objective-C.debug.xcconfig"; path = "Target Support Files/Pods-NERtcSample-GroupVideoCall-iOS-Objective-C/Pods-NERtcSample-GroupVideoCall-iOS-Objective-C.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48FB8CA324EE26F600F9C3BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A07393D942D8AC848260A73A /* Pods_NERtcSample_GroupVideoCall_iOS_Objective_C.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		410FABF97723BEEA0D5B3EA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11312C3C8BF0A1D010C27B9C /* Pods_NERtcSample_GroupVideoCall_iOS_Objective_C.framework */,
+				8777C281EE1B472741CEFA40 /* Pods_NERtcSample_GroupVideoCall_iOS_Objective_CTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48FB8C9D24EE26F600F9C3BC = {
+			isa = PBXGroup;
+			children = (
+				48FB8CA824EE26F600F9C3BC /* NERtcSample-GroupVideoCall-iOS-Objective-C */,
+				48FB8CA724EE26F600F9C3BC /* Products */,
+				9B654E94B51A0F436E91A2F7 /* Pods */,
+				410FABF97723BEEA0D5B3EA3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		48FB8CA724EE26F600F9C3BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48FB8CA624EE26F600F9C3BC /* NERtcSample-GroupVideoCall-iOS-Objective-C.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48FB8CA824EE26F600F9C3BC /* NERtcSample-GroupVideoCall-iOS-Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				48FB8CDC24EE4E0400F9C3BC /* NTESAppDefine.h */,
+				48FB8CE324EE651C00F9C3BC /* NTESAppDelegate.h */,
+				48FB8CE824EE651C00F9C3BC /* NTESAppDelegate.m */,
+				48FB8CE624EE651C00F9C3BC /* NTESDemoViewController.h */,
+				48FB8CE524EE651C00F9C3BC /* NTESDemoViewController.m */,
+				48FB8CE224EE651C00F9C3BC /* NTESMeetingViewController.h */,
+				48FB8CE424EE651C00F9C3BC /* NTESMeetingViewController.m */,
+				48FB8CE024EE4FE400F9C3BC /* nim_strip_archs.sh */,
+				48FB8CB224EE26F600F9C3BC /* Main.storyboard */,
+				48FB8CB524EE26F700F9C3BC /* Assets.xcassets */,
+				48FB8CB724EE26F700F9C3BC /* LaunchScreen.storyboard */,
+				48FB8CBA24EE26F700F9C3BC /* Info.plist */,
+				48FB8CBB24EE26F700F9C3BC /* main.m */,
+			);
+			path = "NERtcSample-GroupVideoCall-iOS-Objective-C";
+			sourceTree = "<group>";
+		};
+		9B654E94B51A0F436E91A2F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A7A896B2A75294CFBC10952 /* Pods-NERtcSample-GroupVideoCall-iOS-Objective-C.debug.xcconfig */,
+				707771EB0384B59A437EA2FF /* Pods-NERtcSample-GroupVideoCall-iOS-Objective-C.release.xcconfig */,
+				1F5564CE05AFD51FBC0BA866 /* Pods-NERtcSample-GroupVideoCall-iOS-Objective-CTests.debug.xcconfig */,
+				031262C82292F15FDA035205 /* Pods-NERtcSample-GroupVideoCall-iOS-Objective-CTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48FB8CA524EE26F600F9C3BC /* NERtcSample-GroupVideoCall-iOS-Objective-C */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48FB8CCA24EE26F700F9C3BC /* Build configuration list for PBXNativeTarget "NERtcSample-GroupVideoCall-iOS-Objective-C" */;
+			buildPhases = (
+				9B188AF479C65B366D05C69B /* [CP] Check Pods Manifest.lock */,
+				48FB8CA224EE26F600F9C3BC /* Sources */,
+				48FB8CA324EE26F600F9C3BC /* Frameworks */,
+				48FB8CA424EE26F600F9C3BC /* Resources */,
+				2F49BD2BAFEF9095DE15CA8E /* [CP] Embed Pods Frameworks */,
+				48FB8CDF24EE4F1500F9C3BC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NERtcSample-GroupVideoCall-iOS-Objective-C";
+			productName = "NERtcSample-GroupVideoCall-iOS-Objective-C";
+			productReference = 48FB8CA624EE26F600F9C3BC /* NERtcSample-GroupVideoCall-iOS-Objective-C.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48FB8C9E24EE26F600F9C3BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Wenchao Ding";
+				TargetAttributes = {
+					48FB8CA524EE26F600F9C3BC = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = 48FB8CA124EE26F600F9C3BC /* Build configuration list for PBXProject "NERtcSample-GroupVideoCall-iOS-Objective-C" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 48FB8C9D24EE26F600F9C3BC;
+			productRefGroup = 48FB8CA724EE26F600F9C3BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48FB8CA524EE26F600F9C3BC /* NERtcSample-GroupVideoCall-iOS-Objective-C */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48FB8CA424EE26F600F9C3BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48FB8CE124EE4FE400F9C3BC /* nim_strip_archs.sh in Resources */,
+				48FB8CB924EE26F700F9C3BC /* LaunchScreen.storyboard in Resources */,
+				48FB8CB624EE26F700F9C3BC /* Assets.xcassets in Resources */,
+				48FB8CB424EE26F600F9C3BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F49BD2BAFEF9095DE15CA8E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NERtcSample-GroupVideoCall-iOS-Objective-C/Pods-NERtcSample-GroupVideoCall-iOS-Objective-C-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NERtcSample-GroupVideoCall-iOS-Objective-C/Pods-NERtcSample-GroupVideoCall-iOS-Objective-C-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NERtcSample-GroupVideoCall-iOS-Objective-C/Pods-NERtcSample-GroupVideoCall-iOS-Objective-C-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48FB8CDF24EE4F1500F9C3BC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/bin/sh \"${SRCROOT}/${PROJECT_NAME}/nim_strip_archs.sh\"\n";
+		};
+		9B188AF479C65B366D05C69B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NERtcSample-GroupVideoCall-iOS-Objective-C-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48FB8CA224EE26F600F9C3BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48FB8CEB24EE651C00F9C3BC /* NTESAppDelegate.m in Sources */,
+				48FB8CEA24EE651C00F9C3BC /* NTESDemoViewController.m in Sources */,
+				48FB8CE924EE651C00F9C3BC /* NTESMeetingViewController.m in Sources */,
+				48FB8CBC24EE26F700F9C3BC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		48FB8CB224EE26F600F9C3BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48FB8CB324EE26F600F9C3BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		48FB8CB724EE26F700F9C3BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48FB8CB824EE26F700F9C3BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48FB8CC824EE26F700F9C3BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		48FB8CC924EE26F700F9C3BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48FB8CCB24EE26F700F9C3BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A7A896B2A75294CFBC10952 /* Pods-NERtcSample-GroupVideoCall-iOS-Objective-C.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 569GNZ5392;
+				INFOPLIST_FILE = "NERtcSample-GroupVideoCall-iOS-Objective-C/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netease.nmc.NERtcSample-GroupVideoCall-iOS-Objective-C";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Dev";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48FB8CCC24EE26F700F9C3BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 707771EB0384B59A437EA2FF /* Pods-NERtcSample-GroupVideoCall-iOS-Objective-C.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 569GNZ5392;
+				INFOPLIST_FILE = "NERtcSample-GroupVideoCall-iOS-Objective-C/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netease.nmc.NERtcSample-GroupVideoCall-iOS-Objective-C";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Dev";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48FB8CA124EE26F600F9C3BC /* Build configuration list for PBXProject "NERtcSample-GroupVideoCall-iOS-Objective-C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48FB8CC824EE26F700F9C3BC /* Debug */,
+				48FB8CC924EE26F700F9C3BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48FB8CCA24EE26F700F9C3BC /* Build configuration list for PBXNativeTarget "NERtcSample-GroupVideoCall-iOS-Objective-C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48FB8CCB24EE26F700F9C3BC /* Debug */,
+				48FB8CCC24EE26F700F9C3BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48FB8C9E24EE26F600F9C3BC /* Project object */;
+}
