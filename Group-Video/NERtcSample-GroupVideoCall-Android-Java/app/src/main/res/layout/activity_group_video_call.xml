@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:title="@string/app_name"
+        app:titleTextColor="@android:color/white" />
+
+    <com.netease.lava.nertc.sdk.video.NERtcVideoView
+        android:id="@+id/vv_local_user"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintDimensionRatio="1:1.3"
+        app:layout_constraintEnd_toStartOf="@id/vv_remote_user1"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <com.netease.lava.nertc.sdk.video.NERtcVideoView
+        android:id="@+id/vv_remote_user1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintDimensionRatio="1:1.3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/vv_local_user"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+
+    <com.netease.lava.nertc.sdk.video.NERtcVideoView
+        android:id="@+id/vv_remote_user2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintDimensionRatio="1:1.3"
+        app:layout_constraintEnd_toStartOf="@id/vv_remote_user3"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vv_local_user" />
+
+
+    <com.netease.lava.nertc.sdk.video.NERtcVideoView
+        android:id="@+id/vv_remote_user3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintDimensionRatio="1:1.3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/vv_remote_user2"
+        app:layout_constraintTop_toBottomOf="@id/vv_local_user" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
