@@ -31,7 +31,7 @@
 
 6. 将AppKey填写进Config.swift
 
-```objective-c
+```swift
 let kAppKey: String = "<#请输入您的app key#>"
 ```
 

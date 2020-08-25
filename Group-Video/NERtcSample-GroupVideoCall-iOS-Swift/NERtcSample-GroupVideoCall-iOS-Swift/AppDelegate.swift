@@ -15,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // 首次安装提示获取网络权限
+        if let url = URL(string: "https://www.baidu.com") {
+            let request = URLRequest(url: url)
+            URLSession.shared.dataTask(with: request).resume()
+        }
+        
         return true
     }
 
