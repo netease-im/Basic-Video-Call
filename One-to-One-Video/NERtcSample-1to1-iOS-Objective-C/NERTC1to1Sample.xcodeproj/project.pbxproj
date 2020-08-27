@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		419DA0B524D7EDF90001A561 /* nim_strip_archs.sh in Resources */ = {isa = PBXBuildFile; fileRef = 419DA0A524D7EDF90001A561 /* nim_strip_archs.sh */; };
 		419DA0B624D7EDF90001A561 /* NETSDemoP2PViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 419DA0A624D7EDF90001A561 /* NETSDemoP2PViewController.m */; };
 		419DA0B724D7EDF90001A561 /* NETSDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 419DA0A724D7EDF90001A561 /* NETSDemoViewController.m */; };
 		419DA0B824D7EDF90001A561 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 419DA0A824D7EDF90001A561 /* Assets.xcassets */; };
@@ -21,7 +20,6 @@
 
 /* Begin PBXFileReference section */
 		419DA0A424D7EDF90001A561 /* NTESDemoUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESDemoUserModel.h; sourceTree = "<group>"; };
-		419DA0A524D7EDF90001A561 /* nim_strip_archs.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = nim_strip_archs.sh; sourceTree = "<group>"; };
 		419DA0A624D7EDF90001A561 /* NETSDemoP2PViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NETSDemoP2PViewController.m; sourceTree = "<group>"; };
 		419DA0A724D7EDF90001A561 /* NETSDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NETSDemoViewController.m; sourceTree = "<group>"; };
 		419DA0A824D7EDF90001A561 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 				419DA0A424D7EDF90001A561 /* NTESDemoUserModel.h */,
 				419DA0B024D7EDF90001A561 /* NTESDemoUserModel.m */,
 				419DA0AE24D7EDF90001A561 /* AppKey.h */,
-				419DA0A524D7EDF90001A561 /* nim_strip_archs.sh */,
 				419DA0A824D7EDF90001A561 /* Assets.xcassets */,
 				419DA0AA24D7EDF90001A561 /* LaunchScreen.storyboard */,
 				419DA0AC24D7EDF90001A561 /* Main.storyboard */,
@@ -132,7 +129,6 @@
 				48CFCBF924C5766E002DE0CA /* Frameworks */,
 				48CFCBFA24C5766E002DE0CA /* Resources */,
 				224416CB89A37BC927D7977B /* [CP] Embed Pods Frameworks */,
-				48CFCC2E24C5781F002DE0CA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -182,7 +178,6 @@
 			files = (
 				419DA0BA24D7EDF90001A561 /* LaunchScreen.storyboard in Resources */,
 				419DA0B824D7EDF90001A561 /* Assets.xcassets in Resources */,
-				419DA0B524D7EDF90001A561 /* nim_strip_archs.sh in Resources */,
 				419DA0BB24D7EDF90001A561 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,23 +223,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NERTC1to1Sample/Pods-NERTC1to1Sample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		48CFCC2E24C5781F002DE0CA /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/bin/sh \"${SRCROOT}/NERTC1to1Sample/nim_strip_archs.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

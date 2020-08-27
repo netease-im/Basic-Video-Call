@@ -8,6 +8,7 @@
 
 #import "NTESMeetingViewController.h"
 #import <NERtcSDK/NERtcSDK.h>
+#import "NTESAppConfig.h"
 
 @interface NTESMeetingViewController () <NERtcEngineDelegateEx>
 
@@ -38,7 +39,7 @@
     NERtcEngine *coreEngine = [NERtcEngine sharedEngine];
     NERtcEngineContext *context = [[NERtcEngineContext alloc] init];
     context.engineDelegate = self;
-    context.appKey = @"<#请输入您的app key#>";
+    context.appKey = kAppKey;
     [coreEngine setupEngineWithContext:context];
     [coreEngine enableLocalAudio:YES];
     [coreEngine enableLocalVideo:YES];

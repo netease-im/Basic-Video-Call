@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		480F581224D41E02003BB446 /* NTESAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480F581124D41E02003BB446 /* NTESAppDelegate.swift */; };
+		480F581924D41E02003BB446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 480F581724D41E02003BB446 /* Main.storyboard */; };
+		480F581B24D41E02003BB446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 480F581A24D41E02003BB446 /* Assets.xcassets */; };
+		480F581E24D41E02003BB446 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 480F581C24D41E02003BB446 /* LaunchScreen.storyboard */; };
+		480F582924D41E02003BB446 /* NERtcSample_1to1_iOS_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480F582824D41E02003BB446 /* NERtcSample_1to1_iOS_SwiftTests.swift */; };
+		480F583424D41FD4003BB446 /* NTESDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480F583324D41FD4003BB446 /* NTESDemoViewController.swift */; };
+		480F583624D439A1003BB446 /* NTES1To1CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480F583524D439A1003BB446 /* NTES1To1CallViewController.swift */; };
+		4826879A24F65B050084B5D4 /* NTESAppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4826879924F65B050084B5D4 /* NTESAppConfig.swift */; };
+		8854AF9509B3C9C3610EC0E6 /* Pods_NERtcSample_1to1_iOS_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12E5C82012061546F7FA79C /* Pods_NERtcSample_1to1_iOS_Swift.framework */; };
+		977C1F652B5395CE52913CC8 /* Pods_NERtcSample_1to1_iOS_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2472BE9BC0A9048A403CDA00 /* Pods_NERtcSample_1to1_iOS_SwiftTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		480F582524D41E02003BB446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 480F580624D41E02003BB446 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 480F580D24D41E02003BB446;
+			remoteInfo = "NERtcSample-1to1-iOS-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E01F541C53D2436C5CC667B /* Pods-NERtcSample-1to1-iOS-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NERtcSample-1to1-iOS-Swift.release.xcconfig"; path = "Target Support Files/Pods-NERtcSample-1to1-iOS-Swift/Pods-NERtcSample-1to1-iOS-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		2472BE9BC0A9048A403CDA00 /* Pods_NERtcSample_1to1_iOS_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NERtcSample_1to1_iOS_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E9343BB00666607A7B79CCB /* Pods-NERtcSample-1to1-iOS-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NERtcSample-1to1-iOS-Swift.debug.xcconfig"; path = "Target Support Files/Pods-NERtcSample-1to1-iOS-Swift/Pods-NERtcSample-1to1-iOS-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		4671BF05B503D58EA38D3F0E /* Pods-NERtcSample-1to1-iOS-SwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NERtcSample-1to1-iOS-SwiftTests.release.xcconfig"; path = "Target Support Files/Pods-NERtcSample-1to1-iOS-SwiftTests/Pods-NERtcSample-1to1-iOS-SwiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		480F580E24D41E02003BB446 /* NERtcSample-1to1-iOS-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NERtcSample-1to1-iOS-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		480F581124D41E02003BB446 /* NTESAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTESAppDelegate.swift; sourceTree = "<group>"; };
+		480F581824D41E02003BB446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		480F581A24D41E02003BB446 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		480F581D24D41E02003BB446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		480F581F24D41E02003BB446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		480F582424D41E02003BB446 /* NERtcSample-1to1-iOS-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NERtcSample-1to1-iOS-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		480F582824D41E02003BB446 /* NERtcSample_1to1_iOS_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NERtcSample_1to1_iOS_SwiftTests.swift; sourceTree = "<group>"; };
+		480F582A24D41E02003BB446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		480F583324D41FD4003BB446 /* NTESDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTESDemoViewController.swift; sourceTree = "<group>"; };
+		480F583524D439A1003BB446 /* NTES1To1CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTES1To1CallViewController.swift; sourceTree = "<group>"; };
+		4826879924F65B050084B5D4 /* NTESAppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTESAppConfig.swift; sourceTree = "<group>"; };
+		77B8703D064201A883DBD046 /* Pods-NERtcSample-1to1-iOS-SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NERtcSample-1to1-iOS-SwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-NERtcSample-1to1-iOS-SwiftTests/Pods-NERtcSample-1to1-iOS-SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C12E5C82012061546F7FA79C /* Pods_NERtcSample_1to1_iOS_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NERtcSample_1to1_iOS_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		480F580B24D41E02003BB446 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8854AF9509B3C9C3610EC0E6 /* Pods_NERtcSample_1to1_iOS_Swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		480F582124D41E02003BB446 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				977C1F652B5395CE52913CC8 /* Pods_NERtcSample_1to1_iOS_SwiftTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		480F580524D41E02003BB446 = {
+			isa = PBXGroup;
+			children = (
+				480F581024D41E02003BB446 /* NERtcSample-1to1-iOS-Swift */,
+				480F582724D41E02003BB446 /* NERtcSample-1to1-iOS-SwiftTests */,
+				480F580F24D41E02003BB446 /* Products */,
+				69B629FE38E5D74BF38D023C /* Pods */,
+				E4F0CEB112CACB43B2BD7FF1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		480F580F24D41E02003BB446 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				480F580E24D41E02003BB446 /* NERtcSample-1to1-iOS-Swift.app */,
+				480F582424D41E02003BB446 /* NERtcSample-1to1-iOS-SwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		480F581024D41E02003BB446 /* NERtcSample-1to1-iOS-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				480F581124D41E02003BB446 /* NTESAppDelegate.swift */,
+				480F583324D41FD4003BB446 /* NTESDemoViewController.swift */,
+				480F583524D439A1003BB446 /* NTES1To1CallViewController.swift */,
+				4826879924F65B050084B5D4 /* NTESAppConfig.swift */,
+				480F581724D41E02003BB446 /* Main.storyboard */,
+				480F581A24D41E02003BB446 /* Assets.xcassets */,
+				480F581C24D41E02003BB446 /* LaunchScreen.storyboard */,
+				480F581F24D41E02003BB446 /* Info.plist */,
+			);
+			path = "NERtcSample-1to1-iOS-Swift";
+			sourceTree = "<group>";
+		};
+		480F582724D41E02003BB446 /* NERtcSample-1to1-iOS-SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				480F582824D41E02003BB446 /* NERtcSample_1to1_iOS_SwiftTests.swift */,
+				480F582A24D41E02003BB446 /* Info.plist */,
+			);
+			path = "NERtcSample-1to1-iOS-SwiftTests";
+			sourceTree = "<group>";
+		};
+		69B629FE38E5D74BF38D023C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E9343BB00666607A7B79CCB /* Pods-NERtcSample-1to1-iOS-Swift.debug.xcconfig */,
+				0E01F541C53D2436C5CC667B /* Pods-NERtcSample-1to1-iOS-Swift.release.xcconfig */,
+				77B8703D064201A883DBD046 /* Pods-NERtcSample-1to1-iOS-SwiftTests.debug.xcconfig */,
+				4671BF05B503D58EA38D3F0E /* Pods-NERtcSample-1to1-iOS-SwiftTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E4F0CEB112CACB43B2BD7FF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C12E5C82012061546F7FA79C /* Pods_NERtcSample_1to1_iOS_Swift.framework */,
+				2472BE9BC0A9048A403CDA00 /* Pods_NERtcSample_1to1_iOS_SwiftTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		480F580D24D41E02003BB446 /* NERtcSample-1to1-iOS-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 480F582D24D41E02003BB446 /* Build configuration list for PBXNativeTarget "NERtcSample-1to1-iOS-Swift" */;
+			buildPhases = (
+				4BEFD44E2A946FE54018AFF5 /* [CP] Check Pods Manifest.lock */,
+				480F580A24D41E02003BB446 /* Sources */,
+				480F580B24D41E02003BB446 /* Frameworks */,
+				480F580C24D41E02003BB446 /* Resources */,
+				16C4B874982D0EA85D32EF9C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NERtcSample-1to1-iOS-Swift";
+			productName = "NERtcSample-1to1-iOS-Swift";
+			productReference = 480F580E24D41E02003BB446 /* NERtcSample-1to1-iOS-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		480F582324D41E02003BB446 /* NERtcSample-1to1-iOS-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 480F583024D41E02003BB446 /* Build configuration list for PBXNativeTarget "NERtcSample-1to1-iOS-SwiftTests" */;
+			buildPhases = (
+				D1BC189BE5C39A6F4D590645 /* [CP] Check Pods Manifest.lock */,
+				480F582024D41E02003BB446 /* Sources */,
+				480F582124D41E02003BB446 /* Frameworks */,
+				480F582224D41E02003BB446 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				480F582624D41E02003BB446 /* PBXTargetDependency */,
+			);
+			name = "NERtcSample-1to1-iOS-SwiftTests";
+			productName = "NERtcSample-1to1-iOS-SwiftTests";
+			productReference = 480F582424D41E02003BB446 /* NERtcSample-1to1-iOS-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		480F580624D41E02003BB446 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Wenchao Ding";
+				TargetAttributes = {
+					480F580D24D41E02003BB446 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					480F582324D41E02003BB446 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 480F580D24D41E02003BB446;
+					};
+				};
+			};
+			buildConfigurationList = 480F580924D41E02003BB446 /* Build configuration list for PBXProject "NERtcSample-1to1-iOS-Swift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 480F580524D41E02003BB446;
+			productRefGroup = 480F580F24D41E02003BB446 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				480F580D24D41E02003BB446 /* NERtcSample-1to1-iOS-Swift */,
+				480F582324D41E02003BB446 /* NERtcSample-1to1-iOS-SwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		480F580C24D41E02003BB446 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				480F581E24D41E02003BB446 /* LaunchScreen.storyboard in Resources */,
+				480F581B24D41E02003BB446 /* Assets.xcassets in Resources */,
+				480F581924D41E02003BB446 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		480F582224D41E02003BB446 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16C4B874982D0EA85D32EF9C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NERtcSample-1to1-iOS-Swift/Pods-NERtcSample-1to1-iOS-Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NERtcSample-1to1-iOS-Swift/Pods-NERtcSample-1to1-iOS-Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NERtcSample-1to1-iOS-Swift/Pods-NERtcSample-1to1-iOS-Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BEFD44E2A946FE54018AFF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NERtcSample-1to1-iOS-Swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1BC189BE5C39A6F4D590645 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NERtcSample-1to1-iOS-SwiftTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		480F580A24D41E02003BB446 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				480F581224D41E02003BB446 /* NTESAppDelegate.swift in Sources */,
+				480F583624D439A1003BB446 /* NTES1To1CallViewController.swift in Sources */,
+				480F583424D41FD4003BB446 /* NTESDemoViewController.swift in Sources */,
+				4826879A24F65B050084B5D4 /* NTESAppConfig.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		480F582024D41E02003BB446 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				480F582924D41E02003BB446 /* NERtcSample_1to1_iOS_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		480F582624D41E02003BB446 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 480F580D24D41E02003BB446 /* NERtcSample-1to1-iOS-Swift */;
+			targetProxy = 480F582524D41E02003BB446 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		480F581724D41E02003BB446 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				480F581824D41E02003BB446 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		480F581C24D41E02003BB446 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				480F581D24D41E02003BB446 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		480F582B24D41E02003BB446 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		480F582C24D41E02003BB446 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		480F582E24D41E02003BB446 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E9343BB00666607A7B79CCB /* Pods-NERtcSample-1to1-iOS-Swift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 569GNZ5392;
+				INFOPLIST_FILE = "NERtcSample-1to1-iOS-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netease.nmc.NERtcSample-1to1-iOS-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Dev";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		480F582F24D41E02003BB446 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E01F541C53D2436C5CC667B /* Pods-NERtcSample-1to1-iOS-Swift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 569GNZ5392;
+				INFOPLIST_FILE = "NERtcSample-1to1-iOS-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netease.nmc.NERtcSample-1to1-iOS-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Dev";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		480F583124D41E02003BB446 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77B8703D064201A883DBD046 /* Pods-NERtcSample-1to1-iOS-SwiftTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 569GNZ5392;
+				INFOPLIST_FILE = "NERtcSample-1to1-iOS-SwiftTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netease.nim.NERtcSample-1to1-iOS-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NERtcSample-1to1-iOS-Swift.app/NERtcSample-1to1-iOS-Swift";
+			};
+			name = Debug;
+		};
+		480F583224D41E02003BB446 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4671BF05B503D58EA38D3F0E /* Pods-NERtcSample-1to1-iOS-SwiftTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 569GNZ5392;
+				INFOPLIST_FILE = "NERtcSample-1to1-iOS-SwiftTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netease.nim.NERtcSample-1to1-iOS-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NERtcSample-1to1-iOS-Swift.app/NERtcSample-1to1-iOS-Swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		480F580924D41E02003BB446 /* Build configuration list for PBXProject "NERtcSample-1to1-iOS-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				480F582B24D41E02003BB446 /* Debug */,
+				480F582C24D41E02003BB446 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		480F582D24D41E02003BB446 /* Build configuration list for PBXNativeTarget "NERtcSample-1to1-iOS-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				480F582E24D41E02003BB446 /* Debug */,
+				480F582F24D41E02003BB446 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		480F583024D41E02003BB446 /* Build configuration list for PBXNativeTarget "NERtcSample-1to1-iOS-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				480F583124D41E02003BB446 /* Debug */,
+				480F583224D41E02003BB446 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 480F580624D41E02003BB446 /* Project object */;
+}
