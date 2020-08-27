@@ -11,7 +11,6 @@
 		48FB8CB624EE26F700F9C3BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FB8CB524EE26F700F9C3BC /* Assets.xcassets */; };
 		48FB8CB924EE26F700F9C3BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FB8CB724EE26F700F9C3BC /* LaunchScreen.storyboard */; };
 		48FB8CBC24EE26F700F9C3BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FB8CBB24EE26F700F9C3BC /* main.m */; };
-		48FB8CE124EE4FE400F9C3BC /* nim_strip_archs.sh in Resources */ = {isa = PBXBuildFile; fileRef = 48FB8CE024EE4FE400F9C3BC /* nim_strip_archs.sh */; };
 		48FB8CE924EE651C00F9C3BC /* NTESMeetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FB8CE424EE651C00F9C3BC /* NTESMeetingViewController.m */; };
 		48FB8CEA24EE651C00F9C3BC /* NTESDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FB8CE524EE651C00F9C3BC /* NTESDemoViewController.m */; };
 		48FB8CEB24EE651C00F9C3BC /* NTESAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FB8CE824EE651C00F9C3BC /* NTESAppDelegate.m */; };
@@ -28,8 +27,7 @@
 		48FB8CB824EE26F700F9C3BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48FB8CBA24EE26F700F9C3BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48FB8CBB24EE26F700F9C3BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		48FB8CDC24EE4E0400F9C3BC /* NTESAppDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTESAppDefine.h; sourceTree = "<group>"; };
-		48FB8CE024EE4FE400F9C3BC /* nim_strip_archs.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = nim_strip_archs.sh; sourceTree = "<group>"; };
+		48FB8CDC24EE4E0400F9C3BC /* NTESAppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTESAppConfig.h; sourceTree = "<group>"; };
 		48FB8CE224EE651C00F9C3BC /* NTESMeetingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESMeetingViewController.h; sourceTree = "<group>"; };
 		48FB8CE324EE651C00F9C3BC /* NTESAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESAppDelegate.h; sourceTree = "<group>"; };
 		48FB8CE424EE651C00F9C3BC /* NTESMeetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESMeetingViewController.m; sourceTree = "<group>"; };
@@ -83,14 +81,13 @@
 		48FB8CA824EE26F600F9C3BC /* NERtcSample-GroupVideoCall-iOS-Objective-C */ = {
 			isa = PBXGroup;
 			children = (
-				48FB8CDC24EE4E0400F9C3BC /* NTESAppDefine.h */,
+				48FB8CDC24EE4E0400F9C3BC /* NTESAppConfig.h */,
 				48FB8CE324EE651C00F9C3BC /* NTESAppDelegate.h */,
 				48FB8CE824EE651C00F9C3BC /* NTESAppDelegate.m */,
 				48FB8CE624EE651C00F9C3BC /* NTESDemoViewController.h */,
 				48FB8CE524EE651C00F9C3BC /* NTESDemoViewController.m */,
 				48FB8CE224EE651C00F9C3BC /* NTESMeetingViewController.h */,
 				48FB8CE424EE651C00F9C3BC /* NTESMeetingViewController.m */,
-				48FB8CE024EE4FE400F9C3BC /* nim_strip_archs.sh */,
 				48FB8CB224EE26F600F9C3BC /* Main.storyboard */,
 				48FB8CB524EE26F700F9C3BC /* Assets.xcassets */,
 				48FB8CB724EE26F700F9C3BC /* LaunchScreen.storyboard */,
@@ -123,7 +120,6 @@
 				48FB8CA324EE26F600F9C3BC /* Frameworks */,
 				48FB8CA424EE26F600F9C3BC /* Resources */,
 				2F49BD2BAFEF9095DE15CA8E /* [CP] Embed Pods Frameworks */,
-				48FB8CDF24EE4F1500F9C3BC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -171,7 +167,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48FB8CE124EE4FE400F9C3BC /* nim_strip_archs.sh in Resources */,
 				48FB8CB924EE26F700F9C3BC /* LaunchScreen.storyboard in Resources */,
 				48FB8CB624EE26F700F9C3BC /* Assets.xcassets in Resources */,
 				48FB8CB424EE26F600F9C3BC /* Main.storyboard in Resources */,
@@ -197,23 +192,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NERtcSample-GroupVideoCall-iOS-Objective-C/Pods-NERtcSample-GroupVideoCall-iOS-Objective-C-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		48FB8CDF24EE4F1500F9C3BC /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/bin/sh \"${SRCROOT}/${PROJECT_NAME}/nim_strip_archs.sh\"\n";
 		};
 		9B188AF479C65B366D05C69B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

@@ -5,6 +5,7 @@ xcuserdata/
 *.xccheckoutPodfile.lock
 *.xcworkspace
 Podfile.lock
+Pods/
 
 # Android
 .idea/

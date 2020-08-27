@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		86E097D524F3BB640005CE13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E097D424F3BB640005CE13 /* AppDelegate.swift */; };
+		86E097D924F3BB640005CE13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E097D824F3BB640005CE13 /* ViewController.swift */; };
+		86E097DE24F3BB680005CE13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E097DD24F3BB680005CE13 /* Assets.xcassets */; };
+		86E097E124F3BB680005CE13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E097DF24F3BB680005CE13 /* LaunchScreen.storyboard */; };
+		86E097F824F3C3E50005CE13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E097F624F3C3E50005CE13 /* Main.storyboard */; };
+		86E097FA24F3C51F0005CE13 /* MeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E097F924F3C51F0005CE13 /* MeetingViewController.swift */; };
+		86E097FC24F3E4C90005CE13 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E097FB24F3E4C90005CE13 /* Config.swift */; };
+		C432AFB80621897B742A1A12 /* Pods_NERtcSample_GroupVideoCall_iOS_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9AC906C417C5FB9D1DE42D /* Pods_NERtcSample_GroupVideoCall_iOS_Swift.framework */; };
+		DBC67EFF9E2F2A4026B2D604 /* Pods_NERtcSample_GroupVideoCall_iOS_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9217B3EB497DA9E979AD8BB3 /* Pods_NERtcSample_GroupVideoCall_iOS_SwiftTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		86E097E824F3BB680005CE13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86E097C924F3BB640005CE13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86E097D024F3BB640005CE13;
+			remoteInfo = "NERtcSample-GroupVideoCall-iOS-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01C7F055D1A2F7B2A4DD5AFD /* Pods-NERtcSample-GroupVideoCall-iOS-SwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NERtcSample-GroupVideoCall-iOS-SwiftTests.release.xcconfig"; path = "Target Support Files/Pods-NERtcSample-GroupVideoCall-iOS-SwiftTests/Pods-NERtcSample-GroupVideoCall-iOS-SwiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		4C12F9C5C57E79875E3045AE /* Pods-NERtcSample-GroupVideoCall-iOS-SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NERtcSample-GroupVideoCall-iOS-SwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-NERtcSample-GroupVideoCall-iOS-SwiftTests/Pods-NERtcSample-GroupVideoCall-iOS-SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		86E097D124F3BB640005CE13 /* NERtcSample-GroupVideoCall-iOS-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NERtcSample-GroupVideoCall-iOS-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86E097D424F3BB640005CE13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		86E097D824F3BB640005CE13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		86E097DD24F3BB680005CE13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		86E097E024F3BB680005CE13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		86E097E224F3BB680005CE13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86E097E724F3BB680005CE13 /* NERtcSample-GroupVideoCall-iOS-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NERtcSample-GroupVideoCall-iOS-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86E097F724F3C3E50005CE13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		86E097F924F3C51F0005CE13 /* MeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingViewController.swift; sourceTree = "<group>"; };
+		86E097FB24F3E4C90005CE13 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		9217B3EB497DA9E979AD8BB3 /* Pods_NERtcSample_GroupVideoCall_iOS_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NERtcSample_GroupVideoCall_iOS_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB6720B96926B4409078D22D /* Pods-NERtcSample-GroupVideoCall-iOS-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NERtcSample-GroupVideoCall-iOS-Swift.debug.xcconfig"; path = "Target Support Files/Pods-NERtcSample-GroupVideoCall-iOS-Swift/Pods-NERtcSample-GroupVideoCall-iOS-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		C0C00E5C39257A4231AE8CC5 /* Pods-NERtcSample-GroupVideoCall-iOS-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NERtcSample-GroupVideoCall-iOS-Swift.release.xcconfig"; path = "Target Support Files/Pods-NERtcSample-GroupVideoCall-iOS-Swift/Pods-NERtcSample-GroupVideoCall-iOS-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		DA9AC906C417C5FB9D1DE42D /* Pods_NERtcSample_GroupVideoCall_iOS_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NERtcSample_GroupVideoCall_iOS_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86E097CE24F3BB640005CE13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C432AFB80621897B742A1A12 /* Pods_NERtcSample_GroupVideoCall_iOS_Swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86E097E424F3BB680005CE13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC67EFF9E2F2A4026B2D604 /* Pods_NERtcSample_GroupVideoCall_iOS_SwiftTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		162ABA60B67278959B9C0282 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA9AC906C417C5FB9D1DE42D /* Pods_NERtcSample_GroupVideoCall_iOS_Swift.framework */,
+				9217B3EB497DA9E979AD8BB3 /* Pods_NERtcSample_GroupVideoCall_iOS_SwiftTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1B68598A36A0135FAAF5A90E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB6720B96926B4409078D22D /* Pods-NERtcSample-GroupVideoCall-iOS-Swift.debug.xcconfig */,
+				C0C00E5C39257A4231AE8CC5 /* Pods-NERtcSample-GroupVideoCall-iOS-Swift.release.xcconfig */,
+				4C12F9C5C57E79875E3045AE /* Pods-NERtcSample-GroupVideoCall-iOS-SwiftTests.debug.xcconfig */,
+				01C7F055D1A2F7B2A4DD5AFD /* Pods-NERtcSample-GroupVideoCall-iOS-SwiftTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		86E097C824F3BB640005CE13 = {
+			isa = PBXGroup;
+			children = (
+				86E097D324F3BB640005CE13 /* NERtcSample-GroupVideoCall-iOS-Swift */,
+				86E097D224F3BB640005CE13 /* Products */,
+				1B68598A36A0135FAAF5A90E /* Pods */,
+				162ABA60B67278959B9C0282 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		86E097D224F3BB640005CE13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86E097D124F3BB640005CE13 /* NERtcSample-GroupVideoCall-iOS-Swift.app */,
+				86E097E724F3BB680005CE13 /* NERtcSample-GroupVideoCall-iOS-SwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86E097D324F3BB640005CE13 /* NERtcSample-GroupVideoCall-iOS-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				86E097D424F3BB640005CE13 /* AppDelegate.swift */,
+				86E097D824F3BB640005CE13 /* ViewController.swift */,
+				86E097F924F3C51F0005CE13 /* MeetingViewController.swift */,
+				86E097DD24F3BB680005CE13 /* Assets.xcassets */,
+				86E097DF24F3BB680005CE13 /* LaunchScreen.storyboard */,
+				86E097F624F3C3E50005CE13 /* Main.storyboard */,
+				86E097E224F3BB680005CE13 /* Info.plist */,
+				86E097FB24F3E4C90005CE13 /* Config.swift */,
+			);
+			path = "NERtcSample-GroupVideoCall-iOS-Swift";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86E097D024F3BB640005CE13 /* NERtcSample-GroupVideoCall-iOS-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86E097F024F3BB680005CE13 /* Build configuration list for PBXNativeTarget "NERtcSample-GroupVideoCall-iOS-Swift" */;
+			buildPhases = (
+				A4B97D2D8192A5D48D0F12C4 /* [CP] Check Pods Manifest.lock */,
+				86E097CD24F3BB640005CE13 /* Sources */,
+				86E097CE24F3BB640005CE13 /* Frameworks */,
+				86E097CF24F3BB640005CE13 /* Resources */,
+				26A2076227C789AAC5E187A1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NERtcSample-GroupVideoCall-iOS-Swift";
+			productName = "NERtcSample-GroupVideoCall-iOS-Swift";
+			productReference = 86E097D124F3BB640005CE13 /* NERtcSample-GroupVideoCall-iOS-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		86E097E624F3BB680005CE13 /* NERtcSample-GroupVideoCall-iOS-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86E097F324F3BB680005CE13 /* Build configuration list for PBXNativeTarget "NERtcSample-GroupVideoCall-iOS-SwiftTests" */;
+			buildPhases = (
+				070ECDACEAC22DE0DAB66BA8 /* [CP] Check Pods Manifest.lock */,
+				86E097E324F3BB680005CE13 /* Sources */,
+				86E097E424F3BB680005CE13 /* Frameworks */,
+				86E097E524F3BB680005CE13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86E097E924F3BB680005CE13 /* PBXTargetDependency */,
+			);
+			name = "NERtcSample-GroupVideoCall-iOS-SwiftTests";
+			productName = "NERtcSample-GroupVideoCall-iOS-SwiftTests";
+			productReference = 86E097E724F3BB680005CE13 /* NERtcSample-GroupVideoCall-iOS-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86E097C924F3BB640005CE13 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = Think;
+				TargetAttributes = {
+					86E097D024F3BB640005CE13 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					86E097E624F3BB680005CE13 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 86E097D024F3BB640005CE13;
+					};
+				};
+			};
+			buildConfigurationList = 86E097CC24F3BB640005CE13 /* Build configuration list for PBXProject "NERtcSample-GroupVideoCall-iOS-Swift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 86E097C824F3BB640005CE13;
+			productRefGroup = 86E097D224F3BB640005CE13 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86E097D024F3BB640005CE13 /* NERtcSample-GroupVideoCall-iOS-Swift */,
+				86E097E624F3BB680005CE13 /* NERtcSample-GroupVideoCall-iOS-SwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86E097CF24F3BB640005CE13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86E097F824F3C3E50005CE13 /* Main.storyboard in Resources */,
+				86E097E124F3BB680005CE13 /* LaunchScreen.storyboard in Resources */,
+				86E097DE24F3BB680005CE13 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86E097E524F3BB680005CE13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		070ECDACEAC22DE0DAB66BA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NERtcSample-GroupVideoCall-iOS-SwiftTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26A2076227C789AAC5E187A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NERtcSample-GroupVideoCall-iOS-Swift/Pods-NERtcSample-GroupVideoCall-iOS-Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NERtcSample-GroupVideoCall-iOS-Swift/Pods-NERtcSample-GroupVideoCall-iOS-Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NERtcSample-GroupVideoCall-iOS-Swift/Pods-NERtcSample-GroupVideoCall-iOS-Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4B97D2D8192A5D48D0F12C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NERtcSample-GroupVideoCall-iOS-Swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86E097CD24F3BB640005CE13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86E097FC24F3E4C90005CE13 /* Config.swift in Sources */,
+				86E097D924F3BB640005CE13 /* ViewController.swift in Sources */,
+				86E097D524F3BB640005CE13 /* AppDelegate.swift in Sources */,
+				86E097FA24F3C51F0005CE13 /* MeetingViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86E097E324F3BB680005CE13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86E097E924F3BB680005CE13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86E097D024F3BB640005CE13 /* NERtcSample-GroupVideoCall-iOS-Swift */;
+			targetProxy = 86E097E824F3BB680005CE13 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		86E097DF24F3BB680005CE13 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86E097E024F3BB680005CE13 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		86E097F624F3C3E50005CE13 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86E097F724F3C3E50005CE13 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		86E097EE24F3BB680005CE13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		86E097EF24F3BB680005CE13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		86E097F124F3BB680005CE13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB6720B96926B4409078D22D /* Pods-NERtcSample-GroupVideoCall-iOS-Swift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 569GNZ5392;
+				INFOPLIST_FILE = "NERtcSample-GroupVideoCall-iOS-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netease.nmc.NERtcSample-GroupVideoCall-iOS-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Dev";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		86E097F224F3BB680005CE13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0C00E5C39257A4231AE8CC5 /* Pods-NERtcSample-GroupVideoCall-iOS-Swift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 569GNZ5392;
+				INFOPLIST_FILE = "NERtcSample-GroupVideoCall-iOS-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netease.nmc.NERtcSample-GroupVideoCall-iOS-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Dev";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		86E097F424F3BB680005CE13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C12F9C5C57E79875E3045AE /* Pods-NERtcSample-GroupVideoCall-iOS-SwiftTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "NERtcSample-GroupVideoCall-iOS-SwiftTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netease.nmc.demo.NERtcSample-GroupVideoCall-iOS-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NERtcSample-GroupVideoCall-iOS-Swift.app/NERtcSample-GroupVideoCall-iOS-Swift";
+			};
+			name = Debug;
+		};
+		86E097F524F3BB680005CE13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01C7F055D1A2F7B2A4DD5AFD /* Pods-NERtcSample-GroupVideoCall-iOS-SwiftTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "NERtcSample-GroupVideoCall-iOS-SwiftTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netease.nmc.demo.NERtcSample-GroupVideoCall-iOS-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NERtcSample-GroupVideoCall-iOS-Swift.app/NERtcSample-GroupVideoCall-iOS-Swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86E097CC24F3BB640005CE13 /* Build configuration list for PBXProject "NERtcSample-GroupVideoCall-iOS-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86E097EE24F3BB680005CE13 /* Debug */,
+				86E097EF24F3BB680005CE13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86E097F024F3BB680005CE13 /* Build configuration list for PBXNativeTarget "NERtcSample-GroupVideoCall-iOS-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86E097F124F3BB680005CE13 /* Debug */,
+				86E097F224F3BB680005CE13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86E097F324F3BB680005CE13 /* Build configuration list for PBXNativeTarget "NERtcSample-GroupVideoCall-iOS-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86E097F424F3BB680005CE13 /* Debug */,
+				86E097F524F3BB680005CE13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 86E097C924F3BB640005CE13 /* Project object */;
+}
