@@ -30,7 +30,7 @@
 
 5. 等待专属客户经理联系您，并向他获取Appkey
 
-6. 将 AppID 填写进 "app/src/main/res/values/strings.xml"
+6. 将 AppID 填写进 "app/src/main/res/values/app_key.xml"
 
 ```xml
 <!-- 替换为你自己的AppKey -->
@@ -64,7 +64,7 @@ Android [视频通话 SDK](https://dev.yunxin.163.com/docs/product/音视频通�
 
 ##### 添加 SDK
 
-1. 设置 libs 存放路径。使用 Android Studio 打开你想要运行的项目，选择 *app/src/build.gradle* 文件，将预设的 libs 路径添加到 fileTree 代码行中。
+1. 设置 libs 存放路径。使用 Android Studio 打开你想要运行的项目，选择 *app/build.gradle* 文件，将预设的 libs 路径添加到 fileTree 代码行中。
 
    ![img](https://yx-web-nosdn.netease.im/quickhtml%2Fassets%2Fyunxin%2Fdefault%2FandroidStudioConfig.jpg)
 

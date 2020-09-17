@@ -18,8 +18,6 @@ import com.netease.lava.nertc.sdk.video.NERtcVideoView;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.netease.nmc.nertcsample_groupvideocall_android_java.AppDefine.APP_KEY;
-
 public class GroupVideoCallActivity extends AppCompatActivity implements NERtcCallback {
 
     public static final String EXTRA_USER_ID = "extra_user_id";
@@ -71,7 +69,7 @@ public class GroupVideoCallActivity extends AppCompatActivity implements NERtcCa
         NERtcParameters parameters = new NERtcParameters();
         NERtc.getInstance().setParameters(parameters); //先设置参数，后初始化
         try {
-            NERtc.getInstance().init(getApplicationContext(), APP_KEY, this, null);
+            NERtc.getInstance().init(getApplicationContext(), getString(R.string.app_key), this, null);
             NERtc.getInstance().enableLocalAudio(true);
             NERtc.getInstance().enableLocalVideo(true);
         } catch (Exception e) {
