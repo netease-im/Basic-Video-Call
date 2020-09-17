@@ -1,6 +1,7 @@
 package com.netease.nmc.nertcsample_groupvideocall_android_java;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -16,8 +17,6 @@ import com.netease.lava.nertc.sdk.video.NERtcVideoView;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.netease.nmc.nertcsample_groupvideocall_android_java.AppDefine.APP_KEY;
 
 public class GroupVideoCallActivity extends AppCompatActivity implements NERtcCallback {
 
@@ -48,10 +47,12 @@ public class GroupVideoCallActivity extends AppCompatActivity implements NERtcCa
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
+    public void onBackPressed() {
+        leave();
+    }
+
+    private void leave() {
         NERtc.getInstance().leaveChannel();
-        NERtc.getInstance().release();
     }
 
     private void initViews() {
@@ -60,13 +61,15 @@ public class GroupVideoCallActivity extends AppCompatActivity implements NERtcCa
         mRemoteUserVvList.add(findViewById(R.id.vv_remote_user1));
         mRemoteUserVvList.add(findViewById(R.id.vv_remote_user2));
         mRemoteUserVvList.add(findViewById(R.id.vv_remote_user3));
+
+        findViewById(R.id.btn_leave).setOnClickListener(view -> leave());
     }
 
     private void setupNERtc() {
         NERtcParameters parameters = new NERtcParameters();
         NERtc.getInstance().setParameters(parameters); //先设置参数，后初始化
         try {
-            NERtc.getInstance().init(getApplicationContext(), APP_KEY, this, null);
+            NERtc.getInstance().init(getApplicationContext(), getString(R.string.app_key), this, null);
             NERtc.getInstance().enableLocalAudio(true);
             NERtc.getInstance().enableLocalVideo(true);
         } catch (Exception e) {
@@ -108,7 +111,8 @@ public class GroupVideoCallActivity extends AppCompatActivity implements NERtcCa
 
     @Override
     public void onLeaveChannel(int i) {
-
+        NERtc.getInstance().release();
+        finish();
     }
 
     @Override

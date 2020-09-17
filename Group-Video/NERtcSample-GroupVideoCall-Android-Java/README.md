@@ -30,7 +30,7 @@
 
 5. 等待专属客户经理联系您，并向他获取Appkey
 
-6. 将 AppID 填写进 "app/src/main/res/values/strings.xml"
+6. 将 AppID 填写进 "app/src/main/res/values/app_key.xml"
 
 ```xml
 <!-- 替换为你自己的AppKey -->
@@ -64,7 +64,7 @@ Android [视频通话 SDK](https://dev.yunxin.163.com/docs/product/音视频通�
 
 ##### 添加 SDK
 
-1. 设置 libs 存放路径。使用 Android Studio 打开你想要运行的项目，选择 *app/src/build.gradle* 文件，将预设的 libs 路径添加到 fileTree 代码行中。
+1. 设置 libs 存放路径。使用 Android Studio 打开你想要运行的项目，选择 *app/build.gradle* 文件，将预设的 libs 路径添加到 fileTree 代码行中。
 
    ![img](https://yx-web-nosdn.netease.im/quickhtml%2Fassets%2Fyunxin%2Fdefault%2FandroidStudioConfig.jpg)
 
@@ -86,10 +86,10 @@ Android [视频通话 SDK](https://dev.yunxin.163.com/docs/product/音视频通�
 - `com.netease.lava.nertc.sdk.video.NERtcVideoView`
 - `com.netease.lava.nertc.sdk.video.NERtcRemoteVideoStreamType`
 
-进入频道之前，调用 `init` 进行初始化。在该方法中:
+进入房间之前，调用 `init` 进行初始化。在该方法中:
 
-- 填入后台应用注册的 **AppKey**。只有 **AppKey** 相同的应用程序才能进入同一个频道进行互通。
-- 指定一个事件回调。SDK 通过指定的事件通知应用程序 SDK 的运行事件，如: 加入或离开频道，新用户加入频道等。
+- 填入后台应用注册的 **AppKey**。只有 **AppKey** 相同的应用程序才能进入同一个房间进行互通。
+- 指定一个事件回调。SDK 通过指定的事件通知应用程序 SDK 的运行事件，如: 加入或离开房间，新用户加入房间等。
 
 ```java
 import com.netease.lava.nertc.sdk.NERtcCallback;
@@ -117,21 +117,21 @@ private void setupNERtc() {
 }
 ```
 
-### 加入频道
+### 加入房间
 
-在加入频道前，请确保你已完成环境准备、安装包获取等步骤。
+在加入房间前，请确保你已完成环境准备、安装包获取等步骤。
 
-#### 加入通信频道
+#### 加入通信房间
 
-调用 `joinChannel` 方法加入频道。在该方法中:
+调用 `joinChannel` 方法加入房间。在该方法中:
 
 在该方法中：
 
 - 传入能标识用户角色和权限的 `Token`。如果安全要求不高，也可以将值设为 null。Token 需要在应用程序的服务器端生成，具体生成办法，详见 [密钥说明](https://dev.yunxin.163.com/docs/product/音视频通话G2/服务端API文档?pos=toc-2-15)。
-- 传入能标识频道的频道名称。输入相同频道名称的用户会进入同一个频道。
-- 频道内每个用户的 UID 必须是唯一的。
+- 传入能标识房间的房间名称。输入相同房间名称的用户会进入同一个房间。
+- 房间内每个用户的 UID 必须是唯一的。
 
-> 如果已在频道中，用户必须调用 `leaveChannel` 方法退出当前频道，才能进入下一个频道。
+> 如果已在房间中，用户必须调用 `leaveChannel` 方法退出当前房间，才能进入下一个房间。
 
 ```java
 NERtcEx.getInstance().joinChannel(null, roomID, userID);
@@ -139,7 +139,7 @@ NERtcEx.getInstance().joinChannel(null, roomID, userID);
 
 ### 发布和订阅音视频流
 
-在发布和订阅音视频流前，请确保你已完成环境准备、安装包获取等步骤，并成功加入频道。
+在发布和订阅音视频流前，请确保你已完成环境准备、安装包获取等步骤，并成功加入房间。
 
 #### 打开视频模式
 
@@ -156,7 +156,7 @@ NERtc.getInstance().enableLocalVideo(boolean enable);
 
 本地视频视图，是指用户在本地设备上看到的本地视频流的视图。
 
-在加入频道前，调用 `setupLocalVideoCanvas` 方法使应用程序绑定本地视频流的显示视窗，并设置本地看到的本地视频视图。`setupLocalVideoCanvas` 参数默认为 `NERtcVideoView`，`NERtcVideoView` 可以通过:
+在加入房间前，调用 `setupLocalVideoCanvas` 方法使应用程序绑定本地视频流的显示视窗，并设置本地看到的本地视频视图。`setupLocalVideoCanvas` 参数默认为 `NERtcVideoView`，`NERtcVideoView` 可以通过:
 
 - 将 setZOrderMediaOverlay 设置为 true，用以覆盖父视图;
 - 通过 setScalingType 设置 View 的缩放模式;
@@ -192,14 +192,14 @@ remoteUserVv.setScalingType(NERtcConstants.VideoScalingType.SCALE_ASPECT_FIT);
 NERtcEx.getInstance().setupRemoteVideoCanvas(remoteUserVv, uid);
 ```
 
-### 离开频道
+### 离开房间
 
-通话或直播结束时，你可以调用 `leaveChannel` 方法离开频道，结束或退出通话或直播。
+通话或直播结束时，你可以调用 `leaveChannel` 方法离开房间，结束或退出通话或直播。
 
-不论当前是否还在直播中，调用该方法会把直播相关的所有资源释放掉。`leaveChannel` 并不会直接让用户离开频道。调用该方法后 SDK 会触发 `onLeaveChannel` 回调。
+不论当前是否还在直播中，调用该方法会把直播相关的所有资源释放掉。`leaveChannel` 并不会直接让用户离开房间。调用该方法后 SDK 会触发 `onLeaveChannel` 回调。
 
 ```java
 NERtcEx.getInstance().leaveChannel();
 ```
 
-**如果在调用** `leaveChannel` **方法后立即使用** `release`**，则退出频道会被打断，SDK 也不会触发** `onLeaveChannel` **回调。**
+**如果在调用** `leaveChannel` **方法后立即使用** `release`**，则退出房间会被打断，SDK 也不会触发** `onLeaveChannel` **回调。**
