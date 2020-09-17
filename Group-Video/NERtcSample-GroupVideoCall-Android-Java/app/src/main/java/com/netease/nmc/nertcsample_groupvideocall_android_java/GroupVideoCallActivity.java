@@ -1,6 +1,7 @@
 package com.netease.nmc.nertcsample_groupvideocall_android_java;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -48,10 +49,12 @@ public class GroupVideoCallActivity extends AppCompatActivity implements NERtcCa
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
+    public void onBackPressed() {
+        leave();
+    }
+
+    private void leave() {
         NERtc.getInstance().leaveChannel();
-        NERtc.getInstance().release();
     }
 
     private void initViews() {
@@ -60,6 +63,8 @@ public class GroupVideoCallActivity extends AppCompatActivity implements NERtcCa
         mRemoteUserVvList.add(findViewById(R.id.vv_remote_user1));
         mRemoteUserVvList.add(findViewById(R.id.vv_remote_user2));
         mRemoteUserVvList.add(findViewById(R.id.vv_remote_user3));
+
+        findViewById(R.id.btn_leave).setOnClickListener(view -> leave());
     }
 
     private void setupNERtc() {
@@ -108,7 +113,8 @@ public class GroupVideoCallActivity extends AppCompatActivity implements NERtcCa
 
     @Override
     public void onLeaveChannel(int i) {
-
+        NERtc.getInstance().release();
+        finish();
     }
 
     @Override
