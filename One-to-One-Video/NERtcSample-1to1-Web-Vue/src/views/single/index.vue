@@ -19,7 +19,7 @@
 <script>
 
     import { message } from '../../components/message'
-    import WebRTC2 from '../../sdk/NIM_Web_WebRTC2_v3.6.0.js'
+    import WebRTC2 from '../../sdk/NIM_Web_WebRTC2_v3.7.0.js'
     import config from '../../../config'
     import { getToken } from '../../common'
 
@@ -98,31 +98,15 @@
                     console.warn('播放对方视频失败了: ', err)
                 })
             })
-            this.getUserCount()
-                .then(userCount => {
-                    if (userCount >= this.max) {
-                        this.returnJoin(1000);
-                        throw Error('该房间人数已满！');
-                    }
-                    return this.getToken()
-                })
-                .then(token => {
-                    this.joinChannel(token)
-                })
-                .catch(e => {
-                    message(e)
-                    console.error(e)
-                })
+
+            this.getToken().then(token => {
+                this.joinChannel(token)
+            }).catch(e => {
+                message(e)
+                console.error(e)
+            })
         },
         methods: {
-            getUserCount() {
-                if (!this.client) {
-                    throw Error('内部错误，请重新加入房间');
-                }
-                return this.client.getSessionStats().then(stats => {
-                    return stats.UserCount
-                })
-            },
             getToken() {
                 return getToken({
                     uid: this.localUid,

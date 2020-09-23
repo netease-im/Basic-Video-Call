@@ -27,25 +27,25 @@ vue （vue-cli 4.x）
 
 ## 6.开始运行项目
 
-### Project setup
+### 安装依赖
 
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 本地启动
 
 ```
 npm run dev
 ```
 
-### Compiles and minifies for production
+### 正式环境打包
 
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### 代码检查及修复
 
 ```
 npm run lint
@@ -53,7 +53,7 @@ npm run lint
 
 ## 7.注意事项
 
-- 当前功能内部署了云信的3.6.0版本的sdk，如需要最新版本的sdk请主动去[云信官网](https://yunxin.163.com/)下载
-- 从云信获取到应用appkey之后，需要使用者主动去代码中添加：`/src/views/single/index.vue`中
+- 当前功能内部署了云信的3.7.0版本的sdk，如需要最新版本的sdk请主动去[云信官网](https://yunxin.163.com/)下载
+- 从云信获取到应用appkey和appSecret之后，需要使用者主动去代码中添加：`/config/index`中
 - 云信sdk音视频功能，需要运行在安全环境中：https链接或者本地链接（localhost、127.0.0.1）
 - 更多内容请访问[云信官网](https://yunxin.163.com/)了解
