@@ -20,7 +20,7 @@ jobs:
       XC_EXPORT_OPTIONS_PATH: ${{ './Workflow/ExportOptions.plist' }}
       XC_KEY_STUB_SCRIPT_PATH: ${{ './Workflow/keyStub.py' }}
 
-      UPLOAD_SCRIPT_PATH: ${{ ./Workflow/upload.py }}
+      UPLOAD_SCRIPT_PATH: ${{ './Workflow/upload.py' }}
       ARTIFACTS_DIR: ${{ './product/artifacts' }}
       ENCRYPTED_CERT_PATH: ${{ '../../Shared Files/iOS/cert.p12.gpg' }}
       DECRYPTED_CERT_PATH: ${{ './Workflow/cert.p12' }}
