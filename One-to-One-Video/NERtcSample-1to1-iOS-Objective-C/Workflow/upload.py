@@ -5,7 +5,7 @@ import sys
 
 BASE_URL = sys.argv[1]
 FILE_PATH = sys.argv[2]
-QRCODE_OUTPUT = sys.argv[3]
+# QRCODE_OUTPUT = sys.argv[3]
 
 def login(username,password):
 	print("Start login")
