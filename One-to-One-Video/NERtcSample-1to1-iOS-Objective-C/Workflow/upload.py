@@ -26,7 +26,7 @@ def upload(session,file):
 	file = open(FILE_PATH, 'rb')
 	print('file is {}'.format(file))
 	files = {'file': (os.path.basename(FILE_PATH), file, 'multipart/form-data', {'Expires': '0'})}
-	response = session.post(url, files=files)
+	response = session.post(url, files=files, timeout=600)
 	responseJson = response.json()
 	print(json.dumps(responseJson, indent=4, sort_keys=False))
 	file.close()
