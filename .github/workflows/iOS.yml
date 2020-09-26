@@ -89,10 +89,11 @@ jobs:
     - name: Export IPA
       run: 
         mkdir -p $XC_IPA_DIR;
+        mkdir -p $ARTIFACTS_DIR;
         xcodebuild -exportArchive -archivePath $XC_ARCHIVE_DIR/$XC_PROJECT_NAME.xcarchive -exportPath $XC_IPA_DIR -exportOptionsPlist $XC_EXPORT_OPTIONS_PATH;
         mv $XC_IPA_DIR/$XC_SCHEME.ipa $ARTIFACTS_DIR/$XC_PROJECT_NAME.ipa;
 
-    - name: Upload And Generate QRCode
+    - name: Generate QRCode
       run: 
         python $UPLOAD_SCRIPT_PATH $UPLOAD_HOST $ARTIFACTS_DIR/$IPA_FILE $ARTIFACTS_DIR/$XC_PROJECT_NAME.png
 
