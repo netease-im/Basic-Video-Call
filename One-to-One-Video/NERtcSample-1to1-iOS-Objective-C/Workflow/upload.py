@@ -3,8 +3,8 @@ import os
 import json
 import sys
 
-# BASE_URL = sys.argv[1]
-BASE_URL = "http://59.111.96.207:8076"
+BASE_URL = sys.argv[1]
+# BASE_URL = "http://59.111.96.207:8076"
 FILE_PATH = sys.argv[2]
 # QRCODE_OUTPUT = sys.argv[3]
 
