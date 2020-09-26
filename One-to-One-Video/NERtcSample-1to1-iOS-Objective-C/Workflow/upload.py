@@ -16,7 +16,6 @@ def login(username,password):
 	headers = {'Content-Type': 'application/json'}
 	response = session.post(url, headers=headers, data=json.dumps(payload))
 	responseJson = response.json()
-	response.close()
 	print(json.dumps(responseJson, indent=4, sort_keys=False))
 	return session
 
@@ -30,7 +29,6 @@ def upload(session,file):
 	responseJson = response.json()
 	print(json.dumps(responseJson, indent=4, sort_keys=False))
 	file.close()
-	response.close()
 	return responseJson["data"]
 	
 
