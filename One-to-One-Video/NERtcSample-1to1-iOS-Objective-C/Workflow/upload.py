@@ -22,8 +22,8 @@ def upload(session,file):
 	url = BASE_URL + "/app/upload"
 	file = open(FILE_PATH, 'rb')
 	print('file is {}'.format(file))
-	# files = {'file': (os.path.basename(FILE_PATH), file, 'multipart/form-data', {'Expires': '0'})}
-	# response = session.post(url, files=files).json()
+	files = {'file': (os.path.basename(FILE_PATH), file, 'multipart/form-data', {'Expires': '0'})}
+	response = session.post(url, files=files).json()
 	print(json.dumps(response, indent=4, sort_keys=False))
 	file.close()
 	return response["data"]
