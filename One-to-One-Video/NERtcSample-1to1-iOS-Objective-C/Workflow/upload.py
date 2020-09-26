@@ -10,7 +10,7 @@ QRCODE_OUTPUT = sys.argv[3]
 
 def login(username,password):
 	print("Start login")
-	session = requests.Session()
+	session = requests.Session(config={'keep_alive': False})
 	url = BASE_URL + "/account/login/"
 	payload = {"username": username, "password": password}
 	headers = {'Content-Type': 'application/json'}
@@ -24,7 +24,7 @@ def upload(session,file):
 	file = open(FILE_PATH, 'rb')
 	print('file is {}'.format(file))
 	files = {'file': (os.path.basename(FILE_PATH), file, 'multipart/form-data', {'Expires': '0'})}
-	response = session.post(url, files=files, headers={'Connection':'close'}).json()
+	response = session.post(url, files=files).json()
 	print(json.dumps(response, indent=4, sort_keys=False))
 	file.close()
 	return response["data"]
