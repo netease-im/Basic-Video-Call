@@ -24,7 +24,7 @@ def upload(session,file):
 	file = open(FILE_PATH, 'rb')
 	print('file is {}'.format(file))
 	files = {'file': (os.path.basename(FILE_PATH), file, 'multipart/form-data', {'Expires': '0'})}
-	response = session.post(url, files=files).json()
+	response = session.post(url, files=files, headers={'Connection':'close'}).json()
 	print(json.dumps(response, indent=4, sort_keys=False))
 	file.close()
 	return response["data"]
@@ -36,3 +36,4 @@ app_url = upload(session, FILE_PATH)
 print("Generate QRCode for url: {}".format(app_url))
 img = qrcode.make(app_url)
 img.save(QRCODE_OUTPUT) 
+
