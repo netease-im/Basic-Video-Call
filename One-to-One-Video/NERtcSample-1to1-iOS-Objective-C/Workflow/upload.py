@@ -2,8 +2,6 @@ import requests
 import os
 import json
 import sys
-import fcntl
-import time 
 
 BASE_URL = sys.argv[1]
 FILE_PATH = sys.argv[2]
@@ -22,21 +20,12 @@ def login(username,password):
 def upload(session,file):
 	print("Uploading file {}".format(file))
 	url = BASE_URL + "/app/upload"
-	response = None
-	while True:    
-		try:
-		    with open(FILE_PATH, 'rb') as io: 
-		        fcntl.flock(io, fcntl.LOCK_EX | fcntl.LOCK_NB)
-		        files = {'file': (os.path.basename(FILE_PATH), io, 'multipart/form-data', {'Expires': '0'})}
-		        response = session.post(url, files=files).json()
-		        fcntl.flock(io, fcntl.LOCK_UN)
-		        break 
-		except:
-		       #wait before retrying  
-				time.sleep(0.05)
-	# files = {'file': (os.path.basename(FILE_PATH), open(FILE_PATH, 'rb'), 'multipart/form-data', {'Expires': '0'})}
+	file = open(FILE_PATH, 'rb')
+	print('file is {}'.format(file))
+	# files = {'file': (os.path.basename(FILE_PATH), file, 'multipart/form-data', {'Expires': '0'})}
 	# response = session.post(url, files=files).json()
 	print(json.dumps(response, indent=4, sort_keys=False))
+	file.close()
 	return response["data"]
 	
 
@@ -50,3 +39,20 @@ io.write(requests.get(qrcode_url).content)
 io.close()
 
 
+while True: 
+# we keep trying forever until we manage to access the file
+# you can change the loop to try a certain number of times     
+try:
+    #try/except in case the file is still locked by another process 
+    #open the file for editing  
+    with open('/Users/csstnns/myfile.txt', 'a') as myfile: 
+        #lock the file   
+        fcntl.flock(myfile, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        #edit it     
+        myfile.write('Hello World\n')
+        #and now unlock it so other processed can edit it!           
+        fcntl.flock(myfile, fcntl.LOCK_UN)
+        break 
+except Error:
+       #wait before retrying  
+       time.sleep(0.05)
