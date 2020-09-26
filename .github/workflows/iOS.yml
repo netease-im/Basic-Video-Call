@@ -92,11 +92,14 @@ jobs:
         mkdir -p $ARTIFACTS_DIR;
         xcodebuild -exportArchive -archivePath $XC_ARCHIVE_DIR/$XC_PROJECT_NAME.xcarchive -exportPath $XC_IPA_DIR -exportOptionsPlist $XC_EXPORT_OPTIONS_PATH;
         mv $XC_IPA_DIR/$XC_SCHEME.ipa $ARTIFACTS_DIR/$XC_PROJECT_NAME.ipa;
-        ls;
 
-    - name: Generate QRCode
-      run: 
-        python $UPLOAD_SCRIPT_PATH $UPLOAD_HOST $ARTIFACTS_DIR/$XC_PROJECT_NAME.ipa $ARTIFACTS_DIR/$XC_PROJECT_NAME.png
+    - name: Print files
+      run:
+        ls -lh $ARTIFACTS_DIR
+
+    # - name: Generate QRCode
+    #   run: 
+    #     python $UPLOAD_SCRIPT_PATH $UPLOAD_HOST $ARTIFACTS_DIR/$XC_PROJECT_NAME.ipa $ARTIFACTS_DIR/$XC_PROJECT_NAME.png
 
     # - name: Upload Artifact
     #   uses: actions/upload-artifact@v2
