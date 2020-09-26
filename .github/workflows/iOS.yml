@@ -92,16 +92,17 @@ jobs:
         mkdir -p $ARTIFACTS_DIR;
         xcodebuild -exportArchive -archivePath $XC_ARCHIVE_DIR/$XC_PROJECT_NAME.xcarchive -exportPath $XC_IPA_DIR -exportOptionsPlist $XC_EXPORT_OPTIONS_PATH;
         mv $XC_IPA_DIR/$XC_SCHEME.ipa $ARTIFACTS_DIR/$XC_PROJECT_NAME.ipa;
+        ls;
 
     - name: Generate QRCode
       run: 
         python $UPLOAD_SCRIPT_PATH $UPLOAD_HOST $ARTIFACTS_DIR/$XC_PROJECT_NAME.ipa $ARTIFACTS_DIR/$XC_PROJECT_NAME.png
 
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: NERtcSample-1to1-iOS-Objective-C
-        path: ./One-to-One-Video/NERtcSample-1to1-iOS-Objective-C/product/artifacts/*
+    # - name: Upload Artifact
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: NERtcSample-1to1-iOS-Objective-C
+    #     path: ./One-to-One-Video/NERtcSample-1to1-iOS-Objective-C/product/artifacts/*
 
 
   # build_1to1_swift:
