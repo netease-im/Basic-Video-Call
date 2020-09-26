@@ -3,7 +3,8 @@ import os
 import json
 import sys
 
-BASE_URL = sys.argv[1]
+# BASE_URL = sys.argv[1]
+BASE_URL = "http://59.111.96.207:8076"
 FILE_PATH = sys.argv[2]
 # QRCODE_OUTPUT = sys.argv[3]
 
@@ -19,7 +20,7 @@ def login(username,password):
 
 def upload(session,file):
 	print("Uploading file {}".format(file))
-	url = BASE_URL + "/app/uploadtest"
+	url = BASE_URL + "/app/upload"
 	file = open(FILE_PATH, 'rb')
 	print('file is {}'.format(file))
 	files = {'file': (os.path.basename(FILE_PATH), file, 'multipart/form-data', {'Expires': '0'})}
@@ -30,14 +31,14 @@ def upload(session,file):
 	
 
 session = login('admin', 'admin123456')
-# qrcode_url = upload(session, FILE_PATH)
-text = "hello world!!!!"
-file = open(FILE_PATH, 'a')
-file.write(text)
-file.close()
-upload(session, FILE_PATH)
+qrcode_url = upload(session, FILE_PATH)
+# text = "hello world!!!!"
+# file = open(FILE_PATH, 'a')
+# file.write(text)
+# file.close()
+# upload(session, FILE_PATH)
 
-# print("Downloading QRCode: {}".format(qrcode_url))
+print("Downloading QRCode: {}".format(qrcode_url))
 	
 # io = open(QRCODE_OUTPUT, 'wb')
 # io.write(requests.get(qrcode_url).content)
