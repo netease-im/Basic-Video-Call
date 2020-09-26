@@ -19,7 +19,7 @@ def login(username,password):
 
 def upload(session,file):
 	print("Uploading file {}".format(file))
-	url = BASE_URL + "/app/upload"
+	url = BASE_URL + "/app/uploadtest"
 	file = open(FILE_PATH, 'rb')
 	print('file is {}'.format(file))
 	files = {'file': (os.path.basename(FILE_PATH), file, 'multipart/form-data', {'Expires': '0'})}
