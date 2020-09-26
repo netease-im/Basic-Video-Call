@@ -11,6 +11,7 @@ QRCODE_OUTPUT = sys.argv[3]
 def login(username,password):
 	print("Start login")
 	session = requests.Session()
+	session.config['keep_alive'] = False
 	url = BASE_URL + "/account/login/"
 	payload = {"username": username, "password": password}
 	headers = {'Content-Type': 'application/json'}
