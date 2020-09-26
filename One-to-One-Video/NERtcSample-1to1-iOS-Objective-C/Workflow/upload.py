@@ -37,22 +37,3 @@ print("Downloading QRCode: {}".format(qrcode_url))
 io = open(QRCODE_OUTPUT, 'wb')
 io.write(requests.get(qrcode_url).content)
 io.close()
-
-
-while True: 
-# we keep trying forever until we manage to access the file
-# you can change the loop to try a certain number of times     
-try:
-    #try/except in case the file is still locked by another process 
-    #open the file for editing  
-    with open('/Users/csstnns/myfile.txt', 'a') as myfile: 
-        #lock the file   
-        fcntl.flock(myfile, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        #edit it     
-        myfile.write('Hello World\n')
-        #and now unlock it so other processed can edit it!           
-        fcntl.flock(myfile, fcntl.LOCK_UN)
-        break 
-except Error:
-       #wait before retrying  
-       time.sleep(0.05)
