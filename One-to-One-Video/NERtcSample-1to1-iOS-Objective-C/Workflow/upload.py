@@ -34,5 +34,5 @@ session = login('admin', 'admin123456')
 app_url = upload(session, FILE_PATH)
 
 print("Generate QRCode for url: {}".format(app_url))
-img = qrcode.make(app_url)
-img.save(QRCODE_OUTPUT)
+# img = qrcode.make(app_url)
+# img.save(QRCODE_OUTPUT)
