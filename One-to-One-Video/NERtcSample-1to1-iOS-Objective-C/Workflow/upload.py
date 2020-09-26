@@ -11,12 +11,13 @@ QRCODE_OUTPUT = sys.argv[3]
 def login(username,password):
 	print("Start login")
 	session = requests.Session()
-	session.config['keep_alive'] = False
 	url = BASE_URL + "/account/login/"
 	payload = {"username": username, "password": password}
 	headers = {'Content-Type': 'application/json'}
-	response = session.post(url, headers=headers, data=json.dumps(payload)).json()
-	print(json.dumps(response, indent=4, sort_keys=False))
+	response = session.post(url, headers=headers, data=json.dumps(payload))
+	responseJson = response.json()
+	response.close()
+	print(json.dumps(responseJson, indent=4, sort_keys=False))
 	return session
 
 def upload(session,file):
