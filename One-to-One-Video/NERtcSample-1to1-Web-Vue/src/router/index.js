@@ -1,22 +1,17 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import routes from './routes'
 
 Vue.use(VueRouter)
 
-const routes = [{
-    path: '/',
-    name: 'join',
-    component: () => import( /* webpackChunkName: "join" */ '../views/join/index.vue')
-}, {
-    path: '/home',
-    name: 'home',
-    component: () => import( /* webpackChunkName: "home" */ '../views/home/index.vue')
-}]
-
 const router = new VueRouter({
-    mode: 'history',
+    mode: 'hash',
     base: process.env.BASE_URL,
-    routes
+    routes: [{
+      path: '/',
+      name: 'join',
+      component: () => import( /* webpackChunkName: "join" */ '../views/join/index.vue')
+    }].concat(routes)
 })
 
 router.onError((error) => {
