@@ -90,7 +90,7 @@ jobs:
       run: 
         mkdir -p $XC_IPA_DIR;
         xcodebuild -exportArchive -archivePath $XC_ARCHIVE_DIR/$XC_PROJECT_NAME.xcarchive -exportPath $XC_IPA_DIR -exportOptionsPlist $XC_EXPORT_OPTIONS_PATH;
-        mv $XC_IPA_DIR/$XC_SCHEME.ipa $XC_ARTIFACTS_DIR/$XC_PROJECT_NAME.ipa;
+        mv $XC_IPA_DIR/$XC_SCHEME.ipa $ARTIFACTS_DIR/$XC_PROJECT_NAME.ipa;
 
     - name: Upload And Generate QRCode
       run: 
