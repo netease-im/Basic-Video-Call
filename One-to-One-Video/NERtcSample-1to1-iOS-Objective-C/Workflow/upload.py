@@ -2,11 +2,11 @@ import requests
 import os
 import json
 import sys
+import qrcode
 
 BASE_URL = sys.argv[1]
-# BASE_URL = "http://59.111.96.207:8076"
 FILE_PATH = sys.argv[2]
-# QRCODE_OUTPUT = sys.argv[3]
+QRCODE_OUTPUT = sys.argv[3]
 
 def login(username,password):
 	print("Start login")
@@ -31,10 +31,8 @@ def upload(session,file):
 	
 
 session = login('admin', 'admin123456')
-qrcode_url = upload(session, FILE_PATH)
+app_url = upload(session, FILE_PATH)
 
-print("Downloading QRCode: {}".format(qrcode_url))
-	
-io = open(QRCODE_OUTPUT, 'wb')
-io.write(requests.get(qrcode_url).content)
-io.close()
+print("Generate QRCode for url: {}".format(app_url))
+img = qrcode.make(app_url)
+img.save(QRCODE_OUTPUT)

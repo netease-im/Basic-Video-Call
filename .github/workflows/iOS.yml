@@ -96,13 +96,12 @@ jobs:
     - name: Generate QRCode
       run: 
         python $UPLOAD_SCRIPT_PATH $UPLOAD_HOST $ARTIFACTS_DIR/$XC_PROJECT_NAME.ipa $ARTIFACTS_DIR/$XC_PROJECT_NAME.png
-        # python $UPLOAD_SCRIPT_PATH $UPLOAD_HOST "./Workflow/1.txt"
 
-    # - name: Upload Artifact
-    #   uses: actions/upload-artifact@v2
-    #   with:
-    #     name: NERtcSample-1to1-iOS-Objective-C
-    #     path: ./One-to-One-Video/NERtcSample-1to1-iOS-Objective-C/product/artifacts/*
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: NERtcSample-1to1-iOS-Objective-C
+        path: ./One-to-One-Video/NERtcSample-1to1-iOS-Objective-C/product/artifacts/*
 
 
   # build_1to1_swift:
