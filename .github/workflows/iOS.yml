@@ -95,7 +95,7 @@ jobs:
 
     - name: Generate QRCode
       run: 
-        python $UPLOAD_SCRIPT_PATH $UPLOAD_HOST $ARTIFACTS_DIR/$IPA_FILE $ARTIFACTS_DIR/$XC_PROJECT_NAME.png
+        python $UPLOAD_SCRIPT_PATH $UPLOAD_HOST $ARTIFACTS_DIR/$XC_PROJECT_NAME.ipa $ARTIFACTS_DIR/$XC_PROJECT_NAME.png
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
