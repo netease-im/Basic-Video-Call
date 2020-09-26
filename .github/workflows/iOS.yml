@@ -48,7 +48,8 @@ jobs:
 
     - name: Install Python Dependencies
       run:
-          pip install requests
+          pip install requests;
+          pip install qrcode;
           
     - name: App Key Stub
       run: 
