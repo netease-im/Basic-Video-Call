@@ -5,6 +5,6 @@ target 'NERtcSample-GroupVideoCall-iOS-Objective-C' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'NERtcSDK', '3.5.2'
+  pod 'NERtcSDK', '3.5.1'
 
 end
