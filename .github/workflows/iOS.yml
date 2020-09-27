@@ -1,7 +1,7 @@
 name: Basic Video Call CI - iOS 
 on:
   push:
-    branches: [ master, develop ]
+    branches: [ master ]
   pull_request:
     branches: [ master ]
 
@@ -107,89 +107,89 @@ jobs:
 
 
 
-  build_1to1_swift:
-    name: Build 1to1 Swift
-    runs-on: macos-latest
-    env:
-      XC_PROJECT_NAME: ${{ 'NERtcSample-1to1-iOS-Swift' }}
-      XC_VERSION: ${{ '11.4' }}
-      XC_SCHEME: ${{ 'NERtcSample-1to1-iOS-Swift' }}
-      XC_WORKSPACE: ${{ 'NERtcSample-1to1-iOS-Swift.xcworkspace' }}
-      XC_CONFIGURATION: ${{ 'release' }}
-      XC_ARCHIVE_DIR: ${{ './product/archive' }}
-      XC_IPA_DIR: ${{ './product/ipa' }}
-      XC_EXPORT_OPTIONS_PATH: ${{ './Workflow/ExportOptions.plist' }}
-      XC_KEY_STUB_SCRIPT_PATH: ${{ './Workflow/keyStub.py' }}
+  # build_1to1_swift:
+  #   name: Build 1to1 Swift
+  #   runs-on: macos-latest
+  #   env:
+  #     XC_PROJECT_NAME: ${{ 'NERtcSample-1to1-iOS-Swift' }}
+  #     XC_VERSION: ${{ '11.4' }}
+  #     XC_SCHEME: ${{ 'NERtcSample-1to1-iOS-Swift' }}
+  #     XC_WORKSPACE: ${{ 'NERtcSample-1to1-iOS-Swift.xcworkspace' }}
+  #     XC_CONFIGURATION: ${{ 'release' }}
+  #     XC_ARCHIVE_DIR: ${{ './product/archive' }}
+  #     XC_IPA_DIR: ${{ './product/ipa' }}
+  #     XC_EXPORT_OPTIONS_PATH: ${{ './Workflow/ExportOptions.plist' }}
+  #     XC_KEY_STUB_SCRIPT_PATH: ${{ './Workflow/keyStub.py' }}
 
-      ENCRYPTED_CERT_PATH: ${{ '../../Shared Files/iOS/cert.p12.gpg' }}
-      DECRYPTED_CERT_PATH: ${{ './Workflow/cert.p12' }}
-      ENCRYPTED_PROVISION_PATH: ${{ '../../Shared Files/iOS/enterpriseForWildCard.mobileprovision.gpg' }}
-      DECRYPTED_PROVISION_PATH: ${{ './Workflow/enterpriseForWildCard.mobileprovision' }}
-      CERT_ENC_PWD: ${{ secrets.CERT_ENC_PWD }}
-      CERT_PWD: ${{ secrets.CERT_PWD }}
-      PROVISION_ENC_PWD: ${{ secrets.PROVISION_ENC_PWD }}
-      APP_KEY: ${{ secrets.APP_KEY }}
-      KEYCHAIN: ${{ 'temp.keychain' }}
-      APP_CONFIG_FILE_PATH: ${{ './NERtcSample-1to1-iOS-Swift/NTESAppConfig.swift' }}
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./One-to-One-Video/NERtcSample-1to1-iOS-Swift
+  #     ENCRYPTED_CERT_PATH: ${{ '../../Shared Files/iOS/cert.p12.gpg' }}
+  #     DECRYPTED_CERT_PATH: ${{ './Workflow/cert.p12' }}
+  #     ENCRYPTED_PROVISION_PATH: ${{ '../../Shared Files/iOS/enterpriseForWildCard.mobileprovision.gpg' }}
+  #     DECRYPTED_PROVISION_PATH: ${{ './Workflow/enterpriseForWildCard.mobileprovision' }}
+  #     CERT_ENC_PWD: ${{ secrets.CERT_ENC_PWD }}
+  #     CERT_PWD: ${{ secrets.CERT_PWD }}
+  #     PROVISION_ENC_PWD: ${{ secrets.PROVISION_ENC_PWD }}
+  #     APP_KEY: ${{ secrets.APP_KEY }}
+  #     KEYCHAIN: ${{ 'temp.keychain' }}
+  #     APP_CONFIG_FILE_PATH: ${{ './NERtcSample-1to1-iOS-Swift/NTESAppConfig.swift' }}
+  #   defaults:
+  #     run:
+  #       shell: bash
+  #       working-directory: ./One-to-One-Video/NERtcSample-1to1-iOS-Swift
 
-    steps:
-    - uses: actions/checkout@v2
+  #   steps:
+  #   - uses: actions/checkout@v2
 
-    - name: Setup Python 2.7
-      uses: actions/setup-python@v2
-      with:
-          python-version: '2.7'
+  #   - name: Setup Python 2.7
+  #     uses: actions/setup-python@v2
+  #     with:
+  #         python-version: '2.7'
           
-    - name: App Key Stub
-      run: 
-        python $XC_KEY_STUB_SCRIPT_PATH
+  #   - name: App Key Stub
+  #     run: 
+  #       python $XC_KEY_STUB_SCRIPT_PATH
     
-    - name: Select Xcode
-      run: 
-        sudo xcode-select -s /Applications/Xcode_$XC_VERSION.app
+  #   - name: Select Xcode
+  #     run: 
+  #       sudo xcode-select -s /Applications/Xcode_$XC_VERSION.app
 
-    - name: Install Dependencies
-      run: pod install
+  #   - name: Install Dependencies
+  #     run: pod install
 
-    - name: Configure Keychain
-      run: 
-        security create-keychain -p "" "$KEYCHAIN";
-        security list-keychains -s "$KEYCHAIN";
-        security default-keychain -s "$KEYCHAIN";
-        security unlock-keychain -p "" "$KEYCHAIN";
-        security set-keychain-settings;
-        security list-keychains;
+  #   - name: Configure Keychain
+  #     run: 
+  #       security create-keychain -p "" "$KEYCHAIN";
+  #       security list-keychains -s "$KEYCHAIN";
+  #       security default-keychain -s "$KEYCHAIN";
+  #       security unlock-keychain -p "" "$KEYCHAIN";
+  #       security set-keychain-settings;
+  #       security list-keychains;
     
-    - name: Configure Code Signing
-      run:
-        gpg -d -o "$DECRYPTED_CERT_PATH" --pinentry-mode=loopback --passphrase "$CERT_ENC_PWD" "$ENCRYPTED_CERT_PATH";
-        gpg -d -o "$DECRYPTED_PROVISION_PATH" --pinentry-mode=loopback --passphrase "$PROVISION_ENC_PWD" "$ENCRYPTED_PROVISION_PATH";
-        security import "$DECRYPTED_CERT_PATH" -k "$KEYCHAIN" -P "$CERT_PWD" -A;
-        security set-key-partition-list -S apple-tool:,apple:, -s -k "" "$KEYCHAIN";
-        mkdir -p "$HOME/Library/MobileDevice/Provisioning Profiles";
-        UUID=$(/usr/libexec/PlistBuddy -c "Print :UUID" /dev/stdin <<< $(security cms -D -i $DECRYPTED_PROVISION_PATH));
-        cp "$DECRYPTED_PROVISION_PATH" "$HOME/Library/MobileDevice/Provisioning Profiles/$UUID.mobileprovision";
+  #   - name: Configure Code Signing
+  #     run:
+  #       gpg -d -o "$DECRYPTED_CERT_PATH" --pinentry-mode=loopback --passphrase "$CERT_ENC_PWD" "$ENCRYPTED_CERT_PATH";
+  #       gpg -d -o "$DECRYPTED_PROVISION_PATH" --pinentry-mode=loopback --passphrase "$PROVISION_ENC_PWD" "$ENCRYPTED_PROVISION_PATH";
+  #       security import "$DECRYPTED_CERT_PATH" -k "$KEYCHAIN" -P "$CERT_PWD" -A;
+  #       security set-key-partition-list -S apple-tool:,apple:, -s -k "" "$KEYCHAIN";
+  #       mkdir -p "$HOME/Library/MobileDevice/Provisioning Profiles";
+  #       UUID=$(/usr/libexec/PlistBuddy -c "Print :UUID" /dev/stdin <<< $(security cms -D -i $DECRYPTED_PROVISION_PATH));
+  #       cp "$DECRYPTED_PROVISION_PATH" "$HOME/Library/MobileDevice/Provisioning Profiles/$UUID.mobileprovision";
 
-    - name: Archive
-      run:
-        mkdir -p $XC_ARCHIVE_DIR;
-        UUID=$(/usr/libexec/PlistBuddy -c "Print :UUID" /dev/stdin <<< $(security cms -D -i $DECRYPTED_PROVISION_PATH));
-        xcodebuild archive -workspace $XC_WORKSPACE -scheme $XC_SCHEME -configuration release -archivePath $XC_ARCHIVE_DIR/$XC_PROJECT_NAME.xcarchive CODE_SIGN_IDENTITY="iPhone Distribution" PROVISIONING_PROFILE_SPECIFIER=$UUID;
+  #   - name: Archive
+  #     run:
+  #       mkdir -p $XC_ARCHIVE_DIR;
+  #       UUID=$(/usr/libexec/PlistBuddy -c "Print :UUID" /dev/stdin <<< $(security cms -D -i $DECRYPTED_PROVISION_PATH));
+  #       xcodebuild archive -workspace $XC_WORKSPACE -scheme $XC_SCHEME -configuration release -archivePath $XC_ARCHIVE_DIR/$XC_PROJECT_NAME.xcarchive CODE_SIGN_IDENTITY="iPhone Distribution" PROVISIONING_PROFILE_SPECIFIER=$UUID;
 
-    - name: Export IPA
-      run: 
-        mkdir -p $XC_IPA_DIR;
-        xcodebuild -exportArchive -archivePath $XC_ARCHIVE_DIR/$XC_PROJECT_NAME.xcarchive -exportPath $XC_IPA_DIR -exportOptionsPlist $XC_EXPORT_OPTIONS_PATH;
+  #   - name: Export IPA
+  #     run: 
+  #       mkdir -p $XC_IPA_DIR;
+  #       xcodebuild -exportArchive -archivePath $XC_ARCHIVE_DIR/$XC_PROJECT_NAME.xcarchive -exportPath $XC_IPA_DIR -exportOptionsPlist $XC_EXPORT_OPTIONS_PATH;
 
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: NERtcSample-1to1-iOS-Swift
-        path: ./One-to-One-Video/NERtcSample-1to1-iOS-Swift/product/ipa/NERtcSample-1to1-iOS-Swift.ipa
+  #   - name: Upload Artifact
+  #     uses: actions/upload-artifact@v2
+  #     with:
+  #       name: NERtcSample-1to1-iOS-Swift
+  #       path: ./One-to-One-Video/NERtcSample-1to1-iOS-Swift/product/ipa/NERtcSample-1to1-iOS-Swift.ipa
 
 
   build_group_video_objc:
@@ -277,87 +277,87 @@ jobs:
         path: ./Group-Video/NERtcSample-GroupVideoCall-iOS-Objective-C/product/ipa/NERtcSample-GroupVideoCall-iOS-Objective-C.ipa
 
 
-  build_group_video_swift:
-    name: Build Group-Video Swift
-    runs-on: macos-latest
-    env:
-      XC_PROJECT_NAME: ${{ 'NERtcSample-GroupVideoCall-iOS-Swift' }}
-      XC_VERSION: ${{ '11.4' }}
-      XC_SCHEME: ${{ 'NERtcSample-GroupVideoCall-iOS-Swift' }}
-      XC_WORKSPACE: ${{ 'NERtcSample-GroupVideoCall-iOS-Swift.xcworkspace' }}
-      XC_CONFIGURATION: ${{ 'release' }}
-      XC_ARCHIVE_DIR: ${{ './product/archive' }}
-      XC_IPA_DIR: ${{ './product/ipa' }}
-      XC_EXPORT_OPTIONS_PATH: ${{ './Workflow/ExportOptions.plist' }}
-      XC_KEY_STUB_SCRIPT_PATH: ${{ './Workflow/keyStub.py' }}
+  # build_group_video_swift:
+  #   name: Build Group-Video Swift
+  #   runs-on: macos-latest
+  #   env:
+  #     XC_PROJECT_NAME: ${{ 'NERtcSample-GroupVideoCall-iOS-Swift' }}
+  #     XC_VERSION: ${{ '11.4' }}
+  #     XC_SCHEME: ${{ 'NERtcSample-GroupVideoCall-iOS-Swift' }}
+  #     XC_WORKSPACE: ${{ 'NERtcSample-GroupVideoCall-iOS-Swift.xcworkspace' }}
+  #     XC_CONFIGURATION: ${{ 'release' }}
+  #     XC_ARCHIVE_DIR: ${{ './product/archive' }}
+  #     XC_IPA_DIR: ${{ './product/ipa' }}
+  #     XC_EXPORT_OPTIONS_PATH: ${{ './Workflow/ExportOptions.plist' }}
+  #     XC_KEY_STUB_SCRIPT_PATH: ${{ './Workflow/keyStub.py' }}
 
-      ENCRYPTED_CERT_PATH: ${{ '../../Shared Files/iOS/cert.p12.gpg' }}
-      DECRYPTED_CERT_PATH: ${{ './Workflow/cert.p12' }}
-      ENCRYPTED_PROVISION_PATH: ${{ '../../Shared Files/iOS/enterpriseForWildCard.mobileprovision.gpg' }}
-      DECRYPTED_PROVISION_PATH: ${{ './Workflow/enterpriseForWildCard.mobileprovision' }}
-      CERT_ENC_PWD: ${{ secrets.CERT_ENC_PWD }}
-      CERT_PWD: ${{ secrets.CERT_PWD }}
-      PROVISION_ENC_PWD: ${{ secrets.PROVISION_ENC_PWD }}
-      APP_KEY: ${{ secrets.APP_KEY }}
-      KEYCHAIN: ${{ 'temp.keychain' }}
-      APP_CONFIG_FILE_PATH: ${{ './NERtcSample-GroupVideoCall-iOS-Swift/Config.swift' }}
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./Group-Video/NERtcSample-GroupVideoCall-iOS-Swift
+  #     ENCRYPTED_CERT_PATH: ${{ '../../Shared Files/iOS/cert.p12.gpg' }}
+  #     DECRYPTED_CERT_PATH: ${{ './Workflow/cert.p12' }}
+  #     ENCRYPTED_PROVISION_PATH: ${{ '../../Shared Files/iOS/enterpriseForWildCard.mobileprovision.gpg' }}
+  #     DECRYPTED_PROVISION_PATH: ${{ './Workflow/enterpriseForWildCard.mobileprovision' }}
+  #     CERT_ENC_PWD: ${{ secrets.CERT_ENC_PWD }}
+  #     CERT_PWD: ${{ secrets.CERT_PWD }}
+  #     PROVISION_ENC_PWD: ${{ secrets.PROVISION_ENC_PWD }}
+  #     APP_KEY: ${{ secrets.APP_KEY }}
+  #     KEYCHAIN: ${{ 'temp.keychain' }}
+  #     APP_CONFIG_FILE_PATH: ${{ './NERtcSample-GroupVideoCall-iOS-Swift/Config.swift' }}
+  #   defaults:
+  #     run:
+  #       shell: bash
+  #       working-directory: ./Group-Video/NERtcSample-GroupVideoCall-iOS-Swift
 
-    steps:
-    - uses: actions/checkout@v2
+  #   steps:
+  #   - uses: actions/checkout@v2
 
-    - name: Setup Python 2.7
-      uses: actions/setup-python@v2
-      with:
-          python-version: '2.7'
+  #   - name: Setup Python 2.7
+  #     uses: actions/setup-python@v2
+  #     with:
+  #         python-version: '2.7'
           
-    - name: App Key Stub
-      run: 
-        python $XC_KEY_STUB_SCRIPT_PATH
+  #   - name: App Key Stub
+  #     run: 
+  #       python $XC_KEY_STUB_SCRIPT_PATH
     
-    - name: Select Xcode
-      run: 
-        sudo xcode-select -s /Applications/Xcode_$XC_VERSION.app
+  #   - name: Select Xcode
+  #     run: 
+  #       sudo xcode-select -s /Applications/Xcode_$XC_VERSION.app
 
-    - name: Install Dependencies
-      run: pod install
+  #   - name: Install Dependencies
+  #     run: pod install
 
-    - name: Configure Keychain
-      run: 
-        security create-keychain -p "" "$KEYCHAIN";
-        security list-keychains -s "$KEYCHAIN";
-        security default-keychain -s "$KEYCHAIN";
-        security unlock-keychain -p "" "$KEYCHAIN";
-        security set-keychain-settings;
-        security list-keychains;
+  #   - name: Configure Keychain
+  #     run: 
+  #       security create-keychain -p "" "$KEYCHAIN";
+  #       security list-keychains -s "$KEYCHAIN";
+  #       security default-keychain -s "$KEYCHAIN";
+  #       security unlock-keychain -p "" "$KEYCHAIN";
+  #       security set-keychain-settings;
+  #       security list-keychains;
     
-    - name: Configure Code Signing
-      run:
-        gpg -d -o "$DECRYPTED_CERT_PATH" --pinentry-mode=loopback --passphrase "$CERT_ENC_PWD" "$ENCRYPTED_CERT_PATH";
-        gpg -d -o "$DECRYPTED_PROVISION_PATH" --pinentry-mode=loopback --passphrase "$PROVISION_ENC_PWD" "$ENCRYPTED_PROVISION_PATH";
-        security import "$DECRYPTED_CERT_PATH" -k "$KEYCHAIN" -P "$CERT_PWD" -A;
-        security set-key-partition-list -S apple-tool:,apple:, -s -k "" "$KEYCHAIN";
-        mkdir -p "$HOME/Library/MobileDevice/Provisioning Profiles";
-        UUID=$(/usr/libexec/PlistBuddy -c "Print :UUID" /dev/stdin <<< $(security cms -D -i $DECRYPTED_PROVISION_PATH));
-        cp "$DECRYPTED_PROVISION_PATH" "$HOME/Library/MobileDevice/Provisioning Profiles/$UUID.mobileprovision";
+  #   - name: Configure Code Signing
+  #     run:
+  #       gpg -d -o "$DECRYPTED_CERT_PATH" --pinentry-mode=loopback --passphrase "$CERT_ENC_PWD" "$ENCRYPTED_CERT_PATH";
+  #       gpg -d -o "$DECRYPTED_PROVISION_PATH" --pinentry-mode=loopback --passphrase "$PROVISION_ENC_PWD" "$ENCRYPTED_PROVISION_PATH";
+  #       security import "$DECRYPTED_CERT_PATH" -k "$KEYCHAIN" -P "$CERT_PWD" -A;
+  #       security set-key-partition-list -S apple-tool:,apple:, -s -k "" "$KEYCHAIN";
+  #       mkdir -p "$HOME/Library/MobileDevice/Provisioning Profiles";
+  #       UUID=$(/usr/libexec/PlistBuddy -c "Print :UUID" /dev/stdin <<< $(security cms -D -i $DECRYPTED_PROVISION_PATH));
+  #       cp "$DECRYPTED_PROVISION_PATH" "$HOME/Library/MobileDevice/Provisioning Profiles/$UUID.mobileprovision";
 
-    - name: Archive
-      run:
-        mkdir -p $XC_ARCHIVE_DIR;
-        UUID=$(/usr/libexec/PlistBuddy -c "Print :UUID" /dev/stdin <<< $(security cms -D -i $DECRYPTED_PROVISION_PATH));
-        xcodebuild archive -workspace $XC_WORKSPACE -scheme $XC_SCHEME -configuration release -archivePath $XC_ARCHIVE_DIR/$XC_PROJECT_NAME.xcarchive CODE_SIGN_IDENTITY="iPhone Distribution" PROVISIONING_PROFILE_SPECIFIER=$UUID;
+  #   - name: Archive
+  #     run:
+  #       mkdir -p $XC_ARCHIVE_DIR;
+  #       UUID=$(/usr/libexec/PlistBuddy -c "Print :UUID" /dev/stdin <<< $(security cms -D -i $DECRYPTED_PROVISION_PATH));
+  #       xcodebuild archive -workspace $XC_WORKSPACE -scheme $XC_SCHEME -configuration release -archivePath $XC_ARCHIVE_DIR/$XC_PROJECT_NAME.xcarchive CODE_SIGN_IDENTITY="iPhone Distribution" PROVISIONING_PROFILE_SPECIFIER=$UUID;
 
-    - name: Export IPA
-      run: 
-        mkdir -p $XC_IPA_DIR;
-        xcodebuild -exportArchive -archivePath $XC_ARCHIVE_DIR/$XC_PROJECT_NAME.xcarchive -exportPath $XC_IPA_DIR -exportOptionsPlist $XC_EXPORT_OPTIONS_PATH;
+  #   - name: Export IPA
+  #     run: 
+  #       mkdir -p $XC_IPA_DIR;
+  #       xcodebuild -exportArchive -archivePath $XC_ARCHIVE_DIR/$XC_PROJECT_NAME.xcarchive -exportPath $XC_IPA_DIR -exportOptionsPlist $XC_EXPORT_OPTIONS_PATH;
 
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: NERtcSample-GroupVideoCall-iOS-Swift
-        path: ./Group-Video/NERtcSample-GroupVideoCall-iOS-Swift/product/ipa/NERtcSample-GroupVideoCall-iOS-Swift.ipa
+  #   - name: Upload Artifact
+  #     uses: actions/upload-artifact@v2
+  #     with:
+  #       name: NERtcSample-GroupVideoCall-iOS-Swift
+  #       path: ./Group-Video/NERtcSample-GroupVideoCall-iOS-Swift/product/ipa/NERtcSample-GroupVideoCall-iOS-Swift.ipa
 
