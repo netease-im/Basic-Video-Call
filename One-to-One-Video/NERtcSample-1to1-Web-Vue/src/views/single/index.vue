@@ -2,9 +2,9 @@
     <div class="wrapper">
         <div class="content">
             <!--画面div-->
-            <div class="main-window" ref='large' @click="swapPlaces"></div>
+            <div class="main-window" ref='large'></div>
             <!--小画面div-->
-            <div class="sub-window" ref='small' @click="swapPlaces">
+            <div class="sub-window" ref='small'>
                 <span class="loading-text" v-show='isDesc'>{{desc}}</span>
             </div>
         </div>
@@ -57,7 +57,6 @@
                     this.isDesc = true
                     this.desc = '对方离开房间了'
                     message(this.desc)
-                    this.preprocessingDiv()
                 }
             })
 
@@ -77,7 +76,6 @@
             this.client.on('stream-removed', evt => {
                 var remoteStream = evt.stream;
                 console.warn('对方停止订阅: ', remoteStream.getId())
-                this.preprocessingDiv()
                 remoteStream.stop()
             })
 
@@ -235,7 +233,6 @@
                 this.isStop = !isStop
                 if (this.isStop) {
                     console.warn('关闭摄像头')
-                    this.preprocessingDiv()
                     this.localStream.close({
                         type: 'video'
                     }).then(() => {
@@ -271,55 +268,6 @@
                 console.warn('离开房间')
                 this.client.leave()
                 this.returnJoin(1)
-            },
-            swapPlaces () {
-                console.warn('交换视频窗口')
-                if (this.$refs.large.children && this.$refs.large.children.length && this.$refs.small.children.length > 1) {
-                    /*this.$refs.small.lastElementChild.lastElementChild.srcObject = [this.$refs.large.lastElementChild.lastElementChild.srcObject , this.$refs.large.lastElementChild.lastElementChild.srcObject = this.$refs.small.lastElementChild.lastElementChild.srcObject][0]*/
-                    const smallDiv = this.$refs.small.lastElementChild
-                    const largeDiv = this.$refs.large.lastElementChild
-                    const smallDIvUid = smallDiv.lastElementChild.dataset.uid
-                    const largeDIvUid = largeDiv.lastElementChild.dataset.uid
-                    console.warn('localStream uid： %s, largeDIvUid: %s, smallDIvUid: %s', this.localStream.getId(), largeDIvUid, smallDIvUid)
-                    if (smallDIvUid === this.localStream.getId() || smallDIvUid === 'local') {
-                        this.localStream.setLocalRenderMode({ // 设置视频窗口大小
-                            width: this.$refs.large.clientWidth,
-                            height: this.$refs.large.clientHeight,
-                            cut: true // 是否裁剪
-                        })
-                        this.remoteStream.setRemoteRenderMode({
-                            width: this.$refs.small.clientWidth,
-                            height: this.$refs.small.clientHeight,
-                            cut: true // 是否裁剪
-                        })
-                    } else {
-                        this.localStream.setLocalRenderMode({ // 设置视频窗口大小
-                            width: this.$refs.small.clientWidth,
-                            height: this.$refs.small.clientHeight,
-                            cut: true // 是否裁剪
-                        })
-                        this.remoteStream.setRemoteRenderMode({
-                            width: this.$refs.large.clientWidth,
-                            height: this.$refs.large.clientHeight,
-                            cut: true // 是否裁剪
-                        })
-                    }
-                    this.$refs.large.removeChild(largeDiv)
-                    this.$refs.small.removeChild(smallDiv)
-                    this.$refs.large.appendChild(smallDiv)
-                    this.$refs.small.appendChild(largeDiv)
-                }
-            },
-            preprocessingDiv () {
-                //为了防止关闭摄像头时，清除不对的div
-                const largeDIvUid = this.$refs.large.children && this.$refs.large.children.length ? this.$refs.large.lastElementChild.lastElementChild.dataset.uid : null
-                const smallDIvUid = this.$refs.small.children.length > 1 ? this.$refs.small.lastElementChild.lastElementChild.dataset.uid : null
-                console.warn('本地的uid： %s, largeDIvUid: %s, smallDIvUid: %s', this.localStream.getId(), largeDIvUid, smallDIvUid)
-                //上面的代码可知，默认本端添加的是large的div，远端添加的是small的div
-                if (this.localStream.getId() !== largeDIvUid && largeDIvUid !== 'local' ) {
-                    console.warn('把远端放到小的div里面，本端放到大的div里面')
-                    this.swapPlaces()
-                }
             }
         }
     }
@@ -346,8 +294,8 @@
         }
 
         .sub-window {
-            width: 160px;
-            height: 90px;
+            width: 165px;
+            height: 95px;
             background: #25252d;
             position: absolute;
             z-index: 9;
