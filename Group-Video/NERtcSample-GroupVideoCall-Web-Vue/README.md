@@ -11,6 +11,8 @@
 - 离开房间
 - 多人通话
 
+[在线体验](https://app.yunxin.163.com/webdemo/g2web/index.html#/?path=multiple)
+
 ## 3.技术栈
 vue （vue-cli 4.x）
 
