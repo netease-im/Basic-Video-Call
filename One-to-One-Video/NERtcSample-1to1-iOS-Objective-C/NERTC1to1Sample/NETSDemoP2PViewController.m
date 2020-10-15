@@ -131,7 +131,7 @@
 }
 
 #pragma mark - SDK回调（含义请参考NERtcEngineDelegateEx定义）
-- (void)onNERtcEngineDidError:(NERtcRuntimeError)errCode {
+- (void)onNERtcEngineDidError:(NERtcError)errCode {
     NSString *msg = [NSString stringWithFormat:@"nertc engine did error.code:%@", @(errCode)];
     [self showDismissAlert:msg];
 }
