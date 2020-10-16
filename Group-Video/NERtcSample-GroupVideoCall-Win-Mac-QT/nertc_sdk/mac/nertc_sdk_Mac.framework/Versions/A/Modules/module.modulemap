@@ -1,0 +1,6 @@
+framework module nertc_sdk_Mac {
+  umbrella header "nertc_sdk_Mac.h"
+
+  export *
+  module * { export * }
+}
