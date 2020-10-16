@@ -1,4 +1,4 @@
-name: Basic Video - Android 
+name: Basic Video Call - Android 
 on:
   push:
     branches: [ master, develop ]
@@ -15,7 +15,7 @@ jobs:
       ENCRYPTED_KEYSTORE_PATH: ${{ '../../Shared Files/Android/release.jks.gpg' }}
       DECRYPTED_KEYSTORE_PATH: ${{ './release.jks' }}
       UNSIGNED_APK_PATH: ${{ './app/build/outputs/apk/release/app-release-unsigned.apk' }}
-      SIGNED_APK_PATH: ${{ './app/build/outputs/apk/release/GroupVideo-Java.apk' }}
+      SIGNED_APK_PATH: ${{ './app/build/outputs/apk/release/GroupVideoCall-Java.apk' }}
       APP_KEY: ${{ secrets.APP_KEY }}
       KEYSTORE_ENC_PWD: ${{ secrets.KEYSTORE_ENC_PWD }}
     defaults:
@@ -55,5 +55,5 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: ScreenShare-Java
-        path: ./Group-Video/NERtcSample-GroupVideoCall-Android-Java/app/build/outputs/apk/release/GroupVideo-Java.apk
+        name: GroupVideoCall-Java
+        path: ./Group-Video/NERtcSample-GroupVideoCall-Android-Java/app/build/outputs/apk/release/GroupVideoCall-Java.apk
