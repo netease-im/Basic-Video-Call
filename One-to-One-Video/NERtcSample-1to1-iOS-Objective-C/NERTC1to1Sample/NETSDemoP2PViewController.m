@@ -31,7 +31,9 @@
 @implementation NETSDemoP2PViewController
 
 - (void)dealloc {
-    [NERtcEngine destroyEngine]; //销毁SDK
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [NERtcEngine destroyEngine]; // 销毁SDK
+    });
 }
 
 + (instancetype)instanceWithRoomId:(NSString *)roomId
