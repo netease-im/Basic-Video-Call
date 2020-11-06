@@ -31,7 +31,9 @@
 @implementation NETSDemoP2PViewController
 
 - (void)dealloc {
-    [NERtcEngine destroyEngine]; //销毁SDK
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [NERtcEngine destroyEngine]; // 销毁SDK
+    });
 }
 
 + (instancetype)instanceWithRoomId:(NSString *)roomId
@@ -131,7 +133,7 @@
 }
 
 #pragma mark - SDK回调（含义请参考NERtcEngineDelegateEx定义）
-- (void)onNERtcEngineDidError:(NERtcRuntimeError)errCode {
+- (void)onNERtcEngineDidError:(NERtcError)errCode {
     NSString *msg = [NSString stringWithFormat:@"nertc engine did error.code:%@", @(errCode)];
     [self showDismissAlert:msg];
 }

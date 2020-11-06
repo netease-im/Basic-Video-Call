@@ -1,0 +1,6 @@
+framework module core_Mac {
+  umbrella header "core_Mac.h"
+
+  export *
+  module * { export * }
+}

@@ -20,17 +20,15 @@
 
 在编译和启动实例程序前，您需要首先获取一个可用的`App Key`:
 
-1. 若您已经与专属客户经理取得联系，可直接向他获取Appkey
+1. 首先在 [网易云信](https://id.163yun.com/register?h=media&t=media&clueFrom=nim&from=bdjjnim0035&referrer=https://app.yunxin.163.com/?clueFrom=nim&from=bdjjnim0035) 注册账号
 
-2. 若您并未与专属客户经理取得联系那么请按后续步骤获取Appkey
+2. 于「应用」一栏中创建您的项目
 
-3. 首先在 [网易云信](https://id.163yun.com/register?h=media&t=media&clueFrom=nim&from=bdjjnim0035&referrer=https://app.yunxin.163.com/?clueFrom=nim&from=bdjjnim0035) 注册账号
+3. 于应用详情页中找到「App Key」管理即可查看App Key
 
-4. 然后在「应用」一栏中创建您的项目
+4. 此时您的Appkey缺乏权限，申请试用「音视频通话」，专属客户经理会联系您并为您开通权限
 
-5. 等待专属客户经理联系您，并向他获取Appkey
-
-6. 将 AppID 填写进 "app/src/main/res/values/app_key.xml"
+5. 将App Key填写进 "app/src/main/res/values/app_key.xml"
 
 ```xml
 <!-- 替换为你自己的AppKey -->
