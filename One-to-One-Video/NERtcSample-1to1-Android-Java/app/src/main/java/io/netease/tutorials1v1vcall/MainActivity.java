@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.netease.lava.nertc.sdk.NERtc;
+import com.netease.nmc.nertcsample.onetoonevideocall.R;
 
 import java.util.List;
 

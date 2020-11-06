@@ -19,6 +19,7 @@ import com.netease.lava.nertc.sdk.NERtcEx;
 import com.netease.lava.nertc.sdk.NERtcParameters;
 import com.netease.lava.nertc.sdk.video.NERtcRemoteVideoStreamType;
 import com.netease.lava.nertc.sdk.video.NERtcVideoView;
+import com.netease.nmc.nertcsample.onetoonevideocall.R;
 
 import java.util.Random;
 
