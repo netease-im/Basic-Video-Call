@@ -7,19 +7,27 @@
                 v-model.trim="channelName"
                 placeholder="请输入房间号"
             >
-            <button class="submit-btn" @click="handleSubmit">加入房间</button>
+            <button :disabled="!isSupport" class="submit-btn" @click="handleSubmit">加入房间</button>
+            <div class="errorMsg" v-show="!isSupport">当前浏览器不支持体验，建议下载安装最新chrome浏览器</div>
         </div>
     </div>
 </template>
 
 <script>
     import { message } from '../../components/message'
+    import { checkBrowser } from '../../common'
 
     export default {
         name: 'join',
         data () {
             return {
                 channelName: '',
+                isSupport: true,
+            }
+        },
+        mounted() {
+            if (!checkBrowser('chrome') && !checkBrowser('safari')) {
+                this.isSupport = false;
             }
         },
         methods: {
@@ -96,6 +104,17 @@
             &:active {
                 background: darken(#337EFF, 5%);
             }
+            &:disabled {
+                background: #dddddd;
+                cursor: not-allowed;
+            }
+        }
+
+        .errorMsg {
+            font-size: 14px;
+            text-align: center;
+            color: red;
+            margin-top: 10px;
         }
     }
 }
