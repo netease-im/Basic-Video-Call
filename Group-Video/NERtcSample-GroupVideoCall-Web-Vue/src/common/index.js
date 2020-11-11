@@ -47,3 +47,15 @@ export const getToken = ({
         });
     })
 }
+
+export const checkBrowser = (type) => {
+  const ua = navigator.userAgent.toLowerCase();
+  const info = {
+      ie: /msie/.test(ua) && !/opera/.test(ua),
+      opera: /opera/.test(ua),
+      safari: /version.*safari/.test(ua),
+      chrome: /chrome/.test(ua),
+      firefox: /gecko/.test(ua) && !/webkit/.test(ua)
+  };
+  return info[type] || false;
+}
