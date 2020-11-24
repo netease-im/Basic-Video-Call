@@ -42,6 +42,8 @@ npm install
 npm run dev
 ```
 
+运行后通过 https://localhost:8020/index.html#/?path=multiple 进行访问
+
 ### 正式环境打包
 
 ```
