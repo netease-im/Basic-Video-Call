@@ -1,5 +1,7 @@
+import Single from '../views/single/index.vue'
+
 export default [{
   path: '/single',
   name: 'single',
-  component: () => import( /* webpackChunkName: "single" */ '../views/single/index.vue')
+  component: Single
 }]

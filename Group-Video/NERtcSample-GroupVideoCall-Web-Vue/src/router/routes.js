@@ -1,5 +1,7 @@
+import Multiple from '../views/multiple/index.vue'
+
 export default [{
   path: '/multiple',
   name: 'multiple',
-  component: () => import( /* webpackChunkName: "multiple" */ '../views/multiple/index.vue')
+  component: Multiple
 }]

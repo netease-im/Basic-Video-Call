@@ -66,28 +66,28 @@
                 );
             });
 
-            this.client.on('stream-added', (evt) => {
-                var remoteStream = evt.stream;
-                const uid = remoteStream.getId();
-                console.warn('收到对方发布的订阅消息: ', uid);
-
-                if (
-                    this.remoteStreams.every((item) => item.getId() !== uid) &&
-                    this.remoteStreams.length < this.max - 1
-                ) {
-                    console.warn('房间新加入一人:  ', uid);
-                    this.remoteStreams.push(remoteStream);
-                    this.subscribe(remoteStream);
-                } else { console.warn('房间人数已满') }
+            this.client.on('stream-added', async (evt) => {
+                const stream = evt.stream;
+                const userId = stream.getId();
+                if (this.remoteStreams.some(item => item.getId() === userId)) {
+                    console.warn('收到已订阅的远端发布，需要更新', stream);
+                    this.remoteStreams = this.remoteStreams.map(item => item.getId() === userId ? stream : item);
+                    await this.subscribe(stream);
+                } else if (this.remoteStreams.length < this.max - 1) {
+                    console.warn('收到新的远端发布消息', stream)
+                    this.remoteStreams = this.remoteStreams.concat(stream)
+                    await this.subscribe(stream);
+                } else {
+                    console.warn('房间人数已满')
+                }
             });
 
             this.client.on('stream-removed', (evt) => {
-                var remoteStream = evt.stream;
-                console.warn('对方停止订阅: ', remoteStream.getId());
-                remoteStream.stop();
-                this.remoteStreams = this.remoteStreams.filter(
-                    (item) => item.getId() !== remoteStream.getId()
-                );
+                const stream = evt.stream
+                const userId = stream.getId()
+                stream.stop();
+                this.remoteStreams = this.remoteStreams.map(item => item.getId() === userId ? stream : item)
+                console.warn('远端流停止订阅，需要更新', userId, stream)
             });
 
             this.client.on('stream-subscribed', (evt) => {
