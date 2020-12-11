@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import routes from './routes'
+import Join from '../views/join/index.vue'
 
 Vue.use(VueRouter)
 
@@ -10,7 +11,7 @@ const router = new VueRouter({
     routes: [{
       path: '/',
       name: 'join',
-      component: () => import( /* webpackChunkName: "join" */ '../views/join/index.vue')
+      component: Join
     }].concat(routes)
 })
 
