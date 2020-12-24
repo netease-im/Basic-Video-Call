@@ -104,6 +104,14 @@
                 console.error(e)
             })
         },
+        destroyed() {
+            try {
+                this.localStream.destroy()
+                WebRTC2.destroy()
+            } catch (e) {
+                // 为了兼容低版本，用try catch包裹一下
+            }
+        },
         methods: {
             getToken() {
                 return getToken({
