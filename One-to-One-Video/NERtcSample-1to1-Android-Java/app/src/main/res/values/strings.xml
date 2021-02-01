@@ -1,6 +1,6 @@
 <resources>
     <!-- 替换为你自己的AppKey -->
-    <string name="app_key">YOUR APP KEY</string>
+    <string name="app_key">6acf024e190215b685905444b6e57dd7</string>
     <string name="app_name">NERTC1to1Sample</string>
     <string name="main_hint_room_id">请输入房间号</string>
     <string name="join_channel">加入频道</string>
