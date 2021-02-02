@@ -23,6 +23,7 @@
     </div>
     <!--底层栏-->
     <ul class="tab-bar">
+      <li class="remote-play" @click="handlerRemotePlay">播放对端音频</li>
       <li :class="{silence:true, isSilence}" @click="setOrRelieveSilence"></li>
       <li class="over" @click="handleOver"></li>
     </ul>
@@ -30,7 +31,7 @@
 </template>
 <script>
     import { message } from '../../components/message';
-    import WebRTC2 from '../../sdk/NIM_Web_WebRTC2_v3.7.0.js';
+    import WebRTC2 from '../../sdk/NIM_Web_WebRTC2_v3.9.1.js';
     import config from '../../../config';
     import { getToken } from '../../common';
 
@@ -44,7 +45,7 @@
                 localUid: Math.ceil(Math.random() * 1e5),
                 localStream: null,
                 remoteStreams: [],
-                max: 4,
+                max: 2,
             };
         },
         mounted() {
@@ -63,7 +64,7 @@
             this.client.on('peer-leave', (evt) => {
                 console.warn(`${evt.uid} 离开房间`);
                 this.remoteStreams = this.remoteStreams.filter(
-                    (item) => item.getId() !== evt.uid
+                    (item) => !!item.getId() && item.getId() !== evt.uid
                 );
             });
 
@@ -252,6 +253,12 @@
                         });
                 }
             },
+            handlerRemotePlay() {
+                const stream = this.remoteStreams[0];
+                if (stream) {
+                    stream.play();
+                }
+            },
             handleOver() {
                 console.warn('离开房间');
                 this.client.leave();
@@ -306,6 +313,13 @@
         font-weight: 400;
       }
     }
+  }
+
+  .remote-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
   }
 
   .tab-bar {

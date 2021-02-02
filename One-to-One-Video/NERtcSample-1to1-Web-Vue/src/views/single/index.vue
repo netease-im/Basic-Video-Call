@@ -19,7 +19,7 @@
 <script>
 
     import { message } from '../../components/message'
-    import WebRTC2 from '../../sdk/NIM_Web_WebRTC2_v3.7.0.js'
+    import WebRTC2 from '../../sdk/NIM_Web_WebRTC2_v3.9.1.js'
     import config from '../../../config'
     import { getToken } from '../../common'
 
