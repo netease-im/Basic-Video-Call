@@ -29,7 +29,7 @@
 </template>
 <script>
     import { message } from '../../components/message';
-    import WebRTC2 from '../../sdk/NIM_Web_WebRTC2_v3.9.1.js';
+    import * as WebRTC2 from '../../sdk/NIM_Web_WebRTC2_v4.0.1.js';
     import config from '../../../config';
     import { getToken } from '../../common';
 
@@ -43,7 +43,7 @@
                 localUid: Math.ceil(Math.random() * 1e5),
                 localStream: null,
                 remoteStreams: [],
-                max: 4,
+                max: 20,
             };
         },
         mounted() {
