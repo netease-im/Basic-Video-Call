@@ -254,6 +254,11 @@ public class MeetingActivity extends AppCompatActivity implements NERtcCallback,
         }
     }
 
+    @Override
+    public void onClientRoleChange(int old, int newRole) {
+        Log.i(TAG, "onUserAudioStart old: " + old + ", newRole : " + newRole);
+    }
+
     /**
      * 判断是否为onUserJoined中，设置了Tag的用户
      *

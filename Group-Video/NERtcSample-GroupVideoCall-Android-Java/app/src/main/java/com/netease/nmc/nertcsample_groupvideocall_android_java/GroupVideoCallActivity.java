@@ -1,6 +1,7 @@
 package com.netease.nmc.nertcsample_groupvideocall_android_java;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -19,6 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GroupVideoCallActivity extends AppCompatActivity implements NERtcCallback {
+
+    private static final String TAG = "GroupVideoCallActivity";
 
     public static final String EXTRA_USER_ID = "extra_user_id";
     public static final String EXTRA_ROOM_ID = "extra_room_id";
@@ -133,6 +136,11 @@ public class GroupVideoCallActivity extends AppCompatActivity implements NERtcCa
     @Override
     public void onDisconnect(int i) {
 
+    }
+
+    @Override
+    public void onClientRoleChange(int old, int newRole) {
+        Log.i(TAG, "onUserAudioStart old: " + old + ", newRole : " + newRole);
     }
 
 }
