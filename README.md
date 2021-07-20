@@ -35,4 +35,4 @@
 
 **推荐客户得京东卡,首次推荐成单得3000元京东卡,连续推荐4500元/单,上不封顶。点击参与https://yunxin.163.com/promotion/recommend**
 
-![main](https://github.com/netease-im/NIM_iOS_UIKit/blob/master/800x160.png)
+![main](https://github.com/netease-kit/NIM_iOS_UIKit/blob/master/activity-1.png)
