@@ -33,6 +33,6 @@
 * 若遇到问题需要开发者帮助，你可以到 [开发者社区](https://yunxin.163.com/dev-blog/question) 提问
 * 如果需要售后技术支持, 你可以在 [网易云信控制台](https://app.yunxin.163.com/index#/issue/submit) 提交工单
 
-**推荐客户得比特币,首次推荐得0.02BTC,连续推荐得0.03BTC/单,上不封顶。点击参与https://yunxin.163.com/promotion/recommend**
+**推荐客户得京东卡,首次推荐成单得3000元京东卡,连续推荐4500元/单,上不封顶。点击参与https://yunxin.163.com/promotion/recommend**
 
 ![main](https://github.com/netease-im/NIM_iOS_UIKit/blob/master/800x160.png)
