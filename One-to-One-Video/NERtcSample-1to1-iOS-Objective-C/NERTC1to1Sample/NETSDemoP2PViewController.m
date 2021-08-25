@@ -31,9 +31,6 @@
 @implementation NETSDemoP2PViewController
 
 - (void)dealloc {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [NERtcEngine destroyEngine]; // 销毁SDK
-    });
 }
 
 + (instancetype)instanceWithRoomId:(NSString *)roomId
@@ -112,6 +109,9 @@
 //UI 挂断按钮事件
 - (IBAction)onHungupAction:(UIButton *)sender {
     [NERtcEngine.sharedEngine leaveChannel];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [NERtcEngine destroyEngine]; // 销毁SDK
+    });
     [self dismiss];
 }
 

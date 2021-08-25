@@ -27,8 +27,6 @@ class NTES1To1CallViewController: UIViewController {
     }
     
     deinit {
-        NERtcEngine.shared().leaveChannel()
-        NERtcEngine.destroy()
     }
     
     private func setupNERtcEngine() {        
@@ -72,7 +70,14 @@ class NTES1To1CallViewController: UIViewController {
         NERtcEngine.shared().enableLocalVideo(enabled)
         sender.isSelected = enabled
     }
-
+    
+    @IBAction func onHungupAction(sender: UIButton) {
+        NERtcEngine.shared().leaveChannel()
+        DispatchQueue.global(qos: .userInitiated).async {
+            NERtcEngine.destroy()
+        }
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 // MARK: - NERtcEngineDelegateEx

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i0t-dT-bUn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i0t-dT-bUn">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -78,7 +78,8 @@
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="QY3-bm-d0U"/>
+                        <color key="backgroundColor" systemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zAZ-BT-uww" firstAttribute="top" secondItem="HFs-nb-A07" secondAttribute="bottom" constant="44" id="Boc-k0-EFs"/>
                             <constraint firstItem="jmR-us-PaZ" firstAttribute="top" secondItem="282-ny-30b" secondAttribute="bottom" constant="52" id="GFd-TU-Vmg"/>
@@ -91,7 +92,6 @@
                             <constraint firstItem="HFs-nb-A07" firstAttribute="top" secondItem="jmR-us-PaZ" secondAttribute="bottom" constant="4.5" id="oqe-aI-6is"/>
                             <constraint firstItem="HFs-nb-A07" firstAttribute="trailing" secondItem="jmR-us-PaZ" secondAttribute="trailing" id="y4d-TE-b3M"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="QY3-bm-d0U"/>
                     </view>
                     <navigationItem key="navigationItem" id="3Qo-rp-IUs"/>
                     <connections>
@@ -100,7 +100,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yso-8u-15l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="NRY-dm-iIt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1119.375" y="22.183098591549296"/>
         </scene>
@@ -114,7 +113,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VoJ-Xh-fYL" userLabel="Remote Render Container">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" systemColor="darkTextColor"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="等待加入...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xa4-Fu-9GO">
                                 <rect key="frame" x="126" y="276" width="68.5" height="16"/>
@@ -143,7 +142,7 @@
                                         <state key="selected" image="Hunghp_h"/>
                                         <state key="highlighted" image="Hunghp_h"/>
                                         <connections>
-                                            <segue destination="NRY-dm-iIt" kind="unwind" unwindAction="unwindWithSegue:" id="tSQ-LB-ZZk"/>
+                                            <action selector="onHungupActionWithSender:" destination="Acj-u0-xFG" eventType="touchDragInside" id="Sgf-R9-YyJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5U-aq-Utk">
@@ -190,6 +189,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Cxo-Y1-AS3"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Xa4-Fu-9GO" firstAttribute="centerX" secondItem="VoJ-Xh-fYL" secondAttribute="centerX" id="3Bd-eq-Cdc"/>
@@ -206,7 +206,6 @@
                             <constraint firstItem="Xa4-Fu-9GO" firstAttribute="centerY" secondItem="VoJ-Xh-fYL" secondAttribute="centerY" id="vIc-Ug-Ehn"/>
                             <constraint firstItem="VoJ-Xh-fYL" firstAttribute="leading" secondItem="hGm-2U-bVj" secondAttribute="leading" id="vvD-pZ-idu"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Cxo-Y1-AS3"/>
                     </view>
                     <navigationItem key="navigationItem" id="sUk-aE-mg5"/>
                     <connections>
@@ -230,5 +229,11 @@
         <image name="Video_s" width="60" height="54"/>
         <image name="btn_bk_enable" width="290" height="40"/>
         <image name="camera" width="100" height="100"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tableCellGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
