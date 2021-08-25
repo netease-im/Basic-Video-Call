@@ -61,13 +61,13 @@
     NERtcEngineContext *context = [[NERtcEngineContext alloc] init];
     context.engineDelegate = self;
     context.appKey = AppKey;
-    
     [coreEngine setupEngineWithContext:context];
+    [coreEngine setAudioProfile:kNERtcAudioProfileStandard scenario:kNERtcAudioScenarioSpeech];
+    NERtcVideoEncodeConfiguration *videoConfig = [[NERtcVideoEncodeConfiguration alloc] init];
+    videoConfig.frameRate = kNERtcVideoFrameRateFps15;
+    [coreEngine setLocalVideoConfig:videoConfig];
     [coreEngine enableLocalAudio:YES];
     [coreEngine enableLocalVideo:YES];
-    NERtcVideoEncodeConfiguration *config = [[NERtcVideoEncodeConfiguration alloc] init];
-    config.maxProfile = kNERtcVideoProfileHD720P;
-    [coreEngine setLocalVideoConfig:config];
 }
 
 //建立本地canvas模型

@@ -6,7 +6,7 @@ target 'NERtcSample-1to1-iOS-Swift' do
   use_frameworks!
 
   # Pods for NERtcSample-1to1-iOS-Swift
-  pod 'NERtcSDK', '3.5.2'
+  pod 'NERtcSDK', '4.3.0'
 
   target 'NERtcSample-1to1-iOS-SwiftTests' do
     inherit! :search_paths

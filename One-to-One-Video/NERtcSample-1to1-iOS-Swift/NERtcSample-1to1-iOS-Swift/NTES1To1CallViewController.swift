@@ -37,12 +37,12 @@ class NTES1To1CallViewController: UIViewController {
         context.engineDelegate = self;
         context.appKey = kAppKey;
         engine.setupEngine(with: context)
+        engine.setAudioProfile(.standard, scenario: .speech)
+        let config = NERtcVideoEncodeConfiguration()
+        config.frameRate = .fps15
+        engine.setLocalVideoConfig(config)
         engine.enableLocalAudio(true)
         engine.enableLocalVideo(true)
-        
-        let config = NERtcVideoEncodeConfiguration()
-        config.maxProfile = .HD720P
-        engine.setLocalVideoConfig(config)
     }
     
     private func joinRoom(roomID: String, userID: UInt64) {
