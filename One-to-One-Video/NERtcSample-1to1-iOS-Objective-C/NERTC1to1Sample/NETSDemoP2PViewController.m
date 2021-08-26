@@ -31,9 +31,6 @@
 @implementation NETSDemoP2PViewController
 
 - (void)dealloc {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [NERtcEngine destroyEngine]; // 销毁SDK
-    });
 }
 
 + (instancetype)instanceWithRoomId:(NSString *)roomId
@@ -61,13 +58,13 @@
     NERtcEngineContext *context = [[NERtcEngineContext alloc] init];
     context.engineDelegate = self;
     context.appKey = AppKey;
-    
     [coreEngine setupEngineWithContext:context];
+    [coreEngine setAudioProfile:kNERtcAudioProfileStandard scenario:kNERtcAudioScenarioSpeech];
+    NERtcVideoEncodeConfiguration *videoConfig = [[NERtcVideoEncodeConfiguration alloc] init];
+    videoConfig.frameRate = kNERtcVideoFrameRateFps15;
+    [coreEngine setLocalVideoConfig:videoConfig];
     [coreEngine enableLocalAudio:YES];
     [coreEngine enableLocalVideo:YES];
-    NERtcVideoEncodeConfiguration *config = [[NERtcVideoEncodeConfiguration alloc] init];
-    config.maxProfile = kNERtcVideoProfileHD720P;
-    [coreEngine setLocalVideoConfig:config];
 }
 
 //建立本地canvas模型
@@ -112,6 +109,9 @@
 //UI 挂断按钮事件
 - (IBAction)onHungupAction:(UIButton *)sender {
     [NERtcEngine.sharedEngine leaveChannel];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [NERtcEngine destroyEngine]; // 销毁SDK
+    });
     [self dismiss];
 }
 

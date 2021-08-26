@@ -11,8 +11,8 @@ import NERtcSDK
 
 class MeetingViewController: UIViewController {
     
-    var userID: UInt64?
-    var roomID: String?
+    var userID: UInt64!
+    var roomID: String!
     
     @IBOutlet weak var localUserView: UIView!
     @IBOutlet var remoteUserViews: [UIView]!
@@ -22,14 +22,13 @@ class MeetingViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Leave", style: .plain, target: self, action: #selector(onBackAction))
         title = "Room \(roomID ?? "--")"
         setupRTCEngine()
         joinCurrentRoom()
     }
     
     deinit {
-        NERtcEngine.shared().leaveChannel()
-        NERtcEngine.destroy()
     }
     
     func setupRTCEngine() {
@@ -38,6 +37,10 @@ class MeetingViewController: UIViewController {
         context.appKey = kAppKey
         let engine = NERtcEngine.shared()
         engine.setupEngine(with: context)
+        engine.setAudioProfile(.standard, scenario: .speech)
+        let config = NERtcVideoEncodeConfiguration()
+        config.frameRate = .fps15
+        engine.setLocalVideoConfig(config)
         engine.enableLocalAudio(true)
         engine.enableLocalVideo(true)
     }
@@ -63,6 +66,13 @@ class MeetingViewController: UIViewController {
             }
     }
     
+    @objc func onBackAction() {
+        self.navigationController?.popViewController(animated: true)
+        NERtcEngine.shared().leaveChannel()
+        DispatchQueue.global(qos: .userInitiated).async {
+            NERtcEngine.destroy()
+        }
+    }
 }
 
 extension MeetingViewController: NERtcEngineDelegateEx {

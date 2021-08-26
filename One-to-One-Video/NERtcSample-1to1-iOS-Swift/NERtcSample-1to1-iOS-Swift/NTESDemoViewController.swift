@@ -31,9 +31,6 @@ class NTESDemoViewController: UIViewController {
             destination.userID = self.userID
         }
     }
-    
-    @IBAction func unwind(segue: UIStoryboardSegue) { }
-    
 }
 
 extension NTESDemoViewController: UITextFieldDelegate {

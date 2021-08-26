@@ -23,6 +23,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Leave" style:UIBarButtonItemStylePlain target:self action:@selector(onBackAction:)];
     self.title = [NSString stringWithFormat:@"Room %@", self.roomID];
     [self setupRTCEngine];
     [self joinCurrentRoom];
@@ -30,8 +31,6 @@
 
 - (void)dealloc
 {
-    [NERtcEngine.sharedEngine leaveChannel];
-    [NERtcEngine destroyEngine];
 }
 
 - (void)setupRTCEngine
@@ -41,6 +40,10 @@
     context.engineDelegate = self;
     context.appKey = kAppKey;
     [coreEngine setupEngineWithContext:context];
+    [coreEngine setAudioProfile:kNERtcAudioProfileStandard scenario:kNERtcAudioScenarioSpeech];
+    NERtcVideoEncodeConfiguration *videoConfig = [[NERtcVideoEncodeConfiguration alloc] init];
+    videoConfig.frameRate = kNERtcVideoFrameRateFps15;
+    [coreEngine setLocalVideoConfig:videoConfig];
     [coreEngine enableLocalAudio:YES];
     [coreEngine enableLocalVideo:YES];
 }
@@ -77,5 +80,14 @@
     [self.view viewWithTag:(NSInteger)userID].tag = 0;
 }
 
+#pragma mark - Actions
+- (void)onBackAction:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    [NERtcEngine.sharedEngine leaveChannel];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [NERtcEngine destroyEngine];
+    });
+}
 
 @end
