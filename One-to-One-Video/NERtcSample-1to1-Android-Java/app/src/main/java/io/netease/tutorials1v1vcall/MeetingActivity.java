@@ -16,9 +16,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.netease.lava.nertc.sdk.NERtcCallback;
 import com.netease.lava.nertc.sdk.NERtcConstants;
 import com.netease.lava.nertc.sdk.NERtcEx;
+import com.netease.lava.nertc.sdk.NERtcOption;
 import com.netease.lava.nertc.sdk.NERtcParameters;
 import com.netease.lava.nertc.sdk.video.NERtcRemoteVideoStreamType;
 import com.netease.lava.nertc.sdk.video.NERtcVideoView;
+import com.netease.nmc.nertcsample.onetoonevideocall.BuildConfig;
 import com.netease.nmc.nertcsample.onetoonevideocall.R;
 
 import java.util.Random;
@@ -109,16 +111,23 @@ public class MeetingActivity extends AppCompatActivity implements NERtcCallback,
      */
     private void setupNERtc() {
         NERtcParameters parameters = new NERtcParameters();
-        parameters.set(NERtcParameters.KEY_AUTO_SUBSCRIBE_AUDIO, false);
         NERtcEx.getInstance().setParameters(parameters); //先设置参数，后初始化
 
+        NERtcOption options = new NERtcOption();
+
+        if (BuildConfig.DEBUG) {
+            options.logLevel = NERtcConstants.LogLevel.INFO;
+        } else {
+            options.logLevel = NERtcConstants.LogLevel.WARNING;
+        }
+
         try {
-            NERtcEx.getInstance().init(getApplicationContext(), getString(R.string.app_key), this, null);
+            NERtcEx.getInstance().init(getApplicationContext(), getString(R.string.app_key), this, options);
         } catch (Exception e) {
             // 可能由于没有release导致初始化失败，release后再试一次
             NERtcEx.getInstance().release();
             try {
-                NERtcEx.getInstance().init(getApplicationContext(), getString(R.string.app_key), this, null);
+                NERtcEx.getInstance().init(getApplicationContext(), getString(R.string.app_key), this, options);
             } catch (Exception ex) {
                 Toast.makeText(this, "SDK初始化失败", Toast.LENGTH_LONG).show();
                 finish();
@@ -210,10 +219,6 @@ public class MeetingActivity extends AppCompatActivity implements NERtcCallback,
     @Override
     public void onUserAudioStart(long uid) {
         Log.i(TAG, "onUserAudioStart uid: " + uid);
-        if (!isCurrentUser(uid)) {
-            return;
-        }
-        NERtcEx.getInstance().subscribeRemoteAudioStream(uid, true);
     }
 
     @Override

@@ -33,7 +33,7 @@
 
 5. 等待专属客户经理联系您，并向他获取Appkey
 
-6. 将 AppID 填写进 "app/src/main/res/values/strings.xml"
+6. 将App Key填写进 "app/src/main/res/values/app_key.xml"
 
 ```xml
 <!-- 替换为你自己的AppKey -->
