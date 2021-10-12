@@ -1,0 +1,36 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/clear.png</file>
+        <file>image/beaut-on.png</file>
+        <file>image/beauty-off.png</file>
+        <file>image/cancel_call.png</file>
+        <file>image/video-off.png</file>
+        <file>image/video-on.png</file>
+        <file>image/voice-off.png</file>
+        <file>image/voice-on.png</file>
+        <file>image/triangle-down.png</file>
+        <file>image/btn_show_device_normal.png</file>
+        <file>image/device_selector_pushed.png</file>
+        <file>image/device_selector_normal.png</file>
+        <file>image/right_white.svg</file>
+        <file>image/smlie-active.svg</file>
+        <file>image/thumbs-down.svg</file>
+        <file>image/thumbs-down-active.svg</file>
+        <file>image/thumb-up.svg</file>
+        <file>image/thumb-up-active.svg</file>
+        <file>image/background.png</file>
+        <file>image/check.png</file>
+        <file>image/normal.png</file>
+        <file>image/networkquality_bad.svg</file>
+        <file>image/networkquality_general.svg</file>
+        <file>image/networkquality_good.svg</file>
+        <file>image/networkquality_unknown.svg</file>
+        <file>image/data.png</file>
+        <file>image/zoomIn.png</file>
+        <file>image/zoomOut.png</file>
+        <file>image/setting.png</file>
+        <file>image/triangle-combox.png</file>
+        <file>image/radio-check.png</file>
+        <file>image/radio-uncheck.png</file>
+    </qresource>
+</RCC>
