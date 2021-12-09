@@ -31,7 +31,7 @@ x86_64|Ubuntu18.04+|g++7.5+|OpenSSL 1.1.1, GLIBCXX 3.4.21+|
 
 ### 4. 编译运行
 
-![demo](https://github.com/netease-im/Basic-Video-Call/tree/master/One-to-One-Video/NERtcSample-1to1-Linux-Qt/NEVideoCall-Linux/demo.png)
+![demo](https://github.com/netease-im/Basic-Video-Call/blob/master/One-to-One-Video/NERtcSample-1to1-Linux-Qt/NEVideoCall-Linux/demo.png)
 
 
 * 请确保开发环境配置了视频设备
