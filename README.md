@@ -33,6 +33,5 @@
 * 若遇到问题需要开发者帮助，你可以到 [开发者社区](https://yunxin.163.com/dev-blog/question) 提问
 * 如果需要售后技术支持, 你可以在 [网易云信控制台](https://app.yunxin.163.com/index#/issue/submit) 提交工单
 
-**推荐客户得京东卡,首次推荐成单得3000元京东卡,连续推荐4500元/单,上不封顶。点击参与https://yunxin.163.com/promotion/recommend**
-
-![main](https://github.com/netease-kit/NIM_iOS_UIKit/blob/master/activity-1.png)
+**#推荐好友使用云信，即享1500元京东卡奖励#** 点击参与https://yunxin.163.com/promotion/recommend?channel=github
+[![main]( https://yx-web-nosdn.netease.im/quickhtml%2Fassets%2Fyunxin%2Fdefault%2F2022%2Fgithub%2F233.png)](https://yunxin.163.com/promotion/recommend?channel=github)
