@@ -2,7 +2,19 @@ module.exports = {
   lintOnSave: false,
   pluginOptions: {
     electronBuilder: {
-        nodeIntegration: true
+        nodeIntegration: true,
+        builderOptions: {
+          asarUnpack: [
+            './node_modules/nertc-electron-sdk/**/*' // 匹配需要解包的文件或目录
+          ],
+          extraResources: [
+            {
+              from: './node_modules/nertc-electron-sdk/build/Release',
+              to: 'unasar',
+              filter: ['**/*.node']
+            }
+          ]
+        }
     }
   },
   configureWebpack:{
