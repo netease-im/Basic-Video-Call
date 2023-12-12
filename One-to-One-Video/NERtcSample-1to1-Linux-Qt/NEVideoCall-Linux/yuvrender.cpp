@@ -119,6 +119,7 @@ void YuvRender::initializeGL()
 
 void YuvRender::paintGL()
 {
+    glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, idY);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RED, video_w, video_h, 0, GL_RED, GL_UNSIGNED_BYTE, data_y.data());
