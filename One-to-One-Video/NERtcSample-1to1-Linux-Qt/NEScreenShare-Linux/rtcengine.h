@@ -7,7 +7,7 @@
 #include <QDebug>
 #include <string>
 
-#define APP_KEY "6acf024e190215b685905444b6e57dd7"
+#define APP_KEY ""
 
 using namespace nertc;
 

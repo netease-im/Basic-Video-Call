@@ -34,6 +34,5 @@
 ![demo](https://github.com/netease-im/Basic-Video-Call/blob/master/One-to-One-Video/NERtcSample-1to1-Linux-Qt/NEScreenShare-Linux/demo.png)
 
 
-* 请确保开发环境配置了视频设备
 * 如果你遇到了困难，可以先参阅 [知识库](https://faq.yunxin.163.com/kb/main/#/)
 * 完整的 API 文档见 [文档中心](https://dev.yunxin.163.com/?from=bdjjnim0035)
