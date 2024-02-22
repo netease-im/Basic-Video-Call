@@ -1,0 +1,12 @@
+{
+  "license": "",
+  "devDependencies": {},
+  "author": "",
+  "name": "demo",
+  "description": "Please describe the basic information.",
+  "main": "",
+  "version": "1.0.0",
+  "dependencies": {
+    "sdk": "file:src/main/libs/sdk.har"
+  }
+}
