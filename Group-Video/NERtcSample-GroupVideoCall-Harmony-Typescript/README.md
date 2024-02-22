@@ -1,6 +1,6 @@
 # 快速入门
 
-本文介绍如何快速运行 NERtc DEMO 以及集成 NERtc SDK到项目中。
+本文介绍在鸿蒙平台下如何快速运行 NERtc DEMO 以及集成 NERtc SDK到项目中。
 
 ## 环境要求
 
