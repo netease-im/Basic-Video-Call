@@ -81,3 +81,19 @@ NERtcSDK.getInstance().setupRemoteVideoCanvas(canvas, BigInt(setUp.uid))
 
 
 ```
+
+## 运行DEMO
+
+1.下载 rtc_demo hap包 [rtc_demo.zip](output%2Frtc_demo.zip)
+
+2.将华为设备ID交与云信技术支持，将您的设备ID添加到云信后台白名单中
+
+3.执行安装命令来安装hap包
+```
+$ hdc uninstall com.netease.lava.nertc.demo
+$ hdc shell mkdir data/local/tmp/6fb0eb90b6f94ae3b290619566d9b79c
+$ hdc file send "/Users/zhangchenliang/Workspace/lava-stable/mobile-sdk/harmony/entry/build/default/outputs/default/demo-default-signed.hap" "data/local/tmp/6fb0eb90b6f94ae3b290619566d9b79c"
+$ hdc shell bm install -p data/local/tmp/6fb0eb90b6f94ae3b290619566d9b79c 
+$ hdc shell rm -rf data/local/tmp/6fb0eb90b6f94ae3b290619566d9b79c
+$ hdc shell aa start -a EntryAbility -b com.netease.lava.nertc.demo
+```
