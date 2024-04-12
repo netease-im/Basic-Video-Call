@@ -1,16 +1,25 @@
 {
-  "apiType": 'stageMode',
+  "apiType": "stageMode",
   "buildOption": {
-    "sourceOption": {
-      "workers": [
-        "./src/main/ets/pages/chat/Worker.ets"
-      ]
-    }
   },
+  "buildOptionSet": [
+    {
+      "name": "release",
+      "arkOptions": {
+        "obfuscation": {
+          "ruleOptions": {
+            "enable": true,
+            "files": [
+              "./obfuscation-rules.txt"
+            ]
+          }
+        }
+      }
+    },
+  ],
   "targets": [
     {
-      "name": "default",
-      "runtimeOS": "HarmonyOS"
+      "name": "default"
     },
     {
       "name": "ohosTest",

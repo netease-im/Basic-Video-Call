@@ -1,9 +1,24 @@
 {
   "src": [
-    "pages/Test",
-    "pages/Settings",
-    "pages/Home",
-    "pages/Chat",
-    "pages/Call"
+    "pages/Index",
+    "audioCall/pages/AudioCallEntry",
+    "audioCall/pages/AudioCall",
+    "videoCall/pages/VideoCallEntry",
+    "videoCall/pages/VideoCall",
+    "pages/AudioConfig",
+    "pages/ExternalAudioInput",
+    "pages/MainAndSubStream",
+    "pages/VideoCall",
+    "pages/NetworkProbe",
+    "pages/VoiceBeauty",
+    "pages/AudioMixing",
+    "pages/AudioEffect",
+    "videoconfig/pages/VideoProfileConfig",
+    "externalsource/pages/ExternalVideoSource",
+    "videoSettings/pages/VideoSettingsEntry",
+    "videoSettings/pages/VideoSettings",
+    "pages/LiveStream",
+    "pages/MainAndSubStreamVideo",
+    "pages/SnapshotWaterMark"
   ]
 }
