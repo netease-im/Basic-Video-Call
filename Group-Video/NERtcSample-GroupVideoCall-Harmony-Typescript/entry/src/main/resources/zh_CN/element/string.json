@@ -10,7 +10,15 @@
     },
     {
       "name": "EntryAbility_label",
-      "value": "NERtcDemo"
+      "value": "label"
+    },
+    {
+      "name": "VideoCall_desc",
+      "value": "description"
+    },
+    {
+      "name": "VideoCall_label",
+      "value": "label"
     }
   ]
 }

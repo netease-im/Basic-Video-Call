@@ -1,6 +1,6 @@
 {
   "app": {
-    "bundleName": "com.netease.lava.nertc.demo",
+    "bundleName": "com.netease.ohos_sample",
     "vendor": "example",
     "versionCode": 1000000,
     "versionName": "1.0.0",

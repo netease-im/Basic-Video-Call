@@ -1,12 +1,12 @@
 {
-  "license": "",
-  "devDependencies": {},
-  "author": "",
-  "name": "demo",
+  "name": "entry",
+  "version": "1.0.0",
   "description": "Please describe the basic information.",
   "main": "",
-  "version": "1.0.0",
+  "author": "",
+  "license": "",
   "dependencies": {
-    "sdk": "file:src/main/libs/sdk.har"
+    'sdk': "file:./src/main/libs/nertc_sdk.har"
   }
 }
+

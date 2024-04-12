@@ -17,7 +17,7 @@
 |  ----  | ----   | ----   |----------|
 |0.1.0 | 10 | 4.0 | 2.0.0.33 |
 |0.2.0 | 11 | 4.1.3.500 | 2.0.0.59 |
-|0.3.0 | 11 | 4.1.3.600 | 2.0.0.66 |
+|0.3.0 及以上 | 11 | 4.1.3.600 | 2.0.0.66 |
 
 
 
@@ -47,13 +47,8 @@
 
 ![WX20240222-102948.png](img%2FWX20240222-102948.png)
 
-
-## DEMO 运行流程
-
-进入首页后，需要用户手动申请权限，否则入会后会导致音视频采集设备无法正常工作。
-和 NERtcSDK 交互的代码在子线程 Worker.ets 文件中。
-
-![process.png](img%2Fprocess.png)
+## 应用截图
+<img src="./img/Screenshot_20240412162105259.jpeg" width = "80%">
 
 
 ## SDK 接入流程
@@ -66,19 +61,18 @@
 
 3.安装第三方包，点击 Run 'ohpm install'
 
-![WX20240222-105813.png](img%2FWX20240222-105813.png)
 
-4.调用SDK接口，完成入会流程
+4.调用SDK相关接口，完成入会流程
 
 ```typescript
 
-//伪代码
+//伪代码，具体实现参考 sample code
 
 //从SDK中导入相关的interface或者class        
 import { NERtcCallbackEx, NERtcConstants, NERtcSDK } from 'sdk';
         
-//初始化引擎, 参数列表分别为: appkey, SDK回调callback, 初始化参数option(可选).
-NERtcSDK.getInstance().init(key, new ChatCallback(), option)
+//初始化引擎, 参数列表分别为: context: UIAbility Context 上下文对象,  appkey, SDK回调callback, 初始化参数option(可选).
+NERtcSDK.getInstance().init(context, key, new ChatCallback(), option)
         
 //入会：参数列表：鉴权token, 频道名，用户id
 NERtcSDK.getInstance().joinChannel(join.token, join.cname, BigInt(join.uid))      
@@ -97,6 +91,7 @@ NERtcSDK.getInstance().setupRemoteVideoCanvas(canvas, BigInt(setUp.uid))
 ```
 
 ## 运行DEMO
+如果不想编译运行 `sample code`，可以解压 `ouput` 目录下 rtc_demo.zip 按照以下执行命令来安装到鸿蒙手机体验。
 
 1.下载 rtc_demo hap包 [rtc_demo.zip](output%2Frtc_demo.zip)
 
@@ -104,10 +99,9 @@ NERtcSDK.getInstance().setupRemoteVideoCanvas(canvas, BigInt(setUp.uid))
 
 3.执行安装命令来安装hap包
 ```
-$ hdc uninstall com.netease.lava.nertc.demo
-$ hdc shell mkdir data/local/tmp/6fb0eb90b6f94ae3b290619566d9b79c
-$ hdc file send "/Users/zhangchenliang/Workspace/lava-stable/mobile-sdk/harmony/entry/build/default/outputs/default/demo-default-signed.hap" "data/local/tmp/6fb0eb90b6f94ae3b290619566d9b79c"
-$ hdc shell bm install -p data/local/tmp/6fb0eb90b6f94ae3b290619566d9b79c 
-$ hdc shell rm -rf data/local/tmp/6fb0eb90b6f94ae3b290619566d9b79c
-$ hdc shell aa start -a EntryAbility -b com.netease.lava.nertc.demo
+hdc shell bm uninstall -n  com.netease.lava.nertc.demo
+hdc file send "output/nertc_demo.hap" "data/local/tmp/nertc_demo.hap"
+hdc shell bm install -p "data/local/tmp/nertc_demo.hap"
+hdc shell rm -rf "data/local/tmp/nertc_demo.hap"
+hdc shell aa start -a EntryAbility -b com.netease.lava.nertc.demo
 ```
