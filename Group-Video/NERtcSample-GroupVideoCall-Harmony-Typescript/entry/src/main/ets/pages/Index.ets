@@ -6,7 +6,7 @@ import { LoadingDialog } from '@ohos.arkui.advanced.Dialog'
 import Utils from '../common/Utils';
 import config from '../common/Config'
 import ChatPresenter from '../common/Presenter';
-import { NERtcConstants } from 'sdk';
+import { NERtcConstants } from '@nertc/nertc_sdk';
 import router from '@ohos.router';
 import * as model from '../common/Model'
 

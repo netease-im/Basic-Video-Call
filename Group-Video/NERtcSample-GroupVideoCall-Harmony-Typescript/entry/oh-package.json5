@@ -6,7 +6,7 @@
   "author": "",
   "license": "",
   "dependencies": {
-    'sdk': "file:./src/main/libs/nertc_sdk.har"
+    "@nertc/nertc_sdk": "1.1.0-beta"
   }
 }
 

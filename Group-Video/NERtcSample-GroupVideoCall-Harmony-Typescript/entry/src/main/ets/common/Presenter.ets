@@ -1,4 +1,4 @@
-import { NERtcCallbackEx, NERtcChannelCallback, NERtcConstants, NERtcSDK , NERtcStatsObserver} from 'sdk/Index';
+import { NERtcCallbackEx, NERtcChannelCallback, NERtcConstants, NERtcSDK , NERtcStatsObserver} from '@nertc/nertc_sdk';
 import Config from './Config';
 import * as model from './Model';
 import Delegate from './Delegate';
@@ -49,7 +49,7 @@ export default class ChatPresenter {
   join(login: model.LoginInfo): number {
 
     this.login = login
-    let ret = NERtcConstants.ErrorCode.NO_ERROR
+    let ret: number = NERtcConstants.ErrorCode.NO_ERROR
     if(login) {
       ret = NERtcSDK.getInstance().joinChannel('', login?.cname, BigInt(login?.uid))
       console.info(TAG, 'Join channel ret: ' + ret)
@@ -66,7 +66,7 @@ export default class ChatPresenter {
     NERtcSDK.getInstance().setExternalSubStreamAudioSource(enable,sampleRate, channel)
   }
   pushExternalSubAudioFrame(uint8Array: Uint8Array, samplesPerChannel: number, sampleRate: number, channels: number, lastSyncTimestamp: bigint) {
-    let frame = new NERtcConstants.NERtcAudioExternalFrame()
+    let frame: NERtcConstants.NERtcAudioExternalFrame = new NERtcConstants.NERtcAudioExternalFrame()
     frame.data = uint8Array
     frame.sampleRate = sampleRate
     frame.samplesPerChannel = samplesPerChannel
@@ -75,7 +75,7 @@ export default class ChatPresenter {
     NERtcSDK.getInstance().pushExternalSubStreamAudioFrame(frame)
   }
   pushExternalAudioFrame(uint8Array: Uint8Array, samplesPerChannel: number, sampleRate: number, channels: number, lastSyncTimestamp: bigint) {
-    let frame = new NERtcConstants.NERtcAudioExternalFrame()
+    let frame: NERtcConstants.NERtcAudioExternalFrame = new NERtcConstants.NERtcAudioExternalFrame()
     frame.data = uint8Array
     frame.sampleRate = sampleRate
     frame.samplesPerChannel = samplesPerChannel
@@ -87,12 +87,12 @@ export default class ChatPresenter {
     let canvas: NERtcConstants.NERtcVideoCanvas = { canvasId: String(user.uid) }
     let local = String(user.uid) === this.login?.uid
     if(local) {
-      let ret = NERtcSDK.getInstance().setupLocalVideoCanvas(canvas)
+      let ret: number = NERtcSDK.getInstance().setupLocalVideoCanvas(canvas)
       console.info(TAG, 'setLocalVideoCanvas ret:' + ret)
     } else {
-      let ret = NERtcSDK.getInstance().setupRemoteVideoCanvas(canvas, user.uid)
+      let ret: number = NERtcSDK.getInstance().setupRemoteVideoCanvas(canvas, user.uid)
       console.info(TAG, 'setupRemoteVideoCanvas ret:' + ret)
-      NERtcSDK.getInstance().subscribeRemoteVideo(user.uid, true, NERtcConstants.NERtcVideoStreamType.kNERtcVideoStreamTypeMain, NERtcConstants.NERtcRemoteVideoSubscribeType.kNERtcRemoteVideoSubscribeTypeHigh)
+      NERtcSDK.getInstance().subscribeRemoteVideo(user.uid, true, NERtcConstants.NERtcRemoteVideoSubscribeType.kNERtcRemoteVideoSubscribeTypeHigh)
     }
   }
 
@@ -100,10 +100,10 @@ export default class ChatPresenter {
     let canvas: NERtcConstants.NERtcVideoCanvas = { canvasId: String(user.uid + 'sub') }
     let local = String(user.uid) === this.login?.uid
     if(local) {
-      let ret = NERtcSDK.getInstance().setupLocalSubStreamVideoCanvas(canvas)
+      let ret: number = NERtcSDK.getInstance().setupLocalSubStreamVideoCanvas(canvas)
       console.info(TAG, 'setupLocalSubStreamVideoCanvas ret:' + ret)
     } else {
-      let ret = NERtcSDK.getInstance().setupRemoteSubStreamVideoCanvas(canvas, user.uid)
+      let ret: number = NERtcSDK.getInstance().setupRemoteSubStreamVideoCanvas(canvas, user.uid)
       console.info(TAG, 'setupRemoteSubStreamVideoCanvas ret:' + ret)
       NERtcSDK.getInstance().subscribeRemoteSubStreamVideo(user.uid, true)
     }
@@ -113,42 +113,43 @@ export default class ChatPresenter {
     NERtcSDK.getInstance().switchCamera()
   }
   enableVideo(enable: boolean) {
-    let ret = NERtcSDK.getInstance().enableLocalVideo(enable, NERtcConstants.NERtcVideoStreamType.kNERtcVideoStreamTypeMain)
+    let ret: number = NERtcSDK.getInstance().enableLocalVideo(enable, NERtcConstants.NERtcVideoStreamType.kNERtcVideoStreamTypeMain)
     console.info(TAG, 'enableLocalVideo result:' + ret)
   }
   enableSubVideo(enable: boolean) {
-    let ret = NERtcSDK.getInstance().enableLocalVideo(enable, NERtcConstants.NERtcVideoStreamType.kNERtcVideoStreamTypeSub)
+    let ret: number = NERtcSDK.getInstance().enableLocalVideo(enable, NERtcConstants.NERtcVideoStreamType.kNERtcVideoStreamTypeSub)
     console.info(TAG, 'enableLocalSubVideo result:' + ret)
   }
   setExternalVideoSouce(enable:boolean, streamType:NERtcConstants.NERtcVideoStreamType){
-    let ret = NERtcSDK.getInstance().setExternalVideoSource(enable,streamType)
+    let ret: number = NERtcSDK.getInstance().setExternalVideoSource(enable,streamType)
     console.info(TAG, 'setExternalVideoSouce result:' + ret)
   }
 
   pushExternalVideoFrame(frame: NERtcConstants.NERtcVideoFrame, streamType: NERtcConstants.NERtcVideoStreamType){
-    let ret = NERtcSDK.getInstance().pushExternalVideoFrame(frame, streamType)
+    let ret: boolean = NERtcSDK.getInstance().pushExternalVideoFrame(frame, streamType)
   }
 
   setStatsObserver(statsObserver: NERtcStatsObserver) {
     NERtcSDK.getInstance().setStatsObserver(statsObserver)
   }
   enableAudio(enable: boolean) {
-    let ret = NERtcSDK.getInstance().enableLocalAudio(enable)
+    let ret: number = NERtcSDK.getInstance().enableLocalAudio(enable)
     console.info(TAG, 'enableLocalAudio result:' + ret)
   }
   startLastmileProbeTest(config: NERtcConstants.LastmileProbeConfig) {
-    let ret: number = NERtcSDK.getInstance().startLastmileProbeTest(config)
-    console.info(TAG, 'startLastmileProbeTest result:' + ret)
+    // 接口后序版本逐渐放开
+    // let ret: number = NERtcSDK.getInstance().startLastmileProbeTest(config)
+    // console.info(TAG, 'startLastmileProbeTest result:' + ret)
   }
   enableSubAudio(enable: boolean) {
-    let ret = NERtcSDK.getInstance().enableLocalSubStreamAudio(enable)
+    let ret: number = NERtcSDK.getInstance().enableLocalSubStreamAudio(enable)
     console.info(TAG, 'enableLocalAudio result:' + ret)
   }
   setAudioProfile(profile: number, scenario: number) {
     NERtcSDK.getInstance().setAudioProfile(profile, scenario);
   }
   setSpeakPhoneOn(enable: boolean) {
-    let ret = NERtcSDK.getInstance().setSpeakerphoneOn(enable)
+    let ret: number = NERtcSDK.getInstance().setSpeakerphoneOn(enable)
     console.info(TAG, 'setSpeakPhoneOn result:' + ret)
   }
   leave() {
@@ -156,16 +157,19 @@ export default class ChatPresenter {
     console.info(TAG, `LeaveChannel ret:${ret}`)
   }
   setVoiceBeautifierPreset(preset: number) {
-    let ret: number = NERtcSDK.getInstance().setVoiceBeautifierPreset(preset)
-    console.info(TAG, `setVoiceBeautifierPreset ret:${ret}`)
+    //后序版本逐渐放开
+    // let ret: number = NERtcSDK.getInstance().setVoiceBeautifierPreset(preset)
+    // console.info(TAG, `setVoiceBeautifierPreset ret:${ret}`)
   }
   setAudioEffectPreset(preset: number) {
-    let ret: number = NERtcSDK.getInstance().setAudioEffectPreset(preset)
-    console.info(TAG, `setAudioEffectPreset ret:${ret}`)
+    //后序版本逐渐放开
+    // let ret: number = NERtcSDK.getInstance().setAudioEffectPreset(preset)
+    // console.info(TAG, `setAudioEffectPreset ret:${ret}`)
   }
   setCameraCaptureConfig(config: NERtcConstants.NERtcCameraCaptureConfiguration) {
-    let ret: number = NERtcSDK.getInstance().setCameraCaptureConfig(config, NERtcConstants.NERtcVideoStreamType.kNERtcVideoStreamTypeMain);
-    console.info(TAG, `setCameraCaptureConfig ret:${ret}`);
+    //后序版本逐渐放开
+    // let ret: number = NERtcSDK.getInstance().setCameraCaptureConfig(config, NERtcConstants.NERtcVideoStreamType.kNERtcVideoStreamTypeMain);
+    // console.info(TAG, `setCameraCaptureConfig ret:${ret}`);
   }
   setLocalVideoConfig(config: NERtcConstants.NERtcVideoEncodeConfiguration) {
     let ret: number = NERtcSDK.getInstance().setLocalVideoConfig(config, NERtcConstants.NERtcVideoStreamType.kNERtcVideoStreamTypeMain);

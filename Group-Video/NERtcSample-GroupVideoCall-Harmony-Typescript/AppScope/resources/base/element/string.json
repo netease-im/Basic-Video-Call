@@ -3,6 +3,14 @@
     {
       "name": "app_name",
       "value": "ohos_sample"
+    },
+    {
+      "name": "camera_auth_reason",
+      "value": "need to use camera"
+    },
+    {
+      "name": "microphone_auth_reason",
+      "value": "need to use microphone"
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { NERtcSDK, NERtcConstants } from 'sdk/Index';
+import { NERtcSDK, NERtcConstants } from '@nertc/nertc_sdk';
 
 import ChatPresenter from '../../common/Presenter';
 import Utils from '../../common/Utils';

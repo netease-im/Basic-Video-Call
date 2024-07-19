@@ -1,4 +1,4 @@
-import { NERtcVideoView } from 'sdk';
+import { NERtcVideoView } from '@nertc/nertc_sdk';
 import ChatPresenter, { remoteUsers } from '../common/Presenter';
 import router from '@ohos.router';
 import * as model from '../common/Model';

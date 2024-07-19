@@ -1,4 +1,4 @@
-import {NERtcConstants} from 'sdk/Index';
+import {NERtcConstants} from '@nertc/nertc_sdk';
 import Delegate from '../common/Delegate';
 import ChatPresenter from '../common/Presenter';
 import { LoadingDialog } from '@ohos.arkui.advanced.Dialog'
@@ -64,12 +64,12 @@ export struct MainAndSubStream {
       //`onLastmileProbeResult`：网络质量探测报告回调，报告中通过客观数据反馈上下行网络质量。该回调视网络情况在约 30 秒内返回。
       this.result += `rtt： ${result.rtt} \n`
       this.result += `ResultType： ${result.type} \n`
-      this.result += `上行丢包率： ${result.upLinkResult.packetLossRate} \n`
-      this.result += `上行jitter： ${result.upLinkResult.jitter} \n`
-      this.result += `上行带宽： ${result.upLinkResult.availableBandWidth} \n`
-      this.result += `下行丢包率： ${result.downLinkResult.packetLossRate} \n`
-      this.result += `下行jitter： ${result.downLinkResult.jitter} \n`
-      this.result += `下行带宽： ${result.downLinkResult.availableBandWidth} \n`
+      this.result += `上行丢包率： ${result.upLinkResult?.packetLossRate} \n`
+      this.result += `上行jitter： ${result.upLinkResult?.jitter} \n`
+      this.result += `上行带宽： ${result.upLinkResult?.availableBandWidth} \n`
+      this.result += `下行丢包率： ${result.downLinkResult?.packetLossRate} \n`
+      this.result += `下行jitter： ${result.downLinkResult?.jitter} \n`
+      this.result += `下行带宽： ${result.downLinkResult?.availableBandWidth} \n`
       this.ProbeWaitDialog.close()
     }
   };
@@ -136,7 +136,7 @@ export struct MainAndSubStream {
             .fontSize(20)
             .margin({ top: "20vp", bottom: "20vp" })
             .onClick(()=>{
-              let config = new NERtcConstants.LastmileProbeConfig()
+              let config: NERtcConstants.LastmileProbeConfig = new NERtcConstants.LastmileProbeConfig()
               config.probeUplink = this.uplinkProbe
               config.probeDownlink = this.downlinkProbe
               config.expectedUplinkBitrate = BigInt(this.uplinkProbeBitrate);

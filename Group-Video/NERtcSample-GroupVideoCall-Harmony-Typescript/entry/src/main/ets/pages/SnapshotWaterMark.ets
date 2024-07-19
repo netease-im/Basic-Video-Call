@@ -1,7 +1,7 @@
 import ChatPresenter from '../common/Presenter';
 import router from '@ohos.router';
 import * as model from '../common/Model';
-import { NERtcConstants, NERtcSDK, NERtcVideoView } from 'sdk';
+import { NERtcConstants, NERtcSDK, NERtcVideoView } from '@nertc/nertc_sdk';
 import image from '@ohos.multimedia.image';
 
 @Entry
