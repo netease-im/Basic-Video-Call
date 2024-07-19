@@ -2,7 +2,7 @@ import router from '@ohos.router';
 import prompt from '@ohos.promptAction';
 import Delegate from '../common/Delegate';
 import ChatPresenter from '../common/Presenter'
-import { NERtcVideoView, NERtcConstants} from 'sdk';
+import { NERtcVideoView, NERtcConstants} from '@nertc/nertc_sdk';
 import * as model from '../common/Model';
 import fs from '@ohos.file.fs';
 import type resourceManager from '@ohos.resourceManager';

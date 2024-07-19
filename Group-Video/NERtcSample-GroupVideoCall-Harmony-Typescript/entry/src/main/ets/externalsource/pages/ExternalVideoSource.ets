@@ -2,7 +2,7 @@ import fs from '@ohos.file.fs';
 import fileIo from '@ohos.file.fs';
 import config from '../../common/Config'
 import Utils from '../../common/Utils';
-import { NERtcSDK, NERtcConstants } from 'sdk/Index';
+import { NERtcSDK, NERtcConstants } from '@nertc/nertc_sdk';
 import prompt from '@ohos.promptAction';
 import { BusinessError } from '@ohos.base';
 import buffer from '@ohos.buffer';
@@ -190,7 +190,7 @@ struct ExternalVideoSource {
 
     //step6: 入会
     let uid = Utils.getRandomNumber(1, 100000)
-    let ret = NERtcSDK.getInstance().joinChannel('', config.CHANNEL_NAME, BigInt(uid))
+    let ret: number = NERtcSDK.getInstance().joinChannel('', config.CHANNEL_NAME, BigInt(uid))
     if (ret == 0) {
       this.isJoined = true;
     }

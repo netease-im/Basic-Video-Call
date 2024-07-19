@@ -2,7 +2,7 @@ import router from '@ohos.router';
 import Delegate from '../../common/Delegate';
 import { LoginInfo } from '../../common/Model'
 import ChatPresenter from '../../common/Presenter'
-import { NERtcStatsObserver, NERtcConstants} from 'sdk/Index';
+import { NERtcStatsObserver, NERtcConstants} from '@nertc/nertc_sdk';
 import prompt from '@ohos.promptAction';
 let TAG: string = 'audioCall'
 
@@ -50,25 +50,37 @@ struct audioCall {
     ChatPresenter.getInstance().join(this.login)
   }
   observer: NERtcStatsObserver = {
+
     onRtcStats: (stats: NERtcConstants.NERtcStats): void => {
 
     },
+
     onLocalAudioStats: (stats: NERtcConstants.NERtcAudioSendStats): void => {
 
     },
+
     onRemoteAudioStats: (statsArray: Array<NERtcConstants.NERtcAudioRecvStats>): void => {
+
       let volumeInfoTmp = ""
       for(let i = 0;i < statsArray.length;i++){
-        volumeInfoTmp += "uid: " + statsArray[i].uid + "  音量: " + statsArray[i].layers[0].volume + "\n"
+        let layers = statsArray[i].layers
+        let volume: number = 0;
+        if(layers) {
+          volume = layers[0].volume
+        }
+        volumeInfoTmp += "uid: " + statsArray[i].uid + "  音量: " + volume + "\n"
       }
       this.volumeInfo = volumeInfoTmp;
     },
+
     onLocalVideoStats: (stats: NERtcConstants.NERtcVideoSendStats): void => {
 
     },
+
     onRemoteVideoStats: (statsArray: Array<NERtcConstants.NERtcVideoRecvStats>): void => {
 
     },
+
     onNetworkQuality: (statsArray: Array<NERtcConstants.NERtcNetworkQualityInfo>): void => {
       let networkInfoTmp = ""
       for(let i = 0;i < statsArray.length;i++){
@@ -78,6 +90,7 @@ struct audioCall {
       }
       this.networkInfo = networkInfoTmp;
     }
+
   }
   delegate: Delegate = {
     onJoin: (result: number, channelId: bigint): void => {

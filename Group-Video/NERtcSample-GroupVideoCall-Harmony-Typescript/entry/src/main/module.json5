@@ -37,6 +37,7 @@
     "requestPermissions": [
       {
         "name": "ohos.permission.CAMERA",
+        "reason": "$string:camera_auth_reason",
         "usedScene": {
           "abilities": [
             "FormAbility"
@@ -46,6 +47,7 @@
       },
       {
         "name": "ohos.permission.MICROPHONE",
+        "reason": "$string:microphone_auth_reason",
         "usedScene": {
           "abilities": [
             "FormAbility"

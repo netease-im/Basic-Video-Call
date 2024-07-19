@@ -54,24 +54,41 @@
 
 ## SDK 接入流程
 
-1.拷贝 sdk.har 到项目文件夹中，例如： entry/src/main/libs
+### 线下集成
 
-2.DEMO 工程下 oh-package.json5 配置 sdk.har 如下图所示：
+1. 拷贝 sdk.har 到项目文件夹中，例如： entry/src/main/libs
+
+2. DEMO 工程下 oh-package.json5 配置 sdk.har 如下图所示：
 
 ![WX20240222-105552.png](img%2FWX20240222-105552.png)
 
-3.安装第三方包，点击 Run 'ohpm install'
+3. 安装第三方包，点击 Run 'ohpm install'
+
+### 依赖Openharmony仓库集成
+
+1. Demo 工程下 oh-package.json5 配置
+
+```json5
+"dependencies": {
+ "@nertc/nertc_sdk": "1.1.0-beta"
+}
+```
+
+2. 点击 Run 'ohpm install'
 
 
-4.调用SDK相关接口，完成入会流程
+调用SDK相关接口，完成入会流程
 
 ```typescript
 
 //伪代码，具体实现参考 sample code
 
 //从SDK中导入相关的interface或者class        
+//如果是线下集成的: import { NERtcSDK } from 'sdk'
+//依赖openharmony仓库集成的: import { NERtcSDK } from '@nertc/nertc_sdk' 
 import { NERtcCallbackEx, NERtcConstants, NERtcSDK } from 'sdk';
-        
+
+
 //初始化引擎, 参数列表分别为: context: UIAbility Context 上下文对象,  appkey, SDK回调callback, 初始化参数option(可选).
 NERtcSDK.getInstance().init(context, key, new ChatCallback(), option)
         

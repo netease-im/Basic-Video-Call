@@ -1,7 +1,7 @@
 import router from '@ohos.router';
 import prompt from '@ohos.promptAction';
 import { LoginInfo } from '../../common/Model'
-import { NERtcSDK, NERtcConstants, NERtc } from 'sdk/Index';
+import { NERtcSDK, NERtcConstants, NERtc } from '@nertc/nertc_sdk';
 
 @Entry
 @Component

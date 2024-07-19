@@ -4,10 +4,13 @@
       {
         "name": "default",
         "signingConfig": "default",
-        "compileSdkVersion": "4.1.0(11)",
-        "compatibleSdkVersion": "4.1.0(11)",
-        "targetSdkVersion": "4.1.0(11)",
+        //指定HarmonyOS应用/服务编译时的版本
+        "compatibleSdkVersion": "5.0.0(12)",
+        //指定HarmonyOS应用/服务兼容的最低版本。版本号需改为"5.0.0(12)"，注意使用英文.和()
+        "targetSdkVersion": "5.0.0(12)",
+        //指定HarmonyOS应用/服务目标版本。若没有设置，默认为compatibleSdkVersion
         "runtimeOS": "HarmonyOS"
+        //指定为HarmonyOS
       }
     ],
     "buildModeSet": [
@@ -16,6 +19,21 @@
       },
       {
         "name": "release"
+      }
+    ],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/yanghui/.ohos/config/default_NERtcSample-GroupVideoCall-Harmony-Typescript_Nx_t0toQBuO8fzdTS9gVlufiDiyU5tVVTLpRNphn43E=.cer",
+          "storePassword": "0000001B8679A80097267B5C909804979972A1870E20694A7C1CAFD2C5A63DFB772D9F046BF5D387F51B78",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BE40315DF50962AE7C9E0E173FA80F3A5836EBE3B6FDAF7F74883ACF2F17AD68E525F9525017F01",
+          "profile": "/Users/yanghui/.ohos/config/default_NERtcSample-GroupVideoCall-Harmony-Typescript_Nx_t0toQBuO8fzdTS9gVlufiDiyU5tVVTLpRNphn43E=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/yanghui/.ohos/config/default_NERtcSample-GroupVideoCall-Harmony-Typescript_Nx_t0toQBuO8fzdTS9gVlufiDiyU5tVVTLpRNphn43E=.p12"
+        }
       }
     ]
   },

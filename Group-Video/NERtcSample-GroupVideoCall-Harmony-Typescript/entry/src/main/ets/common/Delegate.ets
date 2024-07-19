@@ -1,4 +1,4 @@
-import {NERtcConstants} from 'sdk';
+import {NERtcConstants} from '@nertc/nertc_sdk';
 import {LiveStreamEvent} from './Model'
 
 export default interface Delegate {

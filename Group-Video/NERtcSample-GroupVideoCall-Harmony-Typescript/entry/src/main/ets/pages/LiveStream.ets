@@ -2,7 +2,7 @@ import Delegate from '../common/Delegate';
 import { LiveStreamEvent } from '../common/Model';
 import ChatPresenter from '../common/Presenter';
 import Prompt from '@system.prompt';
-import { NERtcConstants } from 'sdk';
+import { NERtcConstants } from '@nertc/nertc_sdk';
 import router from '@ohos.router';
 import * as model from '../common/Model';
 
@@ -454,7 +454,7 @@ struct LiveStream {
 
   buildLiveStreamTask(): NERtcConstants.NERtcLiveStreamTaskInfo {
 
-    let sampleRate = NERtcConstants.NERtcLiveStreamAudioSampleRate.kNERtcLiveStreamAudioSampleRate44100
+    let sampleRate: number = NERtcConstants.NERtcLiveStreamAudioSampleRate.kNERtcLiveStreamAudioSampleRate44100
     if(this.audioSampleRate) {
       if(this.audioSampleRate == 32000) {
         sampleRate = NERtcConstants.NERtcLiveStreamAudioSampleRate.kNERtcLiveStreamAudioSampleRate32000
@@ -465,7 +465,7 @@ struct LiveStream {
       }
     }
 
-    let audioCodec = NERtcConstants.NERtcLiveStreamAudioCodecProfile.kNERtcLiveStreamAudioCodecProfileLCAAC
+    let audioCodec: number = NERtcConstants.NERtcLiveStreamAudioCodecProfile.kNERtcLiveStreamAudioCodecProfileLCAAC
     if(this.audioCodecType) {
       if(this.audioCodecType == 0) {
         audioCodec = NERtcConstants.NERtcLiveStreamAudioCodecProfile.kNERtcLiveStreamAudioCodecProfileLCAAC
@@ -494,7 +494,7 @@ struct LiveStream {
 
     //这里只是为了演示，只推自己
     let userTranscodingList: NERtcConstants.NERtcLiveStreamUserTranscoding[] = []
-    let scaleMode = this.remoteAdaption == 0 ? NERtcConstants.NERtcLiveStreamVideoScaleMode.kNERtcLsModeVideoScaleFit : NERtcConstants.NERtcLiveStreamVideoScaleMode.kNERtcLsModeVideoScaleCropFill
+    let scaleMode: NERtcConstants.NERtcLiveStreamVideoScaleMode = this.remoteAdaption == 0 ? NERtcConstants.NERtcLiveStreamVideoScaleMode.kNERtcLsModeVideoScaleFit : NERtcConstants.NERtcLiveStreamVideoScaleMode.kNERtcLsModeVideoScaleCropFill
     let userTranscoding: NERtcConstants.NERtcLiveStreamUserTranscoding = {
       uid: BigInt(this.login?.uid!),
       videoPush: this.remoteSubVideo,
