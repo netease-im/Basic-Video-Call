@@ -1,0 +1,23 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": false,
+    "preserveConstEnums": true,
+    "erasableSyntaxOnly": false,
+    "jsx": "react-jsx", // 或 "react"
+    "jsxImportSource": "react",
+    "module": "esnext",
+    "target": "es6",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

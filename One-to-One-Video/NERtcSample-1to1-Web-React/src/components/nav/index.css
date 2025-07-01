@@ -1,0 +1,24 @@
+.nav {
+  width: calc(100% - 40px);
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid #ebedf0;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+
+  .yunxinlogo {
+    height: 24px;
+    cursor: pointer;
+  }
+
+  .appName {
+    font-size: 18px;
+    color: #333;
+  }
+}

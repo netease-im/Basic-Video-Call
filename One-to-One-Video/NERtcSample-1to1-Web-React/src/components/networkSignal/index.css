@@ -1,0 +1,43 @@
+.network-signal-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.signal-title {
+  font-size: 14px;
+  color: #666;
+}
+
+.signal-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 20px;
+}
+
+.signal-bar {
+  width: 4px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.signal-bar:nth-child(1) {
+  height: 5px;
+}
+.signal-bar:nth-child(2) {
+  height: 8px;
+}
+.signal-bar:nth-child(3) {
+  height: 12px;
+}
+.signal-bar:nth-child(4) {
+  height: 15px;
+}
+
+.signal-text {
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 4px;
+}

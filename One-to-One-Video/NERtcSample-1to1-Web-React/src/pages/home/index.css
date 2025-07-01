@@ -1,0 +1,22 @@
+.home-body {
+  height: calc(100% - 46px);
+  background: #f7f8fa;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.content {
+  width: 94vw;
+  height: 94vw;
+  padding-top: 10vw;
+  background: #fff;
+  box-shadow: 0 4px 10px 0 rgba(47, 56, 111, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  gap: 5vw;
+  margin-top: 30vw;
+}

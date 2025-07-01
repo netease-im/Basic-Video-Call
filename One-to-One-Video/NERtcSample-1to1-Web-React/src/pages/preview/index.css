@@ -1,0 +1,198 @@
+.preview-body {
+  height: calc(100% - 46px);
+  background: #f7f8fa;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  position: relative;
+}
+.preview-body-header {
+  position: absolute;
+  top: 10px;
+  right: 1px;
+  background-color: #07c160;
+  /* border: 1px solid #008000cf; */
+  color: #fff;
+  line-height: 1;
+  font-size: 1.07692308em;
+  padding: 0.61538462em 1.23076923em;
+  z-index: 10000;
+  border-radius: 0.30769231em;
+  box-shadow: 0 0 0.61538462em rgba(0, 0, 0, 0.4);
+}
+
+.checked-body {
+  position: relative;
+  width: 94vw;
+  height: 94vw;
+  background: #fff;
+  box-shadow: 0 4px 10px 0 rgba(47, 56, 111, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 15vw;
+  gap: 20px;
+}
+
+.checked-body-title {
+  font-size: 24px;
+}
+
+.checked-body-text {
+  font-size: 14px;
+  color: #0000009e;
+}
+
+.checked-body-steps {
+  width: 340px;
+  width: 340px;
+  position: absolute;
+  top: 10px;
+}
+.adm-steps .adm-step .adm-step-icon {
+  margin-bottom: 22px; /* 增加或减少这个值 */
+}
+
+.checked-body-steps-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.checked-body-steps-microphone-devices {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+}
+
+.checked-body-steps-microphone-devices-title {
+  font-size: 14px;
+}
+
+.checked-body-steps-microphone-volume {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+  width: 286;
+}
+
+.checked-body-steps-microphone-volume-title {
+  font-size: 14px;
+}
+
+.checked-body-steps-microphone-callback {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.checked-body-steps-microphone-callback-title {
+  font-size: 13px;
+}
+
+.checked-body-steps-microphone-callback-btn {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+
+.checked-body-steps-speaker {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.checked-body-steps-camera-callback-btn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.checked-body-steps-item-network {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+  justify-content: center;
+  width: 280px;
+  margin-top: 10px;
+}
+
+.checked-body-steps-network {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 280px;
+}
+
+.checked-body-steps-item-report {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.checked-body-steps-report {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.checked-body-steps-network-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.checked-body-steps-network-description {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.checked-body-steps-network-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 220px;
+  gap: 10px;
+}
+
+.checked-body-steps-item-report {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+  justify-content: center;
+  width: 280px;
+}
+
+.checked-body-steps-report-btn {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 10px;
+}

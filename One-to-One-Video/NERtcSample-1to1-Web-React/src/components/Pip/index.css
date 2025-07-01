@@ -1,0 +1,9 @@
+.pip {
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 100;
+  user-select: none;
+  touch-action: none; /* 禁用触摸默认行为 */
+  background: #25252d;
+  border: 1px solid #fff;
+}
